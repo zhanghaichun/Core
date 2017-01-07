@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap示例2</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" ><!-- 适当的绘制和触屏缩放 -->
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+	<!-- {if it IE 9}>
+		<script src="../bootstrap/dist/js/html5.js"></script>
+	<!{endif}-->
+</head>
+<body style="background-color: #ccc; padding: 50px;">
+	<div class="container" style="background-color: #fff; padding: 30px;">
+	
+		<h2 class="page-header">选项卡的效果</h2>
+		<ul class="nav nav-tabs">
+			<li class="active"><a href="carousel.html">框组的应</a></li>
+			<li><a href="#">框组的应</a></li>
+			<li><a href="#">框组的应</a></li>
+		</ul>
+
+
+
+		<h2 class="page-header">输入框组的应用</h2><!-- 这只能应用到input标签元素上 滚动条的样式显示的是 overflow-x
+		overflow-y scroll visible -->
+		<div class="input-group">
+			<span class="input-group-addon">$</span>
+			<input type="text" id="money" placeholder="money" class="form-control">
+			<span class="input-group-addon">.00</span><!-- .input-group-addon是输入框插件的意思  就是用来和输入框进行组合的 -->
+		</div>
+
+
+		<h2 class="page-header">按钮式下拉菜单</h2>
+		<div class="btn-group">
+			<button class="btn btn-primary" type="button">
+				游戏
+			</button>
+			<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a href="#">生死四人组</a></li>
+				<li><a href="#">英雄联盟</a></li>
+				<li><a href="#">极品飞车</a></li>
+				<li><a href="#">细胞分裂</a></li>
+			</ul>
+		</div>
+
+
+
+
+
+		<!-- 按钮组的应用
+		.btn-group  按钮组工具栏 .btn-toolbar  纵向排列的按钮 .btn-group-vertical  
+		.btn-group中已经定义了.dropdown的样式 所以在按钮式的下拉菜单中  可以直接在包围层的标签中使用
+		.btn-group-->
+		<h2 class="page-header">按钮组的下拉菜单</h2>
+		<div class="btn-toolbar">
+			<div class="btn-group btn-group-vertical">
+				<button type="button" class="btn btn-primary">Left</button>
+				<button type="button" class="btn btn-primary">Center</button>
+				<button type="button" class="btn btn-primary">Right</button>
+			</div>
+
+			<div class="btn-group">
+				<button type="button" class="btn btn-danger">1</button>
+				<button type="button" class="btn btn-danger">2</button>
+				<button type="button" class="btn btn-danger">3</button>
+			</div>
+
+			<div class="btn-group">
+				<button type="button" class="btn btn-info">Top</button>
+				<button type="button" class="btn btn-info">Middle</button>
+				<button type="button" class="btn btn-info">Bottom</button>
+			</div>
+		</div>
+
+		<!-- 创建下拉菜单 -->
+		<h2 class="page-header">下拉菜单</h2>
+		<div class="dropdown"><!-- 盛装下拉菜单的容器必须使用.dropdown -->
+			<button type="button" class="btn btn-default drop-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><!-- 数据绑定使用data-toggle属性值为dropdown -->
+				PHP课程体系 <span class="caret"></span><!-- .caret是用来创建向下箭头的 -->
+			</button>
+			<ul class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuDivider"><!-- 需要使用.dropdown-menu与以上按钮进行绑定形成下拉菜单 -->
+				<li ><a href="#">CSS</a></li>
+				<li><a href="#">HTML</a></li>
+				<li><a href="#">JavaScript</a></li>
+				<li class="divider" role="seperator"></li><!-- 对下拉菜单中的元素进行分组 -->
+				<li><a href="#">PHP</a></li>
+				<li><a href="#">Apache</a></li>
+				<li><a href="#">MySQL</a></li>
+			</ul>
+		</div>
+	</div>
+	<script src="bootstrap/dist/js/jquery-1.10.1.min.js"></script>
+	<script src="bootstrap/dist/js/bootstrap.js"></script>
+	
+</body>
+</html>
