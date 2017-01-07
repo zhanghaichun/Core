@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>七巧板</title>
+	<style>
+		#canvas {
+			display: block;
+			/*width: 700px;
+			height: 700px;*/
+			border: 1px solid #777;
+			margin: 50px auto;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas">对不起，你的浏览器不支持canvas!</canvas>
+	<script>
+
+		var tangramObj = [
+			{"p": [{"x": 0, "y": 0}, {"x": 200, "y": 0}, {"x": 0, "y": 200}], "color": "#1a0000"}, // 1
+			{"p": [{"x": 0, "y": 200}, {"x": 350, "y": 700}, {"x": 0, "y": 700}], "color": "#cca300"}, // 2
+			{"p": [{"x": 200, "y": 0}, {"x": 170, "y": 450}, {"x": 0, "y": 200}], "color": "#b3003b"}, // 3
+			{"p": [{"x": 200, "y": 0}, {"x": 650, "y": 0}, {"x": 170, "y": 450}], "color": "#ff1a75"}, // 4
+			{"p": [{"x": 400, "y": 190}, {"x": 700, "y": 700}, {"x": 350, "y": 700}, {"x": 170, "y": 450}], "color": "#1ab2ff"}, // 5
+			{"p": [{"x": 400, "y": 190}, {"x": 700, "y": 400}, {"x": 700, "y": 700}], "color": "#4dff4d"}, // 6
+			{"p": [{"x": 400, "y": 190}, {"x": 650, "y": 0}, {"x": 700, "y": 0}, {"x": 700, "y": 400}], "color": "#7575a3"} // 7
+		];
+
+
+		window.onload = function(){
+			// 获得canvas
+			var canvas = document.getElementById('canvas');;
+
+			// 获得绘图context
+			var context = canvas.getContext("2d");
+
+			// 设置canvas的宽度和高度
+			canvas.width = 700;
+			canvas.height = 700;
+
+			// 开始绘制七巧板
+			for (var i = 0; i < tangramObj.length; i ++ ) {
+				draw( tangramObj[i], context ); // 这里的第一个参数是每一块七巧板，第二个参数是绘图环境的上下文。
+			}
+
+		}
+
+		function draw( piece, cxt ) {
+			// 定义路径开始
+			cxt.beginPath();
+
+			cxt.moveTo(piece.p[0].x, piece.p[0].y);
+
+			for (var i = 1; i < piece.p.length; i ++) {
+				cxt.lineTo(piece.p[i].x, piece.p[i].y);
+			}
+
+			cxt.closePath(); // 使用closePath()会自动封闭图形
+
+			cxt.fillStyle = piece.color;
+			cxt.fill();
+
+
+		}
+	</script>
+</body>
+</html>

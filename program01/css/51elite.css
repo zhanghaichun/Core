@@ -1,0 +1,331 @@
+
+
+body {
+	background-color: #EDEDEA;
+}
+
+
+/* 设置头部导航条 */
+
+
+.navbar {
+	min-height: 0;
+	height: 47px;
+	border-radius: 0;
+	opacity: 0.85;
+	margin-bottom: 0;
+}
+
+/* 设置无忧精英图标 */
+.navbar .logo {
+	width: 129px;
+	height: 29px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	background: url( "../img/51elite/index-logo-Beta.png" ) no-repeat;
+}
+
+/* 设置无忧精英标题理念 */
+.navbar .index-text {
+	width: 270px;
+	height: 19px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin-left: 8px;
+	margin-top: 16px;
+	background: url("../img/51elite/index-title.png") no-repeat; 
+}
+
+/* 设置右侧用户登录和注册模块 */
+.navbar form {
+	position: relative;
+	top: -2px;
+}
+
+.form-control {
+	height: 32px;
+	width: 184px;
+	font-size: 8pt;
+	border-radius: 1px !important;
+}
+
+.navbar form .submit {
+	display: inline-block;
+	width: 57px;
+	height: 30px;
+	margin-top: 0;
+	vertical-align: middle;
+	background: url("../img/51elite/index-login-btn.png") no-repeat;
+	cursor: pointer;
+}
+
+.navbar ul > li {
+	position: relative;
+	top: 6px;
+	margin-left: 6px;
+}
+
+.navbar ul > li,
+.navbar ul > li > a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.navbar ul > li > a:hover {
+	color: #f00;
+}
+
+.navbar ul > li > input {
+	position: relative;
+	top: 2px;
+}
+
+/* 设置中间的banner图效果 */
+body > div.content {
+	height: 780px;
+	margin-bottom: -124px;
+	padding-top: 24px;
+	background-image: url("../img/51elite/index-main-bg.jpg");
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: 1600px 640px;
+}
+
+.content .container {
+	height: 574px;
+	/* 如果在这里设置margin属性的话，结果就是会引起margin重叠的效果 
+	因此需要在其父元素中设置padding属性*/
+	/*margin-top: 24px;*/
+	padding-left: 0;
+	padding-right: 0;
+	background-color: #000;
+}
+
+.operation-content {
+	width: 394px;
+	height: 400px;
+	background-color: #fff;
+}
+
+.operation-content ul {
+	display: inline-block;
+}
+
+.operation-content > div {
+	box-sizing: border-box;
+	height: 100px;
+}
+
+/* 设置图标之间的间距 */
+.grasp-position ul > li:last-child {
+	margin-left: 24px;
+}
+
+.communicate-online ul > li:last-child {
+	margin-left: 54px;
+}
+
+.check-resource ul > li:last-child {
+	margin-left: 54px;
+}
+
+.set-card ul > li:last-child {
+	margin-left: 54px;
+}
+
+
+/* 对图标设置中的文字进行微调 */
+.operation-content > div > ul li a {
+	display: inline-block;
+	color: #acacac;
+	font-family: "微软雅黑";
+}
+
+/* 设置鼠标移动上去颜色改变的样式 */
+.operation-content > div > ul li a:hover {
+	color: #F1921E;
+	text-decoration: none;
+}
+
+
+
+/* 设置文字在图标下方的合适位置 */
+.grasp-position li:first-child a {
+	margin-left: -5px;
+}
+
+.communicate-online li:first-child a {
+	margin-left: 5px;
+}
+
+.communicate-online li:last-child a {
+	margin-left: 14px;
+}
+
+.check-resource li:last-child a {
+	margin-left: -10px;
+}
+
+
+/* 设置提示文字 */
+.prompt-text {
+	display: inline-block;
+	font-weight: bold;
+	font-size: 14pt;
+	vertical-align: middle;
+	margin-right: 14px;
+	margin-bottom: 60px;
+	margin-left: 22px;
+}
+
+/* 设置分割线 */
+.right-line {
+	display: inline-block;
+	height: 70px;
+	margin-top: 18px;
+	margin-right: 16px;
+	border-right: 1px solid #ccc;
+}
+
+
+/* 设置背景图片，这里是使用雪碧图 */
+.operation-content li i {
+	display: inline-block;
+	width: 56px;
+  height: 52px;
+	background-image: url("../img/51elite/i-icon.png");
+}
+
+
+/* 把握高薪职位 */
+.head-hunter { background-position: 0 -4px; }
+.apply-record { background-position: 0 -63px; }
+
+/* 线上实时沟通 */
+.ID-card { background-position: 0 -114px; }
+.self-message {  background-position: 0 -175px; }
+
+/* 查看猎头资源 */
+.people-man { background-position: -2px -237px; }
+.check-files { background-position: 2px -303px; }
+
+/* 设置精英名片 */
+.my-files { background-position: -4px -364px; }
+.privacy-set { background-position: 0 -423px; }
+
+.communicate-online,
+.set-card {
+	background-color: #f4f4f4;
+}
+
+/* 设置轮播图的样式 */
+.carousel,
+.carousel .item {
+	width: 236px;
+	height: 159px;
+}
+
+/* 设置页面底部信息 */
+
+footer {
+	background-color: #F7F7F7;
+}
+
+footer ul {
+	float: left;
+	list-style: none;
+}
+
+.link-container {
+	width: 800px;
+	padding-top: 20px;
+	margin-bottom: 0;	
+}
+
+.link-container ul {
+	height: 134px;
+	margin-right: 62px;
+}
+
+.link-container ul li a {
+	font-size: 8pt;
+	color: #aaa;
+	font-family: "微软雅黑";
+}
+
+.link-container ul li a:hover {
+	text-decoration: none;
+	color: #777;
+}
+
+.link-container h4 {
+	color: #979693;
+	margin-bottom: 7px;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+/* 这只猎英俱乐部小圆点 */
+.small-circle {
+	position: relative;
+	top: -6px;
+	left: -6px;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #D00505;
+}
+
+/* 设置链接的右侧边线 */
+
+.line,
+.line2 {
+	display: inline-block;
+	height: 78px;
+}
+
+
+.line {
+	border-right: 1px solid #E2E2E2;
+}
+
+.line2 {
+	position: relative;
+	left: -4px;
+	border-right: 1px solid #fff;
+}
+
+li.line {
+	position: relative;
+	border: none;
+}
+
+.brief-introduction li.line {
+  top: -72px;
+  left: 118px;
+}
+
+.help-center li.line,
+.cooperation li.line {
+	top: -68px;
+  left: 112px;
+}
+
+hr {
+	margin-bottom: 3px;
+	border-top-color: #e2e2e2;
+}
+
+span.info {
+	width: 700px;
+	height: 100%;
+	color: #aaa;
+	font-size: 10pt;
+	font-family: 'Arial';
+	margin-top: 10px;
+	padding-bottom: 20px;
+}
+
+

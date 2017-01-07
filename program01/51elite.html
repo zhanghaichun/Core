@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap示例2</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" ><!-- 适当的绘制和触屏缩放 -->
+	<link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/51elite.css">
+	<!-- {if it IE 9}>
+		<script src="../bootstrap/dist/js/html5.js"></script>
+	<!{endif}-->
+</head>
+<body>
+	<nav class="navbar navbar-inverse"><!-- 设置顶部导航栏 -->
+		<div class="collapse navbar-collapse">
+			<div class="container">
+				
+				<div class="left clearfix navbar-left"><!-- 设置左侧logo和标题 -->
+					<div class="logo pull-left"></div>
+					<div class="index-text pull-left"></div>
+				</div>
+			
+				<div class="right"><!-- 设置右侧用户注册和登录信息 -->
+					
+					<form class="navbar-form navbar-right">
+						<div class="form-group ">
+							<input class="form-control" type="text" placeholder="邮箱/手机/用户名/51job账号">
+						</div>
+						<div class="form-group ">
+							<input class="form-control" type="text" placeholder="密码">
+						</div>
+			
+						<div class="form-group">
+							<div class="submit" ></div>
+						</div>
+			
+						<div class="form-group">
+							<ul class="list-unstyled list-inline">
+								<li>
+									<input class="autoLogin" type="checkbox" checked>&nbsp;自动登录
+								</li>
+								<li><a href="#">忘记密码 ?</a></li>
+								<li><a href="#">注册</a></li>
+							</ul>
+						</div>
+					</form>
+			
+				</div>
+			
+			
+			</div><!-- /. container -->
+		</div>
+	</nav><!-- /. nav -->
+
+	<!-- 设置内容部分也就是最重要的信息 -->
+	<div class="content">
+		<div class="container">
+			<!-- 设置可以操作的内容部分，例如:把握高薪职位、线上实时沟通、
+			查看猎头资源、设置精英名片 -->
+			<div class="operation-content">
+				<!-- 把握高薪职位 -->
+				<div class="grasp-position">
+					<span class="prompt-text">把握高薪职位</span>
+					<i class="right-line"></i>
+					<ul class="list-unstyled list-inline ">
+						<li>
+							<i class="head-hunter"></i><br>
+							<a href="#">搜索猎头Case</a>
+						</li>
+						<li>
+							<i class="apply-record"></i><br>
+							<a href="#">应聘记录</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 线上实时沟通 -->
+				<div class="communicate-online">
+					<span class="prompt-text">线上实时沟通</span>
+					<i class="right-line"></i>
+					<ul class="list-unstyled list-inline ">
+						<li>
+							<i class="ID-card"></i><br>
+							<a href="#">递名片</a>
+						</li>
+						<li>
+							<i class="self-message"></i><br>
+							<a href="#">私信</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 查看猎头资源 -->
+				<div class="check-resource">
+					<span class="prompt-text">查看猎头资源</span>
+					<i class="right-line"></i>
+					<ul class="list-unstyled list-inline ">
+						<li>
+							<i class="people-man"></i><br>
+							<a href="#">人脉管理</a>
+						</li>
+						<li>
+							<i class="check-files"></i><br>
+							<a href="#">查看猎头档案</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- 设置精英名片 -->
+				<div class="set-card">
+					<span class="prompt-text">设置精英名片</span>
+					<i class="right-line"></i>
+					<ul class="list-unstyled list-inline ">
+						<li>
+							<i class="my-files"></i><br>
+							<a href="#">我的档案</a>
+						</li>
+						<li>
+							<i class="privacy-set"></i><br>
+							<a href="#">隐私设置</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="2000">
+			 
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner" role="listbox">
+			    <div class="item active">
+			      <img src="img/51elite/236-159.gif" alt="...">
+			    </div>
+			    <!-- <div class="item">
+			      <img src="img/51elite/310x160/2.jpg"" alt="...">
+			    </div>
+			    <div class="item">
+			      <img src="img/51elite/310x160/3.jpg"" alt="...">
+			    </div> -->
+			  </div>
+
+			
+			</div>
+
+
+		</div><!-- /. container -->
+	</div><!-- /. content -->
+
+	<footer><!-- 设置底部了链接的内容和公司的地址等信息 -->
+
+			<div class="link-container center-block clearfix">
+				<ul class="brief-introduction">
+					<h4>简介</h4>
+					<li><a href="#">关于无忧精英网</a></li>
+					<li><a href="#">功能介绍</a></li>
+					<li><a href="#">产品动态</a></li>
+					<li class="line">
+						<span class="line"></span>
+						<span class="line2"></span>
+					</li>
+				</ul>
+
+
+				<ul class="help-center">
+					<h4>帮助中心</h4>
+					<li><a href="#">我是猎头</a></li>
+					<li><a href="#">我是精英</a></li>
+					<li><a href="#">安全求职</a></li>
+					<li class="line">
+						<span class="line"></span>
+						<span class="line2"></span>
+					</li>
+				</ul>
+
+				<ul class="cooperation">
+					<h4>合作</h4>
+					<li><a href="#">意见反馈</a></li>
+					<li>
+						<a href="#">猎英俱乐部</a>
+						<!-- 添加小圆点 -->
+						<span class="small-circle"></span>
+					</li>
+					<li><a href="#">网站合作</a></li>
+					<li class="line">
+						<span class="line"></span>
+						<span class="line2"></span>
+					</li>
+				</ul>
+
+				<ul class="tw-code">
+					<li>
+						<img src="img/51elite/2weima.png" alt="">
+					</li>
+					<li><a href="#">无忧精英APP</a></li>
+				</ul>
+
+			</div><!-- /. link-container -->
+
+			<hr />
+
+			<div class="info ">
+				<span class="info center-block text-center">
+					Email：51jingying@51job.com <br>
+					未经51job.com 同意，不得转载本网站之所有招聘信息及作品 <br>
+					沪ICP备12015550号，无忧工作网版权所有©1999-2016
+				</span>
+			</div>
+
+	</footer>
+	<script src="../bootstrap/dist/js/jquery-1.10.1.min.js"></script>
+	<script src="../bootstrap/dist/js/bootstrap.js"></script>
+	<script>
+		$(function() {
+
+			// 将自定义的按钮添加提交的功能
+			$("form .submit").click(function() { $(this).submit(); })
+
+			// 去掉bootstrap中，鼠标移出有下划线的效果
+			$("a").mouseout(function() { $(this).css("text-decoration", "none"); });
+
+			/* 使用jquery控制当鼠标移动到图标上的时候，图标的雪碧图位置会改变
+			以此来控制图标颜色的变化 */
+			$(".operation-content ul li").hover(function() {
+				// 把握高薪职位
+				$(this).find("i.head-hunter").css("background-position", "-60px -4px");
+				$(this).find("i.apply-record").css("background-position", "-60px -63px");
+
+				// 线上实时沟通
+				$(this).find("i.ID-card").css("background-position", "-60px -114px");
+				$(this).find("i.self-message").css("background-position", "-60px -175px");
+
+				// 查看猎头资源
+				$(this).find("i.people-man").css("background-position", "-62px -237px");
+				$(this).find("i.check-files").css("background-position", "-58px -303px");
+
+				// 设置精英名片
+				$(this).find("i.my-files").css("background-position", "-64px -364px");
+				$(this).find("i.privacy-set").css("background-position", "-60px -423px");
+
+				$(this).find("a").css("color", "#F1921E");
+			}, function() {
+				// 把握高薪职位
+				$(this).find("i.head-hunter").css("background-position", "0 -4px");
+				$(this).find("i.apply-record").css("background-position", "0 -63px");
+
+				// 线上实时沟通
+				$(this).find("i.ID-card").css("background-position", "0 -114px");
+				$(this).find("i.self-message").css("background-position", "0 -175px");
+				
+				// 查看猎头资源
+				$(this).find("i.people-man").css("background-position", "-2px -237px");
+				$(this).find("i.check-files").css("background-position", "2px -303px");
+
+				// 设置精英名片
+				$(this).find("i.my-files").css("background-position", "-4px -364px");
+				$(this).find("i.privacy-set").css("background-position", "0 -423px");
+
+				$(this).find("a").css("color", "#acacac");
+			});
+
+
+
+
+
+		})
+
+	</script>
+</body>
+</html>
+
+
+
+

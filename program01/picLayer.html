@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap示例2</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" ><!-- 适当的绘制和触屏缩放 -->
+	<link rel="stylesheet" href="../bootstrap/dist/css/bootstrap.css">
+	<!-- {if it IE 9}>
+		<script src="../bootstrap/dist/js/html5.js"></script>
+	<!{endif}-->
+	<style>
+		html, 
+		body {
+			height: 100%;
+		}
+
+		.click-large {
+			width: 100%;
+		}
+
+		.maskDiv {
+			display: none;
+		}
+	
+		.maskDiv img {
+			width: 100%;
+			/*height: auto;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-xs-12 col-md-12">
+				<img class="img-responsive click-large" src="../images/220x165/litchi.jpg" alt="" >
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-md-12">
+				<img class="img-responsive click-large" src="../images/1024x768/heart.jpg" alt="" >
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-md-12">
+				<img class="img-responsive click-large" src="../images/1024x768/1.jpg" alt="" >
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-md-12">
+				<img class="img-responsive click-large" src="../images/1024x768/village.jpg" alt="" >
+			</div>
+		</div>
+
+		
+		
+	</div><!-- /. container-fluid -->
+
+	<div class="maskDiv"><!-- 定义遮罩层的容器 -->
+		<img class="center-block" src="" alt="" >
+	</div>
+
+	<div id="target"></div>
+	<script src="../bootstrap/dist/js/jquery-1.10.1.min.js"></script>
+	<script src="../bootstrap/dist/js/bootstrap.js"></script>
+	<script>
+		$(function() {
+
+			// 获得body元素的宽和高
+			// var bodyWidth = $( document.body ).width();
+			// var bodyHeight = $( document.body ).height();
+
+			var docWidth = $( document ).width();
+			var docHeight = $( document ).height();
+
+			$(".maskDiv").css({ // 为遮罩层设置样式
+				"position": "absolute",
+				"top": "0",
+				"left": "0",
+				"z-index": "10000",
+				"width": docWidth,
+				"height": docHeight,
+				"background-color": "#000",
+				"opacity": "1"
+			});
+
+
+			$(".click-large").click(function() { // 点击加遮罩层
+
+				$(".maskDiv").show(); // 显示遮罩层
+
+				$(".maskDiv img").attr("src", this.src).css({ // 将遮罩层中的图片路径设置为点击的图片路径
+					"position": "absolute",
+					"top": "50%",
+					"width": docWidth,
+					"margin-top": "-" + $(this).height() / 4 + "px"
+				});
+
+				$( "body" ).css("overflow", "hidden");
+			})
+
+			$(".maskDiv img, .maskDiv").click(function() { // 点击遮罩层中的图片，隐藏遮罩层
+				$(".maskDiv").hide();
+				$( "body" ).css("overflow", "auto");
+			})
+
+
+
+
+
+			
+
+		})
+
+
+	</script>
+</body>
+</html>
