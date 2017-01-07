@@ -1,0 +1,99 @@
+/* 设置主容器的内边距 */
+.container {
+	padding-top: 1.5%; 
+}
+
+/* 设置图标的样式 */
+.logo {
+	margin-top: -25%;
+	margin-left: 40%;
+}
+
+/* 设置用户登录和注册的链接样式 */
+ul.user li {
+	margin-top: 5%;
+	/* list-style-type: none;
+	display: inline-block; */
+}
+
+ul.user li:first-child {
+	border-right: 2px solid black;
+	padding-right: 3px;
+}
+
+ul.user li a {
+	color: #000;
+}
+
+/* 设置主导航的内部边距 */
+div.mainnav {
+	padding-left: 7%;
+}
+
+div.mainnav a {
+	color: #000;
+}
+
+/* 定义网页头部信息表格中的样式 */
+div.info table td {
+	padding: 0 10px;
+}
+
+/* 定义震荡宝网页模块 */
+div.shock {
+	margin-top: 10%;
+	margin-left: 13%;
+}
+
+/* 定义"震荡宝+1期"文字的颜色 */
+div.shockfont {
+	color: rgb(191,167,123);
+}
+
+/* 设置震荡宝图标 */
+/*table.shock tr:first-of-type {
+	text-align: center;
+}*/
+
+table.shock tr:first-of-type td {
+	padding-bottom: 5%;
+}
+
+table.shock tr:not(:first-of-type) td {
+	padding: 0 10px;
+}
+
+
+/* 设置到期利率大字号字体 */
+table.expireroi {
+	margin-top: 10%;
+}
+
+table.expireroi tr:first-of-type td {
+	/* text-align: center; */
+	padding-bottom: 7%;
+}
+
+table.expireroi tr:last-child td {
+	padding-top: 15%;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+/* 设置备注字体样式 */
+div.demo {
+	background-color: rgb(191,167,123); 
+	padding-left: 5%;
+	margin-top: 1%;
+}
+
+/* 改变银多网字体颜色 */
+span.yinduo {
+	color: rgb(191,167,123)
+}
+
+/* 设置网页底部和以上内容的间距 */
+div.footer {
+	margin-left: 30%;
+	margin-top: 5%;
+}

@@ -1,0 +1,273 @@
+nav {
+	background-color: #208D4E;
+}
+
+/* 设置广播链接 */
+.broadcast {
+	display: inline-block;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	color: #fff;
+}
+
+.broadcast:hover {
+	color: #fff;
+}
+
+/* 设置导航条中广播以下的内容 */
+.nav-bottom {
+	height: 354px;
+	background-color:#27AE60; 
+}
+
+.breadcrumb {
+	margin-top: 10px;
+	background-color: transparent;
+}
+
+.breadcrumb a {
+	color: #fff;
+}
+
+nav .container {
+	margin-top: 52px;
+}
+
+/* 标题和文字说明部分 */
+.boot-header,
+.text-state {
+	color: #fff;
+}
+
+.boot-header {
+	font: 45pt "Arial";
+	/* 设置文字阴影 */
+	text-shadow: -5px 5px 1px rgba(0,0,0,.15);
+}
+
+.text-state {
+	font: 17pt "宋体";
+}
+
+.small-title {
+	font: 10pt "微软雅黑";
+}
+
+.small-title .number {
+	font-weight: bold;
+}
+
+/* 设置nav-bottom中的表单效果 */
+form {
+	margin-top: 30px;
+}
+
+.form-control {
+	font-size: 20px;
+	height: 50px;
+	border-radius: 0;
+}
+
+/* 设置搜索图标 */
+.nav-bottom .glyphicon {
+	position: relative;
+	top: -36px;
+	left: 536px;
+	font-size: 22px;
+	opacity: .3;
+}
+
+/* 设置图标展示区域 */
+.icon-library {	
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #F5F5F5;
+}
+
+.icon-library ul {
+	margin-bottom: 0;
+}
+
+.icon-library ul li {
+	margin-right: 18px;
+}
+
+.icon-library ul li:last-child {
+	margin-right: 0;
+}
+
+/* 先将图片的颜色变成灰色，之后当光标悬浮上时，显示彩色图标并且透明度也随之改变 */
+
+.icon-library img {
+	-webkit-filter: grayscale(100%); 
+	-moz-filter: grayscale(100%); 
+	-ms-filter: grayscale(100%); 
+	-o-filter: grayscale(100%); 
+	filter: grayscale(100%); 
+	opacity: .7;
+}
+
+.icon-library img:hover {
+	-webkit-filter: grayscale(0%); 
+	-moz-filter: grayscale(0%); 
+	-ms-filter: grayscale(0%); 
+	-o-filter: grayscale(0%); 
+	filter: grayscale(0%); 
+	opacity: 1;
+}
+
+/* 设置选择协议 */
+.protocol {
+	margin-top: 20px;
+}
+
+.protocol span {
+	font-weight: bold;
+}
+
+/* 设置按钮的样式包括按钮点击时的样式 */
+
+.btn-group .btn {
+	outline: none !important;
+	background: linear-gradient(#fdfdfd, #ededed);
+}
+
+.btn-active {
+	background: #eee !important;
+	box-shadow: inset 2px 3px 5px rgba(0,0,0,.15);
+}
+
+/* 设置主体内容*/ 
+.table {
+	margin-top: 46px;
+}
+
+
+.table td {
+	border: 1px solid #ECF0F1 !important;
+}
+
+tbody > tr > td {
+	padding: 30px !important;
+}
+
+.table tr td:first-child {
+	width: 25%;
+	border-right: none !important;
+	color: #555;
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+.table tr td:last-child {
+	width: 75%;
+	border-left: none !important;
+}
+
+td .glyphicon {
+	font-size: 13px;
+	margin-top: 10px;
+}
+
+.td-text {
+	font-size: 13pt;
+	font-family: "Arial";
+}
+
+/* 设置页面底部导航 */
+.bottom-broadcast {
+	position: absoulte;
+	bottom: 0;
+	height: 50px;
+	line-height: 50px;
+	background-color: #28A45D;
+}
+
+
+
+.dotted { 
+	display: inline-block;
+	color: #fff;
+	line-height: 1;
+	border-bottom: dotted 1px #fff !important;
+}
+
+.dotted:hover { 
+	border-bottom: dotted 1px transparent !important;
+	color: #fff;
+}
+
+
+.bottom-broadcast .container {
+	color: #fff;
+}
+
+.bottom-broadcast .container > * {
+	font-family: "微软雅黑";
+	margin-right: 5px;
+}
+
+/* 设置底部导航的网格系统 */
+.footer-nav {
+	height: 312px;
+	margin-top: 80px;
+	background-color: #27AE60;
+}
+
+.row {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.row > div {
+	margin-top: 36px;
+	font-family: "微软雅黑";
+	color: #fff;
+}
+
+.row > div:not(:first-child) {
+	padding-left: 20px;
+}
+
+.sponsor {
+	width: 65%;
+	height: 95%;
+}
+
+/* 设置返回顶部图标 */
+.backToTop {
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	width: 34px;
+	height: 34px;
+	line-height: 34px;
+	border-radius: 3px;
+	background-color: #27AE60;
+	opacity: .7;
+	display: none;
+}
+
+.backToTop:hover {
+	opacity: 1;
+}
+
+.backToTop span {
+	color: #fff;
+	font-weight: 200 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+body {
+	padding-top: 50px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+/* 设置左侧导航条目 */
+.left-nav {
+	position: fixed;
+	width: 276px;
+	height: 100vh;
+	border-right: 1px solid #eee;
+	background-color: #F5F5F5;
+	overflow: hidden;
+}
+
+/* 消除网格系统中对最左侧的边距 */
+body > .container-fluid {
+	padding-right: 25px;
+	padding-left: 0;
+}
+
+/* 设置活动链接的背景色 */
+.left-nav .active a,
+.left-nav .active a:hover {
+	color: #fff;
+	background-color: #428BCA !important;
+}
+
+
+/* 调整sidebar-nav的样式 */
+.left-nav .nav > li > a {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+/* 设置.left-nav的顶部内部 */
+.left-nav { padding-top: 20px; }
+
+/* 对每一个slidbar-nav设置相应的底部外边距 */
+.left-nav .nav { margin-bottom: 20px; }
+
+.h1 { margin-top: -20px; }
+
+/* 设置span-thumbnail */
+.span-thumbnail {
+	border: 1px solid #CBCBCB;
+	border-radius: 50%;
+	padding: 4px 1px;
+}
+
+.table { margin-bottom: 50px; }
+
+
