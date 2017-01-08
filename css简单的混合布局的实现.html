@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		/* 设置头部 */
+		.top {
+			height: 100px;
+			background-color: #00f;
+		}
+
+		/* 设置内容主体容器 */
+		.main {
+			width: 1000px;
+			height: 600px;
+			background-color: #ccc;
+			margin: 0 auto;
+		}
+		
+		/* 中间的主题部分分成两列 */
+		.main .left {
+			float: left;
+			width: 300px;
+			height: 600px;
+			background-color: #333;
+		}
+
+		.main .right {
+			float: right;
+			width: 700px;
+			height: 600px;
+			background-color: #555;
+		}
+
+		/* 设置网页底部内容 */
+		.foot {
+			width: 1000px;
+			height: 100px;
+			margin: 0 auto;
+			background-color: #0f0;
+		}
+	</style>
+</head>
+<body>
+	<div class="top"></div>
+	<div class="main">
+		<div class="left">main-left</div>
+		<div class="right">main-right</div>
+	</div>
+	<div class="foot"></div>
+</body>
+</html>

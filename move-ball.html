@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#canvas {
+			display: block;
+			margin: 50px auto;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas">对不起，你的浏览器不支持canvas!</canvas>
+	<script>
+
+		var ball = {"x": 512, "y": 100, "r": 10, "g": 2, "vx": -4, "vy": 0, "color": "#058"};
+		window.onload = function() {
+			// 获得canvas对象
+			var canvas = document.getElementById('canvas');
+
+			// 获得context对象
+			var context = canvas.getContext("2d");
+
+			// 设置canvas的宽度和高度
+			canvas.width = 1024;
+			canvas.height = 768;
+
+			setInterval(function() {
+				// 渲染小球
+				render( context );
+
+				update(); // 更新整个屏幕，是小球运动起来
+			}, 50)
+
+
+		}
+
+		/* 刷新函数 */ 
+		function update() {
+			// 小球的横向
+			ball.x += ball.vx;
+			ball.y += ball.vy;
+			ball.vy += ball.g; // 小球的重力加速度
+
+			if (ball.y >= 768 - ball.r) {
+				ball.y = 768 - ball.r;
+				ball.vy = - ball.vy * 0.55;  // 使小球能够向上运动，同时要逼真的进行模拟空气中的摩擦力现象
+			}
+
+		} // update函数结束
+
+		/* 绘制小球 */
+		function render( cxt ) {
+			// 实时刷新
+			cxt.clearRect(0,0,cxt.canvas.width, cxt.canvas.height);
+
+			cxt.fillStyle = ball.color;
+			cxt.beginPath();
+			cxt.arc(ball.x, ball.y, ball.r, 0, 2*Math.PI);
+			cxt.closePath();
+
+			cxt.fill();
+
+
+		} // 渲染函数render结束
+	</script>
+</body>
+</html>

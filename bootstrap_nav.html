@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap示例2</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" ><!-- 适当的绘制和触屏缩放 -->
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+	<!-- {if it IE 9}>
+		<script src="../bootstrap/dist/js/html5.js"></script>
+	<!{endif}-->
+</head>
+<body style="background-color: #ccc;">
+	<!-- 导航条的制作 -->
+	<nav class="nav navbar-default navbar-inverse">
+		<div class="container">
+			<!-- 导航条标题 -->
+			<div class="navbar-header">
+			<!-- 导航条品牌 -->
+				<div class="navbar-brand">Bootstrap</div>
+				<p class="navbar-text">欢迎光临！</p>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#">起步</a></li>
+					<li><a href="#">CSS样式</a></li>
+					<li><a href="#">组件</a></li>
+					<li><a href="#">JavaScript组件</a></li>
+				</ul>
+				<form action="" class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="submit">
+					</div>
+					<button type="button" class="btn btn-success">Submit</button>
+				</form>
+			</div><!-- end of navbar-collapse -->
+		</div>
+	</nav>
+
+	<div class="container" style="background-color: #fff; padding: 30px;">
+		<!-- 胶囊式标签页 -->
+		<h2 class="page-header">胶囊式标签页</h2>
+		<ul class="nav nav-pills">
+			<li role="presentation" class="active"><a href="#">Home</a></li>
+			<li role="presentation"><a href="#">profile</a></li>
+			<li role="presentation"><a href="#">message</a></li>
+		</ul>
+
+		<h2 class="page-header">垂直排列的胶囊式标签页</h2>
+		<div class="row">
+			<ul class="nav nav-pills nav-stacked col-md-1"><!-- .nav-stacked代表的是垂直排列的胶囊式标签 -->
+				<li role="presentation" class="active text-center"><a href="#">Home</a></li>
+				<li role="presentation"><a href="#">profile</a></li>
+				<li role="presentation"><a href="#">message</a></li>
+			</ul>
+		</div>
+
+		<h2 class="page-header">路径导航(面包屑导航)</h2>
+		<ol class="breadcrumb">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Library</a></li>
+			<li class="active">Data</li>
+		</ol>
+
+		<h2 class="page-header">图片样式</h2>
+		<img src="images/220x165/litchi.jpg" alt="" class="thumbnail">
+
+		<h2 class="page-header">缩略图样式</h2>
+		<div class="row"><!-- 需要将缩略图放到栅格系统中 -->
+			<div class="col-md-4"><!-- Banana -->
+				<a href="#" class="thumbnail"><img src="images/220x171/banana.jpg" alt=""></a>
+				<div class="caption">
+					<h4>Banana</h4>
+					<p>
+						：Musa nana Lour.）芭蕉科芭蕉属植物，又指其果实。热带地区广泛栽培食用。香蕉味香、富含营养，终年可收获，在温带地区也很受重视。植株为大型草本，从根状茎发出，由叶鞘下部形成高3～6公尺(10～20尺)的假杆；叶长圆形至椭圆形，有的长达3～3.5公尺(10～11.5尺)，宽65公分(26寸)，10～20枚簇生茎顶。穗状花序大，由假杆顶端抽出，花多数，淡黄色；果序弯垂，结果10～20串，约50～150个。植株结果后枯死，由根状茎长出的吸根继续繁殖，每一根株可活多年。原产亚洲东南部：台湾
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-4"><!-- litchi -->
+				<a href="#" class="thumbnail"><img src="images/220x165/litchi.jpg" alt=""></a>
+				<div class="caption">
+					<h4 class="text-center">litchi</h4>
+					<p>
+						枝（学名：Litchi chinensis Sonn.）无患子科，荔枝属常绿乔木，高约10米。果皮有鳞斑状突起，鲜红，紫红。成熟时至鲜红色；种子全部被肉质假种皮包裹。花期春季，果期夏季。果肉产鲜时半透明凝脂状，味香美，但不耐储藏。
+						分布于中国的西南部、南部和东南部，广东和福建南部栽培最盛。亚洲东南部也有栽培，非洲、美洲和大洋洲有引种的记录。 荔枝与香蕉、菠萝、龙眼一同号称“南国四大果品”。
+						荔枝味甘、酸、性温，入心、脾、肝经；可止呃逆，止腹泻，是顽固性呃逆及五更泻者的食疗佳品，同时有补脑健身，开胃益脾，有促进食欲之功
+					</p>
+				</div>
+			</div>
+
+			<div class="col-md-4"><!-- orange -->
+				<a href="#" class="thumbnail"><img src="images/220x156/orange.jpg" alt=""></a>
+				<div class="caption">
+					<h4>orange</h4>
+					<p>
+						皮包裹。花期春季，果期夏季。果肉产鲜时半透明凝脂状，味香美
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<h2 class="page-header">分页效果的制作</h2>
+		<div class="text-center">
+			<ul class="pagination"><!-- .pagination代表分页 -->
+				<li><a href="#">&laquo;</a></li>
+				<li><a href="#">1</a></li>
+				<li class="active"><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">&raquo;</a></li>
+			</ul>
+		</div>
+
+		<h2 class="page-header">对齐链接</h2>
+		<ul class="pager">
+			<li class="previous"><a href="#"> <span>&larr;</span> Older</a></li>
+			<li class="next"><a href="#"> Newer<span>&rarr;</span> </a></li>
+		</ul>
+	</div>
+	<script src="../bootstrap/dist/js/jquery-1.10.1.min.js"></script>
+	<script src="../bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

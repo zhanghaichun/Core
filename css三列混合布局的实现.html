@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		/* 设置头部 */
+		.top {
+			height: 100px;
+			background-color: #00f;
+		}
+
+		/* 设置头部内容中的容器 */
+		.top .top-inner {
+			width: 1000px;
+			height: 100px;
+			margin: 0 auto;
+			background-color: #a8df7f;
+		}
+
+		/* 设置内容主体容器 */
+		.main {
+			width: 1000px;
+			height: 600px;
+			background-color: #ccc;
+			margin: 0 auto;
+		}
+		
+		/* 中间的主题部分分成两列 */
+		.main .left {
+			float: left;
+			width: 300px;
+			height: 600px;
+			background-color: #333;
+		}
+
+		.main .right {
+			float: right;
+			width: 700px;
+			height: 600px;
+			background-color: #555;
+		}
+		
+		/* 将中间右侧的元素再继续分成两列，形成混合的三列布局 */
+		.right .sub-left {
+			float: left;
+			width: 300px;
+			height: 600px;
+			background-color: #353553;
+		}
+
+		.right .sub-right {
+			float: right;
+			width: 400px;
+			height: 600px;
+			background-color: #272727;
+		}
+
+		/* 设置网页底部内容 */
+		.foot {
+			width: 1000px;
+			height: 100px;
+			margin: 0 auto;
+			background-color: #0f0;
+		}
+	</style>
+</head>
+<body>
+	<!-- 设置头部内容 -->
+	<div class="top">
+	    <div class="top-inner">top-inner</div>
+	</div>
+
+	<!-- 设置主体部分 -->
+	<div class="main">
+		<div class="left">main-left</div>
+		<div class="right">
+			<div class="sub-left">sub-left</div>
+			<div class="sub-right">sub-right</div>
+		</div>
+	</div>
+
+	<!-- 设置页脚 -->
+	<div class="foot">footer</div>
+</body>
+</html>

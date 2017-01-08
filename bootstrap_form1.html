@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap示例2</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" ><!-- 适当的绘制和触屏缩放 -->
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/test003.css">
+	<!-- {if it IE 9}>
+		<script src="../bootstrap/dist/js/html5.js"></script>
+	<!{endif}-->
+</head>
+<body style="background-color: #ccc; padding: 50px;">
+	<div class="container" style="background-color: #fff; padding: 30px;">
+		<form action="" class="form-horizontal">
+			<fieldset disabled>
+				<legend>个人信息：</legend>
+				<div class="form-group">
+					<label for="" class="col-md-2 control-label">Name:</label>
+					<div class="col-md-6">
+						<input type="text" class="form-control" placeholder="请输入姓名">
+					</div>
+					<span class="help-block col-md-4">你输入的信息是正确的</span>
+				</div>
+				<div class="form-group">
+					<label for="" class="control-label">Tel:</label> <input type="text" class="form-control" placeholder="请输入电话号码">
+				</div>
+				<div class="form-group">
+					<label for="" class="control-label">Email:</label> <input type="text" class="form-control" placeholder="请输入电子邮箱地址">
+				</div>
+			</fieldset>
+		</form>
+		
+		<h3 class="page-header">分列式按钮下拉菜单</h3>
+		<div class="btn-group">
+			<button type="button" class="btn btn-inverse">Default</button>
+			<button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a href="#">item1</a></li>
+				<li><a href="#">item2</a></li>
+				<li><a href="#">item3</a></li>
+				<li class="divider"><a href="#"></a></li>
+				<li><a href="#">item4</a></li>
+			</ul>
+		</div>
+
+		<h2 class="page-header">链接按钮</h2>
+		<button class="btn btn-link" type="button">链接按钮</button>
+
+		<p class="text-success">
+			度越高，链格孢毒素含量越高，离病<img src="images/litchi/litchi1.jpg" alt="" style="vertical-align: text-bottom;">斑越远的部分，含量则越低。所以，并不是所有烂水果都不能吃。如果机械损伤和冷害的水果，只要没长时间放置，滋生微生物的话，还是可以吃；而对于霉变腐烂的水果，如果霉变的部分不是很严重，挖去病斑外2cm处，剩余部分还可以食用，如果霉变超过水果三分之一甚至
+		</p>
+
+		<h2 class="page-header">响应式图片</h2>
+		<img src="images/litchi/litchi2.jpg" alt="" class="img-circle img-responsive" style="width: 140px; height: 140px; ">
+
+		<h2 class="page-header">圆角图片</h2>
+		<img src="images/litchi/litchi3.jpg" alt="" style="width: 140px; height: 140px; " class="img-thumbnail">
+
+		<h2 class="page-header">所有可用的图标</h2>
+		<form action="">
+			<div class="form-group has-success has-feedback">
+				<label for="username" class="control-label">用户名：</label>
+				<input type="text" id="username" class="form-control">
+				<span class="glyphicon glyphicon-off form-control-feedback"></span>
+			</div>
+		</form>
+
+	</div>
+	<script src="bootstrap/dist/js/jquery-1.10.1.min.js"></script>
+	<script src="bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>
