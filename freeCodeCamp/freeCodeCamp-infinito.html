@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>infinito main content</title>
+	<link rel="stylesheet" href="./stylesheet/normalize.css">
+	<link rel="stylesheet" href="./fontawesome/css/font-awesome.min.css">
+	<style>
+		body {
+			font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+			font-weight: 700;
+			margin: 0;
+			padding: 0;
+			padding-top: 50px;
+		}
+
+		/* 导航 */
+		nav {
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			height: 50px;
+			width: 100%;
+			background-color: #B0AFAF;
+		}
+
+		nav .nav_vessel {
+			width: 1200px;
+			margin: 0 auto;
+			padding: 0 10px;
+			height: inherit;
+			background: #BFBFBF;
+		}
+
+		nav .left {
+			float: left;
+			height: 100%;
+			padding: 0 10px;
+			cursor: pointer;
+		}
+
+		nav .left:hover {
+			background: rgba(255,255,255,.6);
+		}
+
+		nav .right {
+			float: right;
+			height: 100%;
+		}
+
+		nav .right ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			height: inherit;
+		}
+
+		nav .right ul li {
+			float: left;
+			padding: 0 15px;
+			height: inherit;
+			background: #AEAEAE;
+		}
+
+		nav .right ul li:hover {
+			background: rgba(255,255,255,.6);
+		}
+
+		nav a {
+			display: inline-block;
+			margin-top: 16px;
+			text-decoration: none;
+			color: #000;
+		}
+
+		/* 第一屏 */
+		.first_screen {
+			height: 755px;
+			background: url('./images/Infinito/first_screen.jpg') no-repeat center center fixed;
+			background-size: cover;
+		}
+
+		.first_vessel {
+			width: 1200px;
+			margin: 0 auto;
+			text-align: center;
+			padding-top: 120px;
+		}
+
+		.first_screen h1,
+		.first_screen h2 {
+			margin: 0;
+		}
+
+		.first_screen h1 {
+			font-size: 64px;
+			color: rgba(255,255,255,.7);
+			text-shadow: 2px 1px 2px #000;
+		}
+
+		.first_screen h2 {
+			margin: 20px 0;
+		}
+
+		.first_screen hr {
+			height: 0;
+			border: 0;
+			border-bottom: 1px solid #777;
+			box-shadow: 2px 1px 1px #666;
+		}
+
+		.first_screen .button_group {
+			margin-top: 30px;
+		}
+
+		.first_screen .button_group button {
+			padding: 14px 28px;
+			color: #000;
+			font-family: inherit;
+			background: #C0C0C0;
+			border: 2px solid #000;
+			border-radius: 6px;
+			box-shadow: 2px 2px 1px #000;
+			margin-right: 10px;
+			font-family: inherit;
+			font-weight: bold;
+			text-shadow: 1px 0px 1px #000;
+			font-size: 1.2em;
+			-webkit-transition: all .2s;
+			-moz-transition: all .2s;
+			-ms-transition: all .2s;
+			-o-transition: all .2s;
+			transition: all .2s;
+		}
+
+		.first_screen .button_group button:hover {
+			position: relative;
+			background: #000;
+			color: white;
+			-webkit-transform: scale(1.1);
+			-moz-transform: scale(1.1);
+			-ms-transform: scale(1.1);
+			-o-transform: scale(1.1);
+			transform: scale(1.1);
+		}
+
+		/* 第二屏 */
+		.second_screen {
+			height: 755px;
+			background: url('./images/Infinito/second_screen.jpg') no-repeat center center fixed;
+			background-size: cover;
+			font-weight: bold;
+			font-family: inherit;
+		}
+
+		.second_screen .head_title {
+			margin: 0;
+			font-size: 40px;
+			margin-bottom: 10px;
+		}
+
+		.second_screen .second_vessel {
+			width: 1200px;
+			margin: 0 auto;
+			padding-top: 100px;
+
+		}
+
+		.second_screen .left {
+			float: left;
+			width: 500px;
+		}
+
+		.second_screen .right {
+			float: right;
+		}
+
+		.second_screen .right img {
+			border-radius: 50%;
+			border: 1px solid #ddd;
+			padding: 1px;
+		}
+
+		.second_screen .head_intro {
+			font-size: 24px;
+		}
+
+		.second_screen .head_intro .content_item {
+			line-height: 1.3;
+		}
+
+		.second_screen .white_text {
+			text-decoration: none;
+			color: white;
+		}
+
+		.second_screen .white_text:hover {
+			color: #003AFF;
+			text-decoration: underline;
+		}
+
+		/* 第三屏 */
+		.third_screen {
+			height: 830px;
+			background: url('./images/Infinito/third_screen.jpg') no-repeat center center fixed;
+			background-size: cover;
+			font-weight: bold;
+			font-family: inherit;
+		}
+
+		.third_screen hgroup > * {
+			margin: 0;
+			padding: 0;
+		}
+
+		.third_screen hgroup h1 {
+			font-size: 44px;
+			padding-bottom: 18px;
+		}
+
+		.third_screen hgroup h2 {
+			font-size: 25px;
+			padding-bottom: 18px;
+		}
+
+		.third_screen .third_vessel {
+			width: 1200px;
+			margin: 0 auto;
+			text-align: center;
+			padding-top: 78px;
+		}
+
+		.third_screen .col {
+			position: relative;
+			z-index: 0;
+			float: left;
+			border: 1px solid #ddd;
+			/*border-radius: 4px;*/
+			padding: 0 8px;
+			margin-bottom: 20px;
+			-webkit-transition: all 0.4s;
+			-moz-transition: all 0.4s;
+			-ms-transition: all 0.4s;
+			-o-transition: all 0.4s;
+			transition: all 0.4s;
+		}
+
+		/*.third_screen .col:hover {
+			
+		}*/
+
+		.third_screen .col img {
+			width: 350px;
+			height: 200px;
+		}
+
+		.third_screen .col .col_text {
+			height: 70px;
+			color: white;
+			background: #222;
+			/*margin-left: -8px;
+			margin-right: -8px;*/
+			box-sizing: border-box;
+			padding-top: 16px;
+			margin-top: -4px;
+		}
+
+		.third_screen .col .icon_overlay {
+			position: absolute;
+			display: none;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: rgba(0,0,0,.7);
+		}
+
+		.third_screen .col .icon_overlay i {
+			display: block;
+			color: white;
+			font-size: 3em;
+			margin-top: 98px;
+		}
+
+		/* 第四屏 */
+		.fourth_screen {
+			height: 755px;
+			background: url('./images/Infinito/fourth_screen.jpg') no-repeat center center fixed;
+			background-size: cover;
+			font-weight: bold;
+			font-family: inherit;
+		}
+
+		.fourth_screen .fourth_vessel {
+			width: 1200px;
+			margin: 0 auto;
+			padding-right: 50px;
+			box-sizing: border-box;
+			padding-top: 100px;
+		}
+
+		.fourth_screen .left {
+			float: left;
+		}
+
+		.fourth_screen .right {
+			float: right;
+		}
+
+		.fourth_screen button {
+			display: block;
+			padding: 14px 28px;
+			color: #000;
+			font-family: inherit;
+			background: #C0C0C0;
+			border: 2px solid #000;
+			border-radius: 6px;
+			box-shadow: 2px 2px 1px #000;
+			margin-right: 10px;
+			font-family: inherit;
+			font-weight: bold;
+			text-shadow: 1px 0px 1px #000;
+			font-size: 1.2em;
+			-webkit-transition: all .2s;
+			-moz-transition: all .2s;
+			-ms-transition: all .2s;
+			-o-transition: all .2s;
+			transition: all .2s;
+			margin-bottom: 20px;
+		}
+
+		.fourth_screen button:hover {
+			position: relative;
+			background: #000;
+			color: white;
+			-webkit-transform: scale(1.1);
+			-moz-transform: scale(1.1);
+			-ms-transform: scale(1.1);
+			-o-transform: scale(1.1);
+			transform: scale(1.1);
+		}
+
+		.fourth_screen .head_title {
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		/* 页脚 */
+		footer {
+			height: 150px;
+			background: #bbb;
+			box-sizing: border-box;
+			padding-top: 50px;
+		}
+
+		footer .footer_vessel {
+			width: 1200px;
+			margin: 0 auto;
+		}
+
+		.footer_vessel ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.footer_vessel ul li {
+			float: left;
+			margin-right: 10px;
+		}
+
+		.footer_vessel ul li a {
+			font-size: 13px;
+			text-decoration: none;
+			color: #0080FF;
+		}
+
+		.footer_vessel ul li a:hover {
+			text-decoration: underline;
+			color: #5A00FF;
+		}
+
+		.footer_vessel .footer_copy {
+			font-size: 13px;
+			color: #777;
+			font-weight: 100;
+		}
+
+		
+
+		/* 清除浮动 */
+		.clearfloat:before,
+		.clearfloat:after {
+		  display: table;
+		  content: '';
+		}
+
+		.clearfloat:after {
+		  clear:both;
+		}
+	</style>
+</head>
+<body>
+<!-- 导航 -->
+<nav>
+	<div class="nav_vessel clearfloat">
+		<div class="left">
+			<a href="javascript: void(0);">Thiago Ferrira</a>
+		</div>
+		<div class="right">
+			<ul>
+				<li><a href="#Home">Home</a></li>
+				<li><a href="#About">About</a></li>
+				<li><a href="#Portfolio">Portfolio</a></li>
+				<li><a href="#Contact">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!-- 第一屏 -->
+<div id="Home" class="first_screen">
+	<div class="first_vessel">
+		<hgroup>
+			<h1>Infinito Web Design Studio</h1>
+			<h2>Where Awesomeness Is Brought To Life.</h2>
+		</hgroup>
+		<hr />
+		
+		<div class="button_group">
+			<button><i class="fa fa-twitter"></i> Twitter</button>
+			<button><i class="fa fa-github"></i> Github</button>
+			<button><i class="fa fa-linkedin"></i> Linkedin</button>
+			<button><i class="fa fa-fire"></i> freeCodeCamp</button>
+		</div>
+	</div>
+</div>
+
+<!-- 第二屏 -->
+<div id="About" class="second_screen">
+	<div class="second_vessel clearfloat">
+		<div class="left">
+			<p class="head_title">Infinito Web Design Studio.</p>
+			<div class="head_intro">
+				<div class="content_item">
+					I'm a <a class="white_text" href="javascript: void(0);">self taught</a> web designer, developer, co-founder and entrepreneur based in Finland.
+				</div>
+				<div class="content_item">
+					I'm currently part of a small web development team in an upcoming start-up, building web and mobile applications.
+				</div>
+				<div class="content_item">
+					My passion is to use technology based solutions, to help solve real world challenges.
+				</div>
+				<div class="content_item">
+					Competences:
+				</div>
+				<div class="content_item">
+					Languages and Frameworks:
+				</div>
+				<div class="content_item">
+					Javascript, HTML5, CSS3, jQuery, Bootstrap3, Angular.js, Meteor.js.
+				</div>
+				<div class="content_item">
+					Tools &amp; expertise:
+				</div>
+				<div class="content_item">
+					Git, Responsive Web Design, Agile Methodologies.
+				</div>
+			</div>
+		</div>
+		<div class="right">
+			<img src="./images/Infinito/header_portrait.jpg" alt="">
+		</div>
+	</div>
+</div>
+
+<!-- 第三屏 -->
+<div id="Portfolio" class="third_screen">
+	<div class="third_vessel">
+		<hgroup>
+			<h1>Awesomeness Portfolio.</h1>
+			<h2>Below you'll find some of my recent work.</h2>
+		</hgroup>
+		<div class="row clearfloat">
+			<div class="col">
+				<img src="./images/Infinito/angular.jpg" alt="">
+				<div class="col_text">
+					<span>Twitch.tv API project</span><br />
+					<span>Bootstrap and Angularjs</span>
+				</div>
+				<div class="icon_overlay"><i class="fa fa-fire"></i></div>
+			</div>
+			<div class="col">
+				<img src="./images/Infinito/javascript.jpg" alt="">
+				<div class="col_text">
+					<span>Wikipedia Search Engine</span><br />
+					<span>Bootstrap and jQuery</span>
+				</div>
+				<div class="icon_overlay"><i class="fa fa-fire"></i></div>
+			</div>
+			<div class="col">
+				<img src="./images/Infinito/calculator.jpg" alt="">
+				<div class="col_text">
+					<span>Stainless Steel Calculator</span><br />
+					<span>SCSS and Vanilla Javascript</span>
+				</div>
+				<div class="icon_overlay"><i class="fa fa-fire"></i></div>
+			</div>
+		</div>
+		<div class="row clearfloat">
+			<div class="col">
+				<img src="./images/Infinito/timer.png" alt="">
+				<div class="col_text">
+					<span>Pomodoro Timer Zipline</span><br />
+					<span>Bootstrap and Angular.js</span>
+				</div>
+				<div class="icon_overlay"><i class="fa fa-fire"></i></div>
+			</div>
+			<div class="col">
+				<img src="./images/Infinito/map.jpg" alt="">
+				<div class="col_text">
+					<span>Weather App</span><br />
+					<span>Bootstrap and Vanilla Javascript</span>
+				</div>
+				<div class="icon_overlay"><i class="fa fa-fire"></i></div>
+			</div>
+			<div class="col">
+				<img src="./images/Infinito/jquery.gif" alt="">
+				<div class="col_text">
+					<span>Pacman Tic Tac Toe</span><br />
+					<span>CSS and jQuery</span>
+				</div>
+				<div class="icon_overlay"><i class="fa fa-fire"></i></div>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<!-- 第四屏 --> 
+<div id="Contact" class="fourth_screen">
+	<div class="fourth_vessel clearfloat">
+		<div class="left">
+			<div class="head_title">
+				Connect with Infinito Web Design Studio: <br />
+				thiagoferreira.mail@gmail.com
+			</div>
+		</div>
+		<div class="right">
+			<div class="button_group">
+				<button><i class="fa fa-twitter"></i> Twitter</button>
+				<button><i class="fa fa-github"></i> Github</button>
+				<button><i class="fa fa-linkedin"></i> Linkedin</button>
+				<button><i class="fa fa-fire"></i> freeCodeCamp</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 页脚 --> 
+<footer>
+	<div class="footer_vessel">
+		<ul class="footer_lists clearfloat">
+			<li><a href="#Home">Home</a></li>
+			<li>·</li>
+			<li><a href="#About">About</a></li>
+			<li>·</li>
+			<li><a href="#Portfolio">Portfolio</a></li>
+			<li>·</li>
+			<li><a href="#Contact">Contact</a></li>
+		</ul>
+		
+		<p class="footer_copy">Copyright © Infinito Web Design Studio 2015. All Rights Reserved</p>
+	</div>
+</footer>
+<script src="http://lib.sinaapp.com/js/jquery/2.0/jquery.min.js"></script>
+<script>
+	$(function() {
+
+		// 第三屏 鼠标悬停显示效果
+		$('.row .col').hover(function() {
+			$(this).find('.icon_overlay').fadeIn(300);
+			$(this).css({"box-shadow": '5px 8px 8px #000'});
+			// console.log($(this));
+		},function() {
+			$(this).find('.icon_overlay').fadeOut(300);
+			$(this).css({"box-shadow": 'none'});
+		});
+	})
+</script>
+</body>
+</html>

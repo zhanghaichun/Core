@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>一个精美的导航条切换样式</title>
+	<style>
+		body {
+			background: #444;
+		}
+
+		ul {
+			position: relative;
+			padding: 0;
+		}
+
+		ul li {
+			float: left;
+			position: relative;
+			list-style: none;
+			width: 160px;
+			height: 60px;
+			line-height: 60px;
+			background: #E95546;
+			text-align: center;
+			color: white;
+			font-weight: bold;
+			box-sizing: border-box;
+			-webkit-transition: all .5s;
+			-ms-transition: all .5s;
+			-moz-transition: all .5s;
+			-o-transition: all .5s;
+			transition: all .5s;
+			cursor: pointer;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			-o-user-select: none;
+			user-select: none;
+			overflow: hidden;
+		}
+
+		ul li.slider {
+			position: absolute;
+			left: 0;
+			top: 55px;
+			width: 160px;
+			height: 5px;
+			background: #4FC2E5;
+		}
+
+		span.ripple {
+			position: absolute;
+			width: 0;
+			height: 0;
+			-webkit-transform: scale(0);
+			-moz-transform: scale(0);
+			-ms-transform: scale(0);
+			-o-transform: scale(0);
+			transform: scale(0);
+			background: rgba(255,255,255,.4);
+			opacity: 1;
+			border-radius: 50%;
+		}
+
+		.rippleEffect {
+			-webkit-animation: rippleDrop .4s linear;	
+			animation: rippleDrop .4s linear;	
+		}
+
+		@-webkit-keyframes rippleDrop {
+			100% {
+				-webkit-transform: scale(2);
+				transform: scale(2);
+				opacity: 0;
+			}
+		}
+
+		@keyframes rippleDrop {
+			100% {
+				transform: scale(2);
+				opacity: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+
+<ul>
+	<li class="active">Tab One</li>
+	<li>
+		Tab Two
+	</li>
+	<li>Tab Three</li>
+	<li>Tab Four</li>
+	<li class='slider'></li>
+</ul>
+
+<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/2.0/jquery.min.js"></script>
+<script>
+$(function() {
+	// 标签选项切换效果
+	// $('ul li').each(function(index) {
+	// 	$(this).click(function() {
+	// 		$('li.slider').css({
+	// 			'left': index*160 + 'px'
+	// 		});
+	// 	});
+	// });
+
+	// 标签选项点击事件
+$("ul li").click(function(e) {
+ 	
+ 	// 如果点击的元素带有,slider, 则该函数直接结束
+  if ($(this).hasClass('slider')) {
+    return; // 函数结束
+  }
+ 	
+ 	// 返回所点击元素的index值
+  var whatTab = $(this).index();
+ 	
+ 	// 定义移动的距离
+  var howFar = 160 * whatTab;
+ 	
+ 	// 设置.slider元素应该移动的距离
+  $(".slider").css({
+    left: howFar + "px"
+  });
+ 	
+  // 首先将水波效果容器移除
+  $("span.ripple").remove();
+ 			
+ 			// 计算被点击元素相对于文档左边的距离
+  var posX = $(this).offset().left,
+  		// 计算被点击元素相对于文档上边的距离
+      posY = $(this).offset().top,
+      // 计算被点击元素的宽度
+      buttonWidth = $(this).width(),
+      // 计算被点击元素的高度
+      buttonHeight = $(this).height();
+ 	
+ 	// 将内容插入到被点击元素内部的最前端
+  $(this).prepend("<span class='ripple'></span>");
+ 	
+ 	// 将buttonWidth和buttonHeight的值设置为相等的值
+  if (buttonWidth >= buttonHeight) {
+    buttonHeight = buttonWidth;
+  } else {
+    buttonWidth = buttonHeight;
+  }
+ 	
+ 	// e.pageX和e.pageY分别为点击位置的横纵坐标
+  var x = e.pageX - posX - buttonWidth / 2;
+  var y = e.pageY - posY - buttonHeight / 2;
+
+ 	// 动态设置水波效果容器的位置和动画效果
+  $(".ripple").css({
+    width: buttonWidth,
+    height: buttonHeight,
+    top: y + 'px',
+    left: x + 'px'
+  }).addClass("rippleEffect");
+
+  // console.log(e.pageX + ':' + e.pageY);
+   
+});               
+
+
+})
+
+
+</script>
+</body>
+</html>
