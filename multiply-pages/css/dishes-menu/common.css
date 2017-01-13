@@ -1,0 +1,81 @@
+/* 设置网页头部 */
+.public-header {
+	height: 110px;
+}
+
+
+/* 设置网站头部logo */
+.public-header .header-logo {
+	float: left;
+	margin-top: 46px;
+}
+
+/* 设置网站头部logo链接 */
+.public-header .header-logo a {
+	height: 54px;
+	width: 181px;
+	background-image: url(../../images/dishes-menu/index-header-logo.png);
+}
+
+/* 设置网站头部导航 */
+.public-header .header-nav {
+	float: right;
+	font-size: 14px;
+	margin-top: 46px;
+}
+
+/* 设置头部列表项 */
+.public-header .header-nav .item{
+	float: left;
+	margin-left: 50px;
+}
+
+/* 设置字体样式 */
+.public-header .header-nav a {
+	color: #3b3b3b;
+}
+
+/* 设置a链接：鼠标悬浮的样式 */
+.public-header .header-nav a:hover {
+	text-decoration: underline;
+}
+
+/* 设置居中容器 */
+.public-container {
+	width: 1100px;
+	position: relative;
+	margin: 0 auto;
+}
+
+
+/* 设置网页底部 */
+.public-footer {
+	height: 218px;
+	padding-top: 100px;
+	background-color: #3b3b3b;
+	margin-top: 200px;
+}
+
+/* 设置页面底部的多栏消息 */
+.public-footer .footer-col {
+	float: left;
+	margin-right: 60px;
+	width: 230px;
+	font-size: 16px;
+	line-height: 1.8;
+	color: #fff;
+}
+
+/* 减去最后一栏中右外边距 */
+.public-footer .footer-col:last-child {
+	margin-right: 0px;
+}
+
+/* 设置尾部图标 */
+.footer-col .footer-logo {
+	width: 182px;
+	height: 55px;
+	margin-top: -15px;
+	margin-bottom: 7px;
+	background-image: url(../../images/dishes-menu/index-header-logo-inverse.png);
+}

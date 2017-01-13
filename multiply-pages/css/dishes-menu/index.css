@@ -1,0 +1,282 @@
+
+/* 设置banner图的容器的样式 */
+
+.index-banner {
+	position: relative;
+	background-color: #b3b3b3;
+}
+
+/* 设置banner图中背景图片的样式 */
+.index-banner-bg {
+	height: 570px;
+	overflow: hidden;
+}
+
+/* 设置图片大小为自适应 */
+.index-banner-bg img {
+	margin: 0 auto;
+}
+
+/* 设置banner图上的文字位置 */
+.index-banner-text {
+	position: absolute;
+	top: 212px;
+	left: 50%;
+	margin-left: -388px;
+}
+
+/* 设置文字logo */
+.index-banner-text .text-logo {
+	width: 776px;
+	height: 117px;
+	background: url("../../images/dishes-menu/text-logo.png") no-repeat;
+	margin-bottom: 19px;
+}
+
+/* 设置文字样式 */
+.index-banner-text .text-info {
+	color: #fff;
+	text-align: center;
+}
+
+.index-banner-text .text-info .txt {
+	margin: 0 27px;
+}
+
+/* 设置文字两边横线的样式 */
+.index-banner-text .text-info .line {
+	width: 40px;
+	border-top: 1px solid #fff;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* 菜单设置 */
+.index-menu {
+	position: relative;
+	border-top: 4px solid #f34949;
+}
+
+/* 设置 The Menu菜单的位置 */
+.index-menu .menu-tips {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 156px;
+	margin-left: -78px;
+	height: 75px;
+	text-align: center;
+	line-height: 65px;
+	color: #fff;
+	background: #f34949;
+}
+
+/* css设置正三角效果 */
+.index-menu .menu-tips:after {
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-right: 78px solid transparent;
+	border-bottom: 10px solid #fff;
+	border-left: 78px solid transparent;
+}
+
+/* 设置菜单列表样式 */
+.index-menu .menu-list {
+	margin-top: 152px;
+	overflow: hidden;
+	color: #555;
+}
+
+.index-menu .menu-list ul {
+	width: 1160px;
+}
+
+.index-menu .menu-list a {
+	color: #555;
+}
+
+/* 设置列表项 */
+.index-menu .menu-item {
+	float: left;
+	width: 520px;
+	margin-right: 60px;
+	margin-bottom: 60px;
+}
+
+/* 设置列表项中的内容 */
+.index-menu .menu-item .title, .index-menu .menu-item .line {
+	float: left;
+}
+
+.index-menu .menu-item .price {
+	float: right;
+}
+
+.index-menu .menu-item .title {
+	width: 230px;
+	overflow: hidden;
+	text-overflow: ellipsis; /* 多余文字用省略号(...)来表示 */
+	white-space: nowrap; /* 多余文字禁止换行显示 */
+}
+
+.index-menu .menu-item .line {
+	margin-top: 10px;
+	width: 192px;
+	border-top: 1px solid #e3e1e1;
+	/*vertical-align: middle;*/
+}
+
+/* 设置菜肴注释 */
+.index-menu .menu-item .comment {
+	font-size: 12px;
+	margin-top: 10px;
+	color: #b7b7b7;
+}
+
+/* Load More 按钮 */
+.index-menu .menu-more-btn {
+	margin: 0 auto;
+	height: 32px;
+	line-height: 32px;
+	border: 1px solid #d7d5d5;
+	color: #b7b7b7;
+	padding-left: 16px;
+	font-size: 14px;
+	width: 114px;
+	border-radius: 3px;
+}
+
+.index-menu .menu-more-btn .icon {
+	background: url(../../images/dishes-menu/more-icon.png) no-repeat;
+	margin-left: 12px;
+	display: inline-block;
+	width: 12px;
+	height: 7px;
+}
+
+/* 设置面板 */
+.index-panel {
+	margin-top: 200px;
+}
+
+/* 设置面板标题 */
+.index-panel-header h3 {
+	float: left;
+	font-size: 20px;
+	font-weight: normal;
+	color: #626262;
+	margin-right: 48px;
+}
+
+
+/* 设置直线 */
+.index-panel-header .line {
+	float: left;
+	margin-top: 12px;
+	width: 200px;
+	border-top: 1px solid #e3e1e1;
+}
+
+.index-panel-header .btn-group {
+	float: right;
+	font-size: 0; /* 清除display: block;  所带来的外边距*/
+}
+
+/* 设置小圆圈 */
+.index-panel-header .btn {
+	display: inline-block;
+	height: 9px;
+	width: 9px;
+	margin-right: 11px;
+	border-radius: 50%;
+	background: #dedede;
+}
+
+.index-panel-header .active {
+	background: #9b9b9b;
+}
+
+
+/* 设置面板主体 */
+.index-panel-body {
+	margin-top: 80px;
+}
+
+.index-food-list {
+	overflow: hidden;
+}
+
+.index-food-list ul {
+	width: 1160px;
+}
+
+.index-food-list .food-item {
+	float: left;
+	width: 230px;
+	margin-right: 60px;
+}
+
+/* 设置菜肴的图片 */
+.index-food-list .food-item .banner {
+	margin-bottom: 30px;
+	height: 202px;
+}
+
+/* 设置菜肴的名称 */
+.index-food-list .food-item .name {
+	color: #555;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+/* 设置菜肴的价格 */
+.index-food-list .food-item .name span {
+	float: right;
+}
+
+/* 设置菜肴的星级 */
+.index-food-list .food-item .star-bar {
+	font-size: 0;
+}
+
+.index-food-list .food-item .star {
+	display: inline-block;
+	height: 13px;
+	width: 12px;
+	margin-right: 5px;
+	background-image: url(../../images/dishes-menu/stars.png);
+	background-repeat: no-repeat;
+}
+
+.index-food-list .food-item .nostar {
+	background-position: 0 -12.5px;
+}
+
+
+/* 设置图片库的样式 */
+.index-pics {
+	height: 380px;
+	overflow: hidden;
+}
+
+.index-pics .pic-col {
+	float: left;
+}
+.index-pics .pic-col-m {
+	width: 353px;
+}
+
+.index-pics .pic-col-s {
+	width: 287px;
+}
+
+.index-pics .pic-col-l {
+	float: right;
+	width: 460px;
+}
+
+/* 在css中多余的部分可以使用overflow：hidden来进行隐藏 */

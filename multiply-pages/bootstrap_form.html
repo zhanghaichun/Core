@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap示例2</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" ><!-- 适当的绘制和触屏缩放 -->
+	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+	<!-- {if it IE 9}>
+		<script src="../bootstrap/dist/js/html5.js"></script>
+	<!{endif}-->
+</head>
+<body style="background-color: #ccc; padding: 50px;">
+	<div class="container" style="background-color: #fff; padding: 30px;">
+		<!-- bootstrap中的栅格系统必须放在.container和.container-fluid中间 
+		表单元素的制作 "用户信息表单"-->
+		<form action="" class="form-horizontal"><!-- 表单中的栅格系统使用.form-horizontal -->
+			<div class="form-group">
+				<!-- .control-label是用来控制label标签和输入框之间的距离的 -->
+				<label for="username" class="col-md-2 control-label">用户名：</label><!-- 占用栅格系统中的2列 -->
+				<div class="col-md-10"><!-- 占用栅格系统中的10列 -->
+					<input type="text" class="form-control" id="username" placeholder="请输入用户名">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="password" class="col-md-2 control-label">密  码：</label>
+				<div class="col-md-10">
+					<input type="password" class="form-control" id="password" placeholder="请输入密码">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="upload" class="col-md-2 control-label">上传头像：</label>
+				<div class="col-md-10">
+					<input type="file" id="upload" >
+				</div>
+				<!-- 使用辅助块来进行信息的提示 .help-block -->
+				<!-- <p class="help-block">上传的图片的格式只能是.png 、.jpg 、.gif</p> -->
+			</div>
+			<div class="form-group">
+				<label class="col-md-2 control-label">兴趣爱好：</label>
+				<div class="col-md-10">
+					<!-- bootstrap中复选框样式包含在.checkbox的容器中
+					.checkbox-inline是将所有的复选框在同一行显示 -->
+					<label class="checkbox-inline"><input type="checkbox" value="art" >美术</label>
+					<label class="checkbox-inline"><input type="checkbox" value="computer" >电脑</label>
+					<label class="checkbox-inline"><input type="checkbox" value="paint" >画画</label>
+					<label class="checkbox-inline"><input type="checkbox" value="music" >音乐</label>
+					<label class="checkbox-inline"><input type="checkbox" value="PE" >体育</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-md-2 control-label">文化程度：</label>
+				<div class="col-md-10">
+					<!-- bootstrap中复选框样式包含在.radio的容器中
+									.radio-inline是将所有的复选框在同一行显示 -->
+					<label for="" class="radio-inline"><input type="radio" value="jun" >初中</label>
+					<label for="" class="radio-inline"><input type="radio" value="sen" >高中</label>
+					<label for="" class="radio-inline"><input type="radio" value="college" >大专</label>
+					<label for="" class="radio-inline"><input type="radio" value="undergra" >本科</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="resume" class="col-md-2 control-label">个人简介：</label>
+				<div class="col-md-10">
+					<textarea name="resume" id="resume" rows="7" class="form-control"></textarea>
+				</div>
+			</div>
+			<!-- 按钮的禁用状态使用.disabled .使用列偏移属性将按钮的位置调整至最佳状态-->
+			<div class="col-md-10 col-md-offset-2">
+				<button class="btn-success btn btn-lg" type="button" >提交</button>
+			</div>
+		</form>
+	</div>
+	<script src="bootstrap/dist/js/jquery.js"></script>
+	<script src="bootstrap/dist/js/bootstrap.js"></script>
+</body>
+</html>

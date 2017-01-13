@@ -1,0 +1,91 @@
+/* 设置body样式 */
+body {
+	padding-top: 20px;
+	background-color: #333;
+}
+
+/* 设置navbar-brand样式 */
+.navbar-brand {
+	font-size: 17pt;
+	color: #fff;
+}
+
+/* 响应式设置 */
+@media screen and (min-width: 960px) {
+
+	/* 设置container容器的响应式样式 */
+	.container { width: 690px; }
+}
+
+/* 设置标签行右侧的导航链接之间的外边距的距离 */
+nav ul { margin-top: 15px; }
+
+nav ul li {
+	float: left;
+	margin-right: 25px;
+	padding-bottom: 9px; /* 链接距离底部边线的距离 */
+	border-bottom: 2px solid #fff; /* 下边线，横线效果 */
+}
+
+/* 设置盛装第二个和第三个链接的<li>鼠标悬浮时的样式*/ 
+ul li:not(:first-child) { border-bottom: none; }
+
+ul li:not(:first-child):hover { border-bottom: 2px solid #fff; }
+
+/* 清除最后一个链接的margin-right值 */
+nav ul li:last-child { margin-right: 0; }
+
+/* 设置后两个链接的透明度 */
+nav ul li:not(:first-child) { opacity: 0.6; }
+
+nav ul li {
+	-webkit-transition: all .5s ;
+	-moz-transition: all .5s ;
+	-ms-transition: all .5s ;
+	-o-transition: all .5s ;
+	transition: all .5s ;
+}
+
+/* 设置所有a链接的字体和颜色 */
+nav a {
+	font: 13pt "Arial";
+	color: #fff;
+}
+
+/* 定义<li>下边框消失和存在的两个类*/ 
+.border-exist { border-bottom: 2px solid #fff !important; }
+
+
+/* 设置a链接所有声明周期的颜色 */
+a:link { color: #fff; }
+
+a:visited { color: #fff; }
+
+a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:active { color: #fff; }
+
+/* 设置内容容器中内容的样式 */
+.content { 
+	margin-top: 270px;
+	color: #fff; 
+}
+
+button {
+	width: 140px;
+}
+
+/* 设置footer底部内容 */
+footer {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  margin-left: -128px;
+}
+
+footer span {
+  color: #fff;
+}

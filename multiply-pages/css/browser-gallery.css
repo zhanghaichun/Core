@@ -1,0 +1,71 @@
+/* 上下留地， 抵消固定导航栏引起的内容的覆盖 */
+body {
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+
+/* 设置轮播图样式 */
+
+.carousel { margin-bottom: 60px; }
+
+.carousel,
+.carousel .item {
+	height: 500px;
+	background-color: #000;
+}
+
+
+.carousel .item img { width: 100%; }
+
+.carousel-caption h1 { font-size: 60px; }
+
+.carousel-caption p {
+	font-size: 17pt;
+	line-height: 1.8;
+}
+
+/* carousel 内部的html内容的位置调整*/
+.chrome-carousel .carousel-caption {
+	bottom: 90px;
+}
+
+.firefox-carousel .carousel-caption {
+	bottom: 90px;
+}
+
+.safari-carousel .carousel-caption {
+	bottom: 130px;
+}
+
+.opera-carousel .carousel-caption {
+	bottom: 90px;
+}
+
+.ie-carousel .carousel-caption {
+	bottom: 130px;
+}
+
+/* 设置对 Chrome Firefox Safari三个浏览器的解释说明 */ 
+.summary { text-align: center; }
+
+
+.summary h2 { color: #777; }
+
+/* 设置分割线 */
+hr.divider {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+/* 设置标签页的内容 */
+.tab-content { margin-top: 30px; }
+
+.tab-content .col-md-7 { margin-top: 80px; }
+
+
+.feature-heading {
+	font-size: 35pt;
+	color: #2A6496;
+}
+
+.feature-heading .text-muted { font-size: 22pt; }

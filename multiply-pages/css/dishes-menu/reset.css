@@ -1,0 +1,37 @@
+/* 重置内外边距 */
+body, div, dd, dl, dt, h1, h2, h3, h4, h5, h6, a, p, textarea, form, ul, li {
+	margin: 0;
+	padding: 0;
+	font-family: "Times New Roman", Georgia, Serif, Arial;
+} 
+
+/* 重置列表项目符号 */
+ol, ul, li {
+	list-style: none;
+}
+
+/* 链接元素 */
+a {
+	text-decoration: none;
+	display: block;
+	color: #fff;
+}
+
+/* 图片 */
+img {
+	border: none;
+	display: block;
+}
+
+/* 清除浮动 */
+.clearfloat {
+	zoom: 1;
+}
+
+.clearfloat:after {
+	display: block;
+	content:"";
+	visibility: hidden;
+	clear: both;
+	height: 0;
+}
