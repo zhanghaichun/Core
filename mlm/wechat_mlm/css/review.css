@@ -1,0 +1,227 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-top: 44px;
+	padding-bottom: 20%;
+	overflow: hidden;
+	/*background: #ededed;*/
+	/*font-family: "微软雅黑";*/
+}
+
+/* 设置标题 */
+.title {
+	position: fixed;
+	top: 0%;
+	height: 44px;
+	line-height: 44px;
+	background: #fff;
+	text-align: center;
+	width: 100%;
+	z-index: 2;
+	border-bottom: 1px solid #eee;
+}
+
+
+.title span {
+	display: block;
+	width: 85px;
+	margin: auto;
+}
+
+.title a {
+	float: left;
+	height: 44px;
+	line-height: 44px;
+}
+
+.title img {
+	width: 25px;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+/* 描述评价 */
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.img-circle {
+	width: 56px;
+	border-radius: 50%;
+}
+
+.review-container {
+	text-align: center;
+	padding-top: 1.5em;
+}
+
+.review-container .name {
+	/*font-size: 1.2em;*/
+	font-weight: bold;
+	margin-top: 8px;
+}
+
+.review-container .prompt-review {
+	font-size: .8em;
+	color: #bbb;
+	margin-top: 1em;
+}
+
+.txt-container {
+	text-align: center;
+	background: #ebebeb;
+	width: 86vw;
+	margin: auto;
+	margin-top: 1em;
+	border-radius: 1em;
+}
+
+.txt-container > div {
+	display: inline-block;
+	width: 27vw;
+	padding: .3em 0;
+}
+
+.txt-container > div > img {
+	width: 20px;
+	vertical-align: top;
+	margin-right: .2em;
+}
+
+
+.selected {
+	background: #f00;
+	color: #fff;
+	border-radius: 1em;
+}
+
+/* 评价文本域 */
+textarea {
+	display: block;
+	/*font-size: 1em;*/
+	margin: auto;
+	margin-top: 1em;
+	border: 2px solid #bbb; 
+	resize: none;
+	padding: .2em .4em;
+	width: 90%;
+	outline: none;
+}
+
+/* 上传图片容器 */
+.fileupload {
+	font-size: 1em;
+
+}
+
+/* 底部的确定按钮 */
+.btn-container {
+	position: fixed;
+	right: 6%;
+	bottom: 1rem;
+}
+
+.btn {
+	font-size: inherit;
+	padding: .3em 1em;
+	color: #f00;
+	border: 1px solid #f00;
+	border-radius: .2em;
+	background: #fff;
+}
+
+/* 定义栅格系统 设置图片上传模块*/
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-xs-4 {
+	position: relative;
+  min-height: 1px;
+  /*padding-right: 15px;
+  padding-left: 15px;*/
+  float: left;
+  margin-right: 8vw;
+  margin-bottom: 1em;
+}
+
+.upload-container {
+	margin: auto;
+	margin-top: 1em;
+	width: 90%;
+}
+
+.col-xs-4 img.master {
+	width: 22vw;
+	height: 22vw;
+}
+
+.img-content {
+	position: relative;
+}
+
+.img-content .del-pic {
+	position: absolute;
+	width: 20px;
+	top: -10px;
+	right: -8px;
+	background-color: transparent;
+}
+
+.fileInputContainer {
+   position:relative;
+   width: 22vw;
+   height:22vw;
+   /*transform: translateY(.5em);*/
+   background:url("../img/Images.xcassets/add.imageset/add@3x.png");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.fileInput {
+   position:absolute;
+   right:0;
+   top:0;
+   height:22vw;
+   width:22vw;
+   opacity: 0;
+   /*font-size: 300px;*/
+   cursor:pointer;
+}
+
+/* 设置清除浮动 */
+.clearfloat:before,
+.clearfloat:after {
+	display: table;
+	content: "";
+}
+
+.clearfloat:after {
+	clear: both;
+}
+
+.del-pic {
+	border-radius: 50%;
+	background: transparent;
+}
+
+.this {
+	background: #000;
+}
+
+@media screen and (width: 320px) {
+	.txt-container {
+		width: 90vw;
+	}
+	
+	.txt-container > div {
+		width: 28vw;
+	}
+}
+
+input {
+	-webkit-tap-highlight-color:rgba(0,0,0,0)
+}
+

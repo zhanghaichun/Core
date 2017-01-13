@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<style>
+		.clearfloat:before,
+		.clearfloat:after {
+			display: table;
+			content: "";
+		}
+
+		.clearfloat:after {
+			clear: both;
+		}
+		
+		.img-con img {
+			float: left;
+			width: 50px;
+			height: 50px;
+		}
+
+		.img-con img:first-child {
+			margin-right: 10px;
+		}
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		td , th {
+			border: 1px solid #aaa;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="img-con clearfloat">
+		<img src="img/Self/1.jpg" alt="">
+		<img src="img/Self/sasuke.jpg" alt="">
+	</div>
+	<table>
+		<tbody>
+			<tr>
+				<th>姓名</th>
+				<th>年龄</th>
+			</tr>
+			<tr>
+				<td>漩涡鸣人</td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td>宇智波佐助</td>
+				<td>22</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

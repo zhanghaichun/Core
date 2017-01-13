@@ -1,0 +1,68 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-top: 50px;
+	padding-bottom: 20%;
+	background: #ededed;
+	/*font-family: "微软雅黑";*/
+}
+
+/* 设置顶部标题 */
+.title {
+	position: fixed;
+	top: 0%;
+	height: 44px;
+	line-height: 44px;
+	background: #fff;
+	text-align: center;
+	width: 100%;
+	z-index: 2;
+}
+
+.title a {
+	float: left;
+	height: 44px;
+	line-height: 44px;
+}
+
+.title img {
+	width: 25px;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+
+/* 优惠券为空时的样式 */
+.no-coupon .content {
+	height: 25vh;
+	background: url("../img/Image/iconImage/记录缺省图/优惠券缺省@3x.png") no-repeat;
+	background-size: 30vw 30vw;
+	background-position: center center;
+	text-align: center;
+}
+
+.no-coupon .content span {
+	display: inline-block;
+	margin-top: 22vh;
+}
+
+/* 分页内容显示动画 */
+.opacity{
+    -webkit-animation: opacity 0.5s linear;
+    animation: opacity 0.5s linear;
+}
+@-webkit-keyframes opacity {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@keyframes opacity {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}

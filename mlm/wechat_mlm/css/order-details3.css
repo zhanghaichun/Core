@@ -1,0 +1,193 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 20%;
+	font-size: 3em;
+	background: #ededed;
+	/*font-family: "微软雅黑";*/
+}
+
+/* 设置顶部预约标题 */
+.title {
+	background: #fff;
+	text-align: center;
+	padding: 15px 0 15px 15px;
+	/*margin-bottom: 40px;*/
+}
+
+.title img {
+	float: left;
+}
+
+/* 设置清除浮动 */
+.clearfloat:before,
+.clearfloat:after {
+	display: table;
+	content: "";
+}
+
+.clearfloat:after {
+	clear: both;
+}
+
+/* 设计选择设计师项的样式 */
+.stylist {
+	padding: 10px 25px;
+	background: #fff;
+	margin-top: 30px;
+}
+
+.iconAndTxt {
+	float: left;
+}
+
+.iconAndTxt .txt {
+	display: inline-block;
+	padding-left: 5px;
+	transform: translateY(-20px);
+}
+
+.enter {
+	float: right;
+	margin-top: 18px;
+}
+
+.iconAndTxt img {
+	width: 87px;
+	height: 87px;
+	border-radius: 50%;
+}
+
+
+/*展示服务项目*/
+.serv-list {
+	margin: 0;
+	background: #fff;
+	color: #bbb;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.serv-list > li {
+	margin: 20px 40px;
+	color: #777;
+}
+
+.serv-list > li > ul {
+	color: #bbb;
+	list-style: none;
+}
+
+.serv-list > li > ul li {
+	line-height: 1.7;
+}
+
+.serv-list .price {
+	float: right;
+}
+
+/*.serv-list .item {
+	float: left;
+}*/
+
+/* 设置合计栏 */
+.total {
+	background: #fff;
+	padding: 20px 40px;
+}
+
+.total .left {
+	float: left;
+}
+
+.total .right {
+	color: #f00;
+	float: right;
+}
+
+/* 设置三个可以重复使用样式的区域 */
+/* 设计用户昵称、预约时间、服务门店 */
+/* 设置优惠券、可用积分与实付金额 */
+/* 设置仅支付定金 */
+.container1 {
+	margin-top: 30px;
+	background: #fff;
+}
+
+.container1 > div {
+	background: inherit;
+	padding: 25px 30px;
+	padding-right: 40px;
+}
+
+.container1 .left {
+	float: left;
+}
+
+.container1 .right {
+	float: right;
+	font-size: .9em;
+	color: #ccc;
+}
+
+
+
+.avail-integral .offset,
+.real-money .right,
+.payment,
+.final-pay {
+	color: #f00;
+}
+
+
+
+
+/* 设置支付与取消订单底部栏 */
+.no-pay {
+	position: fixed;
+	bottom: 0;
+	width: 92%;
+	background: #fff;
+	padding: 30px 40px;
+	font-size: .8em;
+
+}
+
+.no-pay .left {
+	float: left;
+}
+
+.no-pay .right {
+	float: right;
+}
+
+.no-pay .btn {
+	padding: .2em .5em;
+	border-radius: .2em;
+	background: #fff;
+	font-size: 1em;
+	border: 3px solid #ddd;
+	margin-left: 30px;
+	color: #bbb;
+}
+
+.no-pay .btn:last-child {
+	color: #f00;
+	border-color: #f00;
+}
+
+.no-pay .price {
+	color: #f00;
+}
+
+.no-pay .book {
+	background: #f00;
+	color: #fff;
+	padding: 2px 4px;
+	border-radius: 10px;
+}
+
+.no-pay .have-done {
+	font-size: .8em;
+	color: #bbb;
+}

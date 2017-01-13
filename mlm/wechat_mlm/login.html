@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>注册和登陆</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<!-- 定义标题 -->
+<div class="title">
+	<a href="javascript: history.go(-1)"><img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt=""></a>
+	<div class="content">
+		<span class="l">登录</span>
+		<i></i>
+		<span class="r">注册</span>
+	</div>
+</div>
+
+<div class="tab-content log-in">
+	<div class="regis-phone">
+		<div class="content">
+			<input type="text" placeholder="请输入注册手机号">
+		</div>
+	</div>
+	<div class="login-psw">
+		<div class="content">
+			<input type="password" placeholder="请输入登录密码">
+		</div>
+	</div>
+	
+	<div class="login-btn">登录</div>
+	<a href="mod-login-psw.html">忘记密码</a>
+</div>
+
+<div class="tab-content regis">
+	<div class="container">
+		<div class="phone">
+			<div class="content">
+				<input type="text" placeholder="请输入手机号码">
+				<img src="img/Image/iconImage/others-icon/预约-删除套餐@2x.png" alt="">
+			</div>
+		</div>
+		<div class="ver-code">
+			<div class="content">
+				<input type="text" placeholder="请输入短信验证码">
+				<span>发送验证码</span>
+			</div>
+		</div>
+		<div class="psw">
+			<div class="content">
+				<input type="text" placeholder="请输入6-16位字母和数字组合密码">
+			</div>
+		</div>
+		<div class="nickname">
+			<div class="content">
+				<input type="text" placeholder="请输入用户昵称">
+				<div class="sex">
+					<div class="male">
+						<img src="img/Image/未选中@3x.png" alt="">
+						<span>男</span>
+					</div>
+					<div class="female">
+						<img src="img/Image/未选中@3x.png" alt="">
+						<span>女</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	
+	<div class="login">注册</div>
+	
+	<div class="protocol">
+		<img src="img/Image/注册协议icon@3x.png" alt="">
+		<span>我已阅读并同意</span>
+		<a href="javascript:;">《注册协议》</a>
+	</div>
+</div>
+
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+		setInterval(function() {
+			if($(".phone input").val() != "") {
+				$(".phone > img").show();
+			} else {
+				$(".phone > img").hide();
+			}
+		});
+
+		$(".phone > img").click(function() {
+			$(".phone input").val("");
+		})
+
+		$("div.sex > div").click(function() {
+			$(this).find("img").attr("src","img/Image/选中@3x.png");
+			$(this).siblings().find("img").attr("src","img/Image/未选中@3x.png");
+		})
+
+		$(".title .l").addClass("active");
+		$(".log-in").show();
+
+		// 登录和注册选项
+		$(".title span").each(function(index) {
+			$(this).click(function() {
+				$(this).addClass("active");
+				$(this).siblings().removeClass("active");
+				$(".tab-content").hide();
+				$(".tab-content").eq(index).show();
+			});
+		});
+
+
+
+	})
+</script>
+</body>
+</html>

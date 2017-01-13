@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>我的优惠券</title>
+	<link rel="stylesheet" href="css/mine-coupon.css">
+	<link rel="stylesheet" href="css/dropload.css">
+</head>
+<body>
+<!-- 定义标题 -->
+<div class="title">
+	<a href="javascript: history.go(-1)"><img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt=""></a>
+	<span>我的优惠券</span>
+</div>
+
+<!-- 设置选项卡 -->	
+<div class="tab">
+	<div><span class="active index">未使用</span></div><!--
+	--><div><span class="index">已使用</span></div><!--
+	--><div><span class="index">已到期</span></div>
+</div>
+
+<div class="no-use tab-content">
+	<!-- <div class="no-coupon">
+		<div class="content">
+			<span>暂无优惠券记录</span>
+		</div>
+	</div> -->
+
+	<div class="inner-container">
+		<div class="coupon">
+			<div class="reward">100元烫发优惠券</div>
+			<div class="condition">烫发金额超480元可用</div>
+			<div class="sum">100</div>
+			<div class="time">有效期至:<span class="limited">2017-03-11</span></div>
+		</div>
+		
+		<div class="coupon">
+			<div class="reward">100元烫发优惠券</div>
+			<div class="condition">烫发金额超480元可用</div>
+			<div class="sum">100</div>
+			<div class="time">有效期至:<span class="limited">2017-03-11</span></div>
+		</div>
+	</div>
+
+
+</div>
+
+<div class="use tab-content">
+	<div class="no-coupon">
+		<div class="content">
+			<span>暂无优惠券记录</span>
+		</div>
+	</div>
+</div>
+
+<div class="limited tab-content">
+	<div class="no-coupon">
+		<div class="content">
+			<span>暂无优惠券记录</span>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/dropload.js"></script>
+<script>
+	$(function() {
+
+		$("div.no-use").show();
+		// 优惠券使用情况选项卡切换
+		$("span.index").each(function(index) {
+			$(this).click(function() {
+				$(this).addClass("active");
+				$(this).parent().siblings().find("span").removeClass("active");
+
+				$(".tab-content").hide();
+				$(".tab-content").eq(index).show();
+			});
+			
+		});
+
+
+		var counter = 0;
+		// 每页展示4个
+		var num = 4;
+		var pageStart = 0,pageEnd = 0;
+
+		// dropload
+		$('.no-use').dropload({
+    	scrollArea : window,
+	    // 每一次下拉的时候都执行一次该函数
+	    loadDownFn : function(me){
+        $.ajax({
+          type: 'GET',
+          url: './json/coupon.json',
+          dataType: 'json',
+          success: function(data){
+            // console.log(data);
+            var result = '';
+            counter++; // 1 2 3
+            pageEnd = num * counter; // 4 8 12
+            pageStart = pageEnd - num; // 0 4 8
+
+            for(var i = pageStart; i < pageEnd; i++){
+              result +=   '<div class="coupon opacity"><div class="reward">' + data.lists[i].reward + '</div><div class="condition">' + data.lists[i].condition + '</div><div class="sum">' + data.lists[i].sum + '</div><div class="time">有效期至:<span class="limited">' + data.lists[i].limited + '</span></div></div>';
+              if((i + 1) >= data.lists.length){
+                // 锁定
+                me.lock();
+                // 无数据
+                me.noData();
+                break;
+              }
+
+                
+            } // for -->
+
+            // 为了测试，延迟1秒加载
+            setTimeout(function(){
+              $('.inner-container').append(result);
+              // 每次数据加载完，必须重置
+              me.resetload();
+            },1000);
+          },
+          error: function(xhr, type){
+            alert('Ajax error!');
+            // 即使加载出错，也得重置
+            me.resetload();
+          }
+        }); // ajax -->
+	    } // loadDownFn -->
+		}); // dropload -->
+
+
+
+	})
+</script>
+</body>
+</html>

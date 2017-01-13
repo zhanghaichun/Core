@@ -1,0 +1,183 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 20%;
+	font-size: 3em;
+	background: #ededed;
+	background-image: url("../img/Image/bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	/*font-family: "微软雅黑";*/
+}
+
+/* 设置顶部预约标题 */
+.title {
+	background: #fff;
+	text-align: center;
+	padding: 15px 0 15px 15px;
+	margin-bottom: 30px;
+}
+
+.title img {
+	float: left;
+}
+
+/* 标志 */
+.sign {
+	width: 56%;
+	margin: auto;
+}
+
+.item {
+	/*width: 500px;*/
+	width: 18em;
+	background-image: url("../img/Image/coupon@2x.png");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	margin: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 0.5em;
+	padding-right: 1em;
+	padding-bottom: .4em;
+	box-sizing: border-box;
+}
+
+.item .left {
+	float: left;
+}
+
+.item .left > img {
+	width: 300px;
+	height: 280px;
+}
+
+.item .right {
+	float: right;
+	font-size: .8em;
+}
+
+.item .right .btn {
+	font-size: inherit;
+}
+
+.item .price {
+	display: inline-block;
+	margin-top: .8em;
+	color: #f00;
+}
+
+.item .big {
+	font-size: 2em;
+}
+
+.item .txt {
+	font-size: 1.3em;
+	/*font-weight: bold;*/
+	margin-bottom: .5em;
+}
+
+.item del {
+	color: #bbb;
+}
+
+.use,
+.time {
+	display: block;
+	color: #bbb;
+	font-size: .9em;
+}
+
+.item .right .btn {
+	background: #82b1ff;
+	color:#fff100;
+	border: 0px;
+	padding: .3em .7em;
+	border-radius: .1em;
+}
+
+/* 显示支付订单成功弹窗 */
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+	background: rgba(0,0,0,.2);
+	text-align: center;
+
+}
+
+.overlay .content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 70%;
+	height: 35%;
+	padding-top: 8%;
+	margin: auto;
+	background: #fff;
+	border-radius: .5em;
+	box-sizing: border-box;
+}
+
+.content > div {
+	line-height: 1.4em;
+}
+
+.overlay .confirm img {
+	display: block;
+	margin: auto;
+}
+
+.overlay .confirm span {
+	display: block;
+	text-align: center;
+	transform: translateX(17px);
+}
+
+.confirm .prompt {
+	margin-top: 1em;
+}
+
+.confirm .txt {
+	color: #bbb;
+	font-size: .9em;
+}
+
+
+.overlay .btn {
+	position: relative;
+	bottom: -0.1em;
+	display: inline-block;
+	width: 90%;
+	/*margin: 0;*/
+	padding: 1em;
+	background: #fff;
+	border: 1px solid #f7f7f7;
+	border-right: none;
+	font-size: inherit;
+	color: #f00;
+}
+
+/* 响应式图片 */
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* 设置清除浮动 */
+.clearfloat:before,
+.clearfloat:after {
+	display: table;
+	content: "";
+}
+
+.clearfloat:after {
+	clear: both;
+}
+

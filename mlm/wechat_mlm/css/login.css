@@ -1,0 +1,206 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-top: 54px;
+	padding-bottom: 20%;
+	background: #ededed;
+	/*font-family: "微软雅黑";*/
+}
+
+/* 设置标题 */
+.title {
+	position: fixed;
+	top: 0%;
+	height: 44px;
+	line-height: 44px;
+	background: #fff;
+	text-align: center;
+	width: 100%;
+	z-index: 2;
+}
+
+.title .content {
+	width: 180px;
+	margin: auto;
+}
+
+.title .content span {
+	display: inline-block;
+	height: 37px;
+}
+
+.title a {
+	float: left;
+	height: 44px;
+	line-height: 44px;
+}
+
+.title img {
+	width: 25px;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+.active {
+	color: #f00;
+	border-bottom: 1px solid #f00;
+}
+
+.title i {
+	display: inline-block;
+	width: 5vw;
+}
+
+
+/*注册信息*/
+.container > div {
+	background: #fff;
+	height: 40px;
+  line-height: 40px;
+  padding-left: 3%;
+  padding-bottom: 1px;
+}
+
+.container .content {
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 1px;
+	padding-right: 3%;
+}
+
+.regis .sex img {
+	width: 20px;
+	vertical-align: middle;
+}
+
+div > input {
+	font-size: inherit;
+	border: none;
+	outline: none; 
+	/*font-size: .9em;*/
+}
+
+.psw input {
+	/*width: 90%;*/
+}
+
+div.sex {
+	float: right;
+}
+
+div.sex,
+div.sex > div {
+	display: inline-block;
+}
+
+div.sex > div {
+	margin-right: .5em;
+}
+
+div.sex > img {
+	vertical-align: middle;
+}
+
+.phone  img {
+	width: 20px;
+	float: right;
+	display: none;
+}
+
+.ver-code span {
+	display: inline-block;
+	float: right;
+	line-height: normal;
+	font-size: .9em;
+	color: #f00;
+	border-radius: .2em;
+	border: 1px solid #f00;
+	padding: .3em .1em; 
+	transform: translateY(.4rem);
+}
+
+.nickname input {
+	width: 58vw;
+}
+
+.login {
+	background: #f00;
+	padding: 12px;
+	color: white;
+	text-align: center;
+	margin: auto;
+	margin-top: 1em;
+	margin-bottom: .8em;
+	width: 90%;
+	border-radius: .2em;
+}
+
+.protocol {
+	padding-left: 3%;
+}
+
+.protocol img {
+	display: inline-block;
+	transform: translateY(-.1rem);
+	width: 20px;
+	vertical-align: middle;
+}
+
+.protocol span {
+	font-size: .9em;
+}
+
+.protocol a {
+	color: #f00;
+}
+
+/* 登录信息 */
+.log-in .regis-phone,
+.log-in .login-psw {
+	height: 40px;
+	line-height: 40px;
+	background: #fff;
+	padding-left: 3%;
+	padding-bottom: 1px;
+}
+
+.log-in .login-psw {
+	margin-bottom: 10px;
+}
+
+.log-in .content {
+	border-bottom: 1px solid #ddd;
+}
+
+.log-in .login-btn {
+	margin-top: 10px;
+	color: #fff;
+	width: 90%;
+	margin: auto;
+	padding: 7px;
+	text-align: center;
+	background: #f00;
+	border-radius: 4px;
+}
+
+.log-in a {
+	display: inline-block;
+  float: right;
+  margin-top: 10px;
+  color: #000;
+  padding-right: 5%;
+}
+
+.tab-content {
+	display: none;
+}
+
+
+
+
+
+
+a {
+	text-decoration: none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+

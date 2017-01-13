@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>评价</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<link rel="stylesheet" href="css/review.css">
+</head>
+<body>
+<!-- 定义标题 -->
+<div class="title">
+	<a href="javascript: history.go(-1)"><img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt=""></a>
+	<span>评价</span>
+</div>
+
+<!-- 描述评价 -->
+<div class="review-container">
+	<img class="img-circle" src="img/Images.xcassets/AppIcon.appiconset/Icon-60@2x.png.png" alt="">
+	<div class="name">佳佳</div>
+	<div class="prompt-review">描述我对他（她）的评价</div>
+	<div class="txt-container">
+		<div class="vs"><img src="img/Image/iconImage/评价new/非常满意default@3x.png" alt=""><span>非常满意</span></div>
+		<div class="s"><img src="img/Image/iconImage/评价new/满意default@3x.png" alt=""><span>满意</span></div>
+		<div class="common"><img src="img/Image/iconImage/评价new/一般default@3x.png" alt=""><span>一般</span></div>
+	</div>
+</div>
+
+<!-- 评价文本域 -->
+<textarea name="reviews" id="" cols="40" rows="8" class="reviews" placeholder="对这次消费满意吗？和小伙伴分享一下吧！"></textarea>
+
+<!-- 上传图片容器 -->
+<div class="upload-container clearfloat">
+	<div class="col-xs-4 img-content"  >
+		<img class="img-responsive master" src="img/Self/bridge.jpg" alt="">
+		<img class="del-pic" src="img/Images.xcassets/dele.imageset/dele@3x.png" alt="">
+	</div>
+
+	<div class="col-xs-4 img-content" >
+		<img class="img-responsive master" src="img/Self/fall.jpg" alt="">
+		<img class="del-pic" src="img/Images.xcassets/dele.imageset/dele@3x.png" alt="">
+	</div>
+
+	<div class="col-xs-4 img-content"  >
+		<img class="img-responsive master" src="img/Self/1.jpg" alt="">
+		<img class="del-pic" src="img/Images.xcassets/dele.imageset/dele@3x.png" alt="">
+	</div>
+
+	<div class="col-xs-4">
+		<div class="fileInputContainer">
+		    <input class="fileInput" type="file" name="fileInput" id="file" />
+		</div>
+	</div>
+</div>
+
+
+
+<!-- 底部的确定按钮 -->
+<div class="btn-container"><button class="btn" type="button">确定</button></div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+		// 默认评价为满意
+		$(".s").addClass("selected");
+		$(".s").find("img").attr("src","img/Image/iconImage/评价new/满意selected@3x.png");
+
+		// 点击满意度显示的效果
+		$(".txt-container > div").click(function(){
+			$(this).addClass("selected");
+			$(this).siblings().removeClass("selected");
+
+			if($(this).hasClass("selected")) {
+				if($(this).hasClass("vs")) {
+					$(this).find("img").attr("src","img/Image/iconImage/评价new/非常满意selected@3x.png");
+					$(this).siblings(".s").find("img").attr("src","img/Image/iconImage/评价new/满意default@3x.png");
+					$(this).siblings(".common").find("img").attr("src","img/Image/iconImage/评价new/一般default@3x.png");
+				} else if ($(this).hasClass("s")) {
+					$(this).find("img").attr("src","img/Image/iconImage/评价new/满意selected@3x.png");
+					$(this).siblings(".vs").find("img").attr("src","img/Image/iconImage/评价new/非常满意default@3x.png");
+					$(this).siblings(".common").find("img").attr("src","img/Image/iconImage/评价new/一般default@3x.png");
+				} else {
+					$(this).find("img").attr("src","img/Image/iconImage/评价new/一般selected@3x.png");
+					$(this).siblings(".vs").find("img").attr("src","img/Image/iconImage/评价new/非常满意default@3x.png");
+					$(this).siblings(".s").find("img").attr("src","img/Image/iconImage/评价new/满意default@3x.png");
+				}
+			}
+		})
+
+		// 点击删除图片的图标会删除整个容器
+		$(".img-content .del-pic").click(function() {
+			$(this).parents(".img-content").remove();
+		})
+
+	})
+</script>	
+</body>
+</html>

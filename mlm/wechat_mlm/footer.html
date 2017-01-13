@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>公用底部</title>
+	<style>
+
+		body {
+			margin: 0;
+			padding: 0;
+			background: #ededed;
+		}
+
+		nav {
+			display: flex;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			height: 50px;
+			align-items: center;
+			background: #fff;
+		}
+
+		nav a {
+			flex: 1;
+			text-align: center;
+		}
+
+		nav a span {
+			font-size: 90%;
+			/*line-height: .8;*/
+		}
+
+		nav a div {
+			margin: 0;
+			padding: 0;
+			line-height: .7;
+		}
+
+		nav img {
+			width: 25px;
+			/*height: 20px;*/
+		}
+
+		nav img.ap {
+			width: 40px;
+			/*height: 40px;*/
+		}
+
+		nav a {
+			text-decoration: none;
+			color: #000;
+			-webkit-tap-highlight-color: #fff;
+		}
+
+		/* 底部导航栏的样式设置结束 */
+	</style>
+</head>
+<body>
+<nav>
+	<a href="#">
+		<div><img src="img/Image/iconImage/tabbar-icon/bar首页@3x.png" alt=""></div>
+		<span>首页</span>
+	</a>
+	<a href="#">
+		<div><img src="img/Image/iconImage/tabbar-icon/bar设计师@3x.png" alt=""></div>
+		<span>设计师</span>
+	</a>
+	<a href="#">
+		<div><img class="ap" src="img/Image/iconImage/tabbar-icon/bar预约@3x.png" alt=""></div>
+		<!-- <span>预约</span> -->
+	</a>
+	<a href="#">
+		<div><img src="img/Image/iconImage/tabbar-icon/bar发型@3x.png" alt=""></div>
+		<span>发型</span>
+	</a>
+	<a href="#">
+		<div><img src="img/Image/iconImage/tabbar-icon/bar我的@3x.png" alt=""></div>
+		<span>我的</span>
+	</a>
+</nav>
+
+
+</body>
+</html>

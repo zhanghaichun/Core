@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>我的主页中的收藏</title>
+	<link rel="stylesheet" href="css/collection.css">
+</head>
+<body>
+<!-- 定义标题 -->
+<div class="title">
+	<a href="javascript: history.go(-1)"><img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt=""></a>
+	<div class="content">
+		<span class="stylist">设计师</span>
+		<span class="hairdo">发型</span>
+	</div>
+</div>
+
+<!-- 定义设计师和发型选项卡 -->
+<div class="stylist-content tab-content">
+	<!-- <div class="no-collection">
+		<div class="content">
+			<span>暂无收藏记录</span>
+		</div>
+	</div> -->
+
+	<div class="container">
+		<div class="stylistIntro clearfloat">
+			<a href="stylist-details.html"><div class="hp"><img  class="img-circle" src="img/Self/ninetales.jpg" alt=""></div>
+				<div class="intro">
+					<span class="name">汤尼</span>
+					<span class="level">高级技术总监</span>
+					<div class="motto text-muted">发型改变气质，你也可以成为明星</div>
+					<ul>
+						<li><span>656</span> 收藏</li>
+						<li>|</li>
+						<li><span>3489</span> 美单</li>
+						<li>|</li>
+						<li>洗剪吹 <span class="text-danger">￥89</span></li>
+					</ul>
+				</div></a>
+				
+			<div class="appoint">
+				<a href="appoint.html"><img src="img/Images.xcassets/homeImage/发型详情.imageset/发型详情@3x.png" alt=""></a>
+			</div>
+		</div>
+
+		<div class="stylistIntro clearfloat">
+			<a href="stylist-details.html"><div class="hp"><img  class="img-circle" src="img/Self/ninetales.jpg" alt=""></div>
+				<div class="intro">
+					<span class="name">汤尼</span>
+					<span class="level">高级技术总监</span>
+					<div class="motto text-muted">发型改变气质，你也可以成为明星</div>
+					<ul>
+						<li><span>656</span> 收藏</li>
+						<li>|</li>
+						<li><span>3489</span> 美单</li>
+						<li>|</li>
+						<li>洗剪吹 <span class="text-danger">￥89</span></li>
+					</ul>
+				</div></a>
+				
+			<div class="appoint">
+				<a href="appoint.html"><img src="img/Images.xcassets/homeImage/发型详情.imageset/发型详情@3x.png" alt=""></a>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div class="hairdo-content tab-content">
+	<!-- <div class="no-collection">
+		<div class="content">
+			<span>暂无收藏记录</span>
+		</div>
+	</div> -->
+	
+	<div class="row">
+		<div class="col">
+			<div class="wrapper">
+				<a href="hairdo-details2.html"><img class="img-res" src="img/self/1.jpg" alt="">
+					<div class="flex">
+						<span>的搜房大家佛山江东父老</span>
+					</div></a>
+			</div>
+		</div>
+		<div class="col">
+			<div class="wrapper">
+				<a href="hairdo-details2.html"><img class="img-res" src="img/self/heart.jpg" alt="">
+					<div class="flex">
+					    <span>的搜房大家佛山江东父老</span>
+					</div></a>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="row">
+		<div class="col">
+			<div class="wrapper">
+				<a href="hairdo-details2.html"><img class="img-res" src="img/self/1.jpg" alt="">
+					<div class="flex">
+						<span contenteditable="true">的搜房大家佛山江东父老</span>
+					</div></a>
+			</div>
+		</div>
+		<div class="col">
+			<div class="wrapper">
+				<a href="hairdo-details2.html"><img class="img-res" src="img/self/heart.jpg" alt="">
+					<div class="flex">
+						<span>的搜房大家佛山江东父老</span>
+					</div></a>
+			</div>
+		</div>
+	</div>
+
+</div>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function () {
+		$(".title .stylist").addClass("active");
+		$(".stylist-content").show();
+		// 设计师和发型选项
+		$(".title span").each(function(index) {
+			$(this).click(function() {
+				$(this).addClass("active");
+				$(this).siblings().removeClass("active");
+				$(".tab-content").hide();
+				$(".tab-content").eq(index).show();
+			});
+		});
+	})
+</script>
+</body>
+</html>

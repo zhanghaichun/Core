@@ -1,0 +1,75 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 20%;
+	/*font-size: 3em;*/
+	background: #ededed;
+	/*font-family: "微软雅黑";*/
+}
+
+/* 设置顶部标题 */
+.title {
+	background: #fff;
+	text-align: center;
+	height: 44px;
+	line-height: 44px;
+	padding-left: 3%;
+}
+
+.title a {
+	float: left;
+	height: 44px;
+	line-height: 44px;
+}
+
+.title img {
+	width: 25px;
+	vertical-align: middle;
+	margin-top: -5px;
+}
+
+/* 设置热门城市和定位城市 */
+.location-city,
+.hot-city {
+	background: #fff;
+	padding: 4% 5%;
+}
+
+.location-city .label,
+.hot-city .label{
+}
+
+.location-city .container,
+.hot-city .container {
+	margin-top: 4%;
+}
+
+.location-city .container > span,
+.hot-city .container > a {
+	display: inline-block;
+	font-size: .8em;
+	border: 1px solid #aaa;
+	padding: .2em .6em;
+	border-radius: 3px;
+	color: #666;
+}
+
+.content {
+	padding-bottom: 3%;
+  border-bottom: 1px solid #aaa;
+}
+
+.stress {
+	color: #f00 !important;
+	border: 1px solid #f00 !important;
+}
+
+a {
+	text-decoration: none;
+	color: #666;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+a:visited {
+	color: #666;
+}

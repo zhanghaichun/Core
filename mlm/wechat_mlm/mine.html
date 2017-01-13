@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="full-screen" content="yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no,maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>我的</title>
+	<style>
+		body {
+			padding: 0;
+			padding-bottom: 20%;
+			background: #ebebeb;
+			/*font-size: 3em;*/
+			margin: 0;
+		}
+
+		/* 设置最顶部的顾客信息，包括头像，收藏，美币金额，优惠券 */
+		.customer-info {
+			height: 200px;
+			text-align: center;
+			padding-top: 30px;
+			background: url("./img/Image/我的背景图.png") no-repeat;
+			background-size: cover;
+			box-sizing: border-box;
+			font-size: .8em;
+			color: #fff;
+		}
+
+		.customer-info > div img {
+			width: 70px;
+			border-radius: 50%;
+		}
+
+		.list {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			margin-top: 7%;
+		}
+
+		.list li {
+			display: inline-block;
+			width: 31%;
+		}
+
+		.list li a {
+			color: #fff;
+		}
+
+		.list li > span {
+			display: inline-block;
+			margin-top: .2em;
+		}
+
+		.list li img {
+			width: 15px;
+			/*height: 40px;*/
+			transform: translate(.2em, .2em);
+		}
+
+		.collection,
+		.mb {
+			border-right: 1px dashed #fff;
+		}
+
+		/* 定义我的美单  */
+		.my-orders {
+			/*padding: 20px 30px;*/
+			padding-left: 2%;
+			padding-bottom: 4px;
+			height: 40px;
+			line-height: 40px;
+			background: #fff;
+		}
+
+		.my-orders .content {
+			padding-right: 3%;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.my-orders .left img {
+			width: 30px;
+			vertical-align: middle;
+			transform: translateY(-.2rem);
+		}
+
+		.my-orders .cl-orders {
+			color: #bbb;
+		}
+
+		.left {
+			float: left;
+		}
+
+		.left .txt {
+			display: inline-block;
+		}
+
+		.right {
+			float: right;
+			/*margin-top: 18px;*/
+		}
+
+
+		/* 定义未支付、已支付、已完成和退款选项 */
+		.select-items {
+			height: 60px;
+			padding: 0;
+			list-style: none;
+			background: #fff;
+			margin: 0;
+			/*margin-top: 1px;*/
+			/*padding: 15px 0;*/
+		}
+
+		.select-items li {
+			display: inline-block;
+			width: 25%;
+			text-align: center;
+			font-size: .9em;
+			transform: translateY(.3rem);
+		}
+
+		.select-items li img {
+			display: block;
+			width: 30px;
+			margin: auto;
+		}
+
+		.select-items li > span {
+			display: inline-block;
+			/*margin-top: 6px;*/
+		}
+
+		/* 美优MALL、 美币购买、签到有奖 */
+		.container1 {
+			margin-top: 10px;
+			padding-left: 2%;
+			background: #fff;
+		}
+
+		.container1 .content {
+			padding-right: 3%;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.container1 > div {
+			height: 40px;
+			line-height: 40px;
+			background: #fff;
+			padding-bottom: 2px;
+		}
+
+		.container1 .left img {
+			width: 30px;
+			vertical-align: middle;
+			transform: translateY(-.2rem);
+		}
+
+		.container1 .right {
+			float: right;
+			color: #bbb;
+		}
+
+		.check-prize .content{
+			border-bottom: none;
+		}
+
+		.small-font {
+			font-size: 84%;
+		}
+
+		/* 合伙人、我的评价、账号设置 */
+		.container2 {
+			margin-top: 10px;
+			padding-left: 2%;
+			background: #fff;
+		}
+		.container2 > div {
+			height: 40px;
+			line-height: 40px;
+			background: #fff;
+			padding-bottom: 2px;
+			/*padding: 20px 30px;*/
+		}
+
+		.container2 .content {
+			padding-right: 3%;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.container2 .left {
+			float: left;
+		}
+
+		.container2 .left img {
+			width: 30px;
+			vertical-align: middle;
+			transform: translateY(-.2rem);
+		}
+
+		.container2 .right {
+			float: right;
+			color: #bbb;
+		}
+
+		.account-set .content{
+			border-bottom: none;
+		}
+
+		/* 设置城市、门店地址、关于我们 */
+
+		.container3 {
+			margin-top: 10px;
+			padding-left: 2%;
+			background: #fff;
+		}
+		.container3 > div {
+			height: 40px;
+			line-height: 40px;
+			background: #fff;
+			padding-bottom: 2px;
+			/*padding: 20px 30px;*/
+		}
+
+		.container3 .content {
+			padding-right: 3%;
+			border-bottom: 1px solid #ccc;
+		}
+
+		.container3 .left {
+			float: left;
+		}
+
+		.container3 .left img {
+			width: 30px;
+			vertical-align: middle;
+			transform: translateY(-.2rem);
+		}
+
+		.container3 .right {
+			float: right;
+			color: #bbb;
+		}
+
+		.aboutUs .content{
+			border-bottom: none;
+		}
+
+		a {
+			text-decoration: none;
+			color: #000;
+			-webkit-tap-highlight-color:rgba(0,0,0,0);
+		}
+
+
+		/* 设置清除浮动 */
+		.clearfloat:before,
+		.clearfloat:after {
+			display: table;
+			content: "";
+		}
+
+		.clearfloat:after {
+			clear: both;
+		}
+		
+	</style>
+</head>
+<body>
+<!-- 设置最顶部的顾客信息，包括头像，收藏，美币金额，优惠券 -->
+<div class="customer-info">
+	<div>
+		<img src="img/Image/160Wow.png" alt="">
+		<div class="name">destiny</div>
+	</div>
+	<ul class="list">
+		<li class="collection">
+			<a href="collection.html"><div>
+					<img src="img/Image/iconImage/page我的icon-2016-1-22/page我的3x/1/收藏@3x.png" alt="">
+					<span>收藏</span>
+				</div>
+				<span class="num">169</span></a>
+		</li>
+		<li class="mb">
+			<a href="minemb.html"><div>
+					<img src="img/Image/iconImage/page我的icon-2016-1-22/page我的3x/1/积分@3x.png" alt="">
+					<span>美币金额</span>
+				</div>
+				<span class="num">169</span></a>
+		</li>
+		<li class="coupon">
+			<a href="mine-coupon.html"><div>
+					<img src="img/Image/iconImage/page我的icon-2016-1-22/page我的3x/1/优惠券@3x.png" alt="">
+					<span>优惠券</span>
+				</div>
+				<span class="num">169</span></a>
+		</li>
+	</ul>
+</div>
+
+<!-- 定义我的美单 -->
+<div class="my-orders clearfloat">
+	<div class="content clearfloat">
+		<a href="mine-orders.html" class="clearfloat"><div class="left">
+				<img src="img/Image/iconImage/page我的icon-2016-1-22/page我的3x/我的美单@3x.png" alt="">
+				<span class="txt">我的美单</span>
+			</div>
+			<div class="right">
+				<span  class="cl-orders"><span>查看全部订单</span> <strong>></strong></span>
+			</div></a>
+	</div>
+</div>
+
+<!-- 定义未支付、已支付、已完成和退款选项 -->
+<ul class="select-items">
+	<li class="no-pay">
+		<a href="mine-orders.html"><img src="img/Image/iconImage/page我的icon-2016-1-22/page我的3x/3/未付款@3x.png" alt="">
+			<span>未支付</span></a>
+	</li><!--
+	--><li class="payed">
+		<a href="mine-orders.html"><img src="img/Image/iconImage/page我的icon-2016-1-22/page我的3x/3/预约成功@3x.png" alt="">
+			<span>已支付</span></a>
+		</li><!--
+	--><li class="finished">
+		<a href="mine-orders.html"><img src="img/Image/iconImage/page我的icon-2016-1-22/page我的3x/3/已完成@3x.png" alt="">
+			<span>已完成</span></a>
+	</li><!--
+	--><li class="refund">
+		<a href="mine-orders.html"><img src="img/Image/iconImage/page我的icon-2016-1-22/page我的3x/3/退款@3x.png" alt="">
+			<span>退款</span></a>
+	</li>
+</ul>
+
+<!-- 美优MALL、 美币购买、签到有奖 -->
+<div class="container1">
+	<div class="mu-mall">
+		<div class="content clearfloat">
+			<a href="javascript:;" class="clearfloat"><div class="left">
+					<img src="img/Image/iconImage/page我的icon-2016-1-22/page我的3x/4/限时抢购@3x.png" alt="">
+					<span class="txt">美优MALL</span>
+				</div>
+				<div class="right">
+					<span><span class="small-font">线上选购优质产品</span> <strong>></strong></span>
+				</div></a>
+		</div>
+	</div>
+
+	<div class="mb-purchase">
+		<div class="content clearfloat">
+			<a href="mb-buy.html" class="clearfloat"><div class="left">
+					<img src="img/Image/iconImage/page我的icon-2016-1-22/page我的3x/4/积分购买@3x.png" alt="">
+					<span class="txt">美币购买</span>
+				</div>
+				<div class="right">
+					<span><span class="small-font">充反活动进行中</span> <strong>></strong></span>
+				</div></a>
+		</div>
+	</div>
+
+
+	<div class="check-prize">
+		<div class="content clearfloat">
+			<a href="javascript:;" class="clearfloat"><div class="left">
+					<img src="img/Image/iconImage/page我的icon-2016-1-22/page我的3x/4/签到有奖@3x.png" alt="">
+					<span class="txt">签到有奖</span>
+				</div>
+				<div class="right">
+					<span><span class="small-font">这里有优惠券哦</span> <strong>></strong></span>
+				</div></a>
+		</div>
+	</div>
+</div>
+
+<!-- 合伙人、我的评价、账号设置 -->
+<div class="container2">
+	<div class="partner">
+			<div class="content clearfloat">
+				<a href="javascript:;" class="clearfloat"><div class="left">
+						<img src="img/Image/iconImage/page我的icon-2016-1-22/page我的3x/4/我的推广@3x.png" alt="">
+						<span class="txt">合伙人</span>
+					</div>
+					<div class="right">
+						<span><span class="small-font">您的专属身份</span> <strong>></strong></span>
+					</div></a>
+			</div>
+		</div>
+
+		<div class="mine-reviews">
+			<div class="content clearfloat">
+				<a href="mine-reviews.html" class="clearfloat"><div class="left">
+						<img src="img/Image/iconImage/page我的icon-2016-1-22/page我的3x/4/我的评价@3x.png" alt="">
+						<span class="txt">我的评价</span>
+					</div>
+					<div class="right">
+						<span><strong>></strong></span>
+					</div></a>
+			</div>
+		</div>
+
+
+		<div class="account-set">
+			<div class="content clearfloat">
+				<div class="left">
+					<a class="clearfloat" href="an-set.html"><img src="img/Image/iconImage/page我的icon-2016-1-22/page我的3x/4/账号设置@3x.png" alt="">
+						<span class="txt">账号设置</span>
+										</div>
+										<div class="right">
+						<span><strong>></strong></span>
+										</div></a>
+			</div>
+		</div>
+</div>
+
+<!-- 设置城市、门店地址、关于我们 -->
+<div class="container3">
+	<div class="set-city">
+		<div class="content clearfloat">
+			<a href="set-city.html" class="clearfloat"><div class="left">
+					<img src="img/Image/iconImage/page我的icon-2016-1-22/page我的3x/4/myPosition@3x.png" alt="">
+					<span class="txt">设置城市</span>
+				</div>
+				<div class="right">
+					<span><strong>></strong></span>
+				</div></a>
+		</div>
+	</div>
+
+	<div class="outlet-addr">
+		<div class="content clearfloat">
+			<a href="outlet-addr.html" class="clearfloat"><div class="left">
+					<img src="img/Image/iconImage/page我的icon-2016-1-22/page我的3x/4/门店地址@3x.png" alt="">
+					<span class="txt">门店地址</span>
+				</div>
+				<div class="right">
+					<span><strong>></strong></span>
+				</div></a>
+		</div>
+	</div>
+
+
+	<div class="aboutUs">
+		<div class="content clearfloat">
+			<a href="javascript:;" class="clearfloat"><div class="left">
+					<img src="img/Image/iconImage/page我的icon-2016-1-22/page我的3x/4/关于我们@3x.png" alt="">
+					<span class="txt">关于我们</span>
+				</div>
+				<div class="right">
+					<span><span class="small-font">400-165-6518</span> <strong>></strong></span>
+				</div></a>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		
+
+
+	})
+</script>
+</body>
+</html>

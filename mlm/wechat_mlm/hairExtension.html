@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>烫发</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			padding-top: 50px;
+			background: #ededed;
+			font-family: "微软雅黑";
+		}
+		
+		/* 标题 */
+		.title {
+			position: fixed;
+			top: 0%;
+			height: 44px;
+			line-height: 44px;
+			background: #fff;
+			text-align: center;
+			width: 100%;
+			z-index: 2;
+		}
+
+		.title a {
+			float: left;
+			height: 44px;
+			line-height: 44px;
+		}
+
+		.title img {
+			width: 25px;
+		  vertical-align: middle;
+		  margin-top: -5px;
+		}
+
+		/* 烫发种类 */
+		/*.kind-container {
+			background: #fff;
+		}
+
+		.kind-container .content {
+			width: 90%;
+			margin: auto;
+			padding: 1%;
+		}
+
+		.kind-container .content span {
+			display: inline-block;
+			float: left;
+			width: 49%;
+			text-align: center;
+			border: 1px solid #f00;
+			color: #f00;
+			padding-top: 8px;
+			padding-bottom: 8px;
+		}
+
+		.kind-container .content span:first-child {
+			border-right: none;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+
+		.kind-container .content span:last-child {
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+		}
+
+		.selected {
+			color: #fff !important;
+			background: #f00;
+		}*/
+		
+		/* 种类选择 */
+		.container {
+			background: #fff;
+			height: calc(100vh - 105px);
+		}
+
+		.container .content {
+			height: 35px;
+			line-height: 35px;
+			padding-left: 3%;
+			padding-bottom: 5px;
+		}
+
+		.container .item {
+			padding-right: 3%;
+			border-bottom: 1px solid #eee;
+		}
+
+		.left {
+			float: left;
+		}
+
+		.right {
+			float: right;
+		}
+
+		img.choose {
+			width: 20px;
+			vertical-align: middle;
+			transform: translateY(-.15rem);
+    	margin-right: 2vw;
+		}
+
+		.item-name,
+		.container .right {
+			color: #f00;
+		}
+
+		/* 确定和取消按钮 */
+		.btn-group {
+			position: fixed;
+			bottom: 0;
+			height: 44px;
+			width: 100%;
+			background: #fff;
+		}
+
+		.btn-group span {
+			float: right;
+			margin-right: 4%;
+			border: 1px solid #aaa;
+	    color: #aaa;
+	    padding: 1% 4%;
+	    margin-top: .4rem;
+	    border-radius: 3px;
+		}
+
+		.btn-group span:first-child {
+			border: 1px solid #f00;
+	    color: #f00;
+		}
+
+		/* 清楚浮动 */
+		.clearfloat:after,
+		.clearfloat:before {
+			display: table;
+			content: "";
+		} 
+		
+		.clearfloat:after {
+			clear: both;
+		}
+
+	</style>
+</head>
+<body>
+<!-- 标题 -->
+<div class="title">
+	<a href="javascript: history.go(-1)"><img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt=""></a>
+	<span>接发</span>
+</div>
+
+<!-- 染发种类 -->
+<!-- <div class="kind-container">
+	<div class="content clearfloat">
+		<span>短发</span>
+		<span>长发</span>
+	</div>
+</div> -->
+
+<!-- 种类选择 -->
+<div class="container">
+	<div class="content">
+		<div class="item clearfloat">
+			<div class="left">
+				<img class="choose" src="img/Image/未选中@3x.png" alt="">
+				<span class="item-name">基础烫发</span>
+			</div>
+			<div class="right">￥280</div>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="item clearfloat">
+			<div class="left">
+				<img class="choose" src="img/Image/未选中@3x.png" alt="">
+				<span class="item-name">基础烫发</span>
+			</div>
+			<div class="right">￥280</div>
+		</div>
+	</div>
+
+	<div class="content">
+		<div class="item clearfloat">
+			<div class="left">
+				<img class="choose" src="img/Image/未选中@3x.png" alt="">
+				<span class="item-name">基础烫发</span>
+			</div>
+			<div class="right">￥280</div>
+		</div>
+	</div>
+</div>
+
+<!-- 确定和取消按钮 -->
+<div class="btn-group">
+	<span class="stress">确定</span>
+	<span>取消</span>
+</div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function () {
+
+		// 默认加载选择项
+		// $(".kind-container span:eq(0)").addClass("selected");
+		// 选择烫发类型
+		// $(".kind-container span").click(function () {
+		// 	$(this).addClass("selected");
+		// 	$(this).siblings().removeClass("selected");
+		// });
+
+		// 选择服务项目名称
+		$(".container .content").click(function() {
+
+			// 点击单选按钮，如果单选按钮是选中状态则取消选中，否则即为选中
+			if ( $(this).find("img").attr('src') == "img/Image/未选中@3x.png" ) {
+				$(this).find("img").attr('src',"img/Image/选中@3x.png");
+			} else {
+				$(this).find("img").attr('src',"img/Image/未选中@3x.png");
+			}
+
+		})
+	})
+</script>
+</body>
+</html>

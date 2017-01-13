@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>提交订单的第二页</title>
+	<link rel="stylesheet" href="css/LArea.css">
+	<link rel="stylesheet" href="css/deliveryWay.css">
+</head>
+<body>
+<!-- 页头 -->
+<div class="top">
+	<a href=""><img src="img/fh_03.png" alt=""></a>
+	<span>提交订单</span>
+</div>
+
+<!-- 商品展示和数量的添加 -->
+<div class="product-show clearfloat">
+	<img src="img/pic@2x.png" alt="">
+	<div class="content">
+		<div class="name">欧莱雅洗发水</div>
+		<div class="coinPrice">
+			<img src="img/人民币@2x.png" alt="">
+			<span>11960.00</span>
+			<span class="amount">x1</span>
+		</div>
+		<div class="coinPrice">
+			<img src="img/美币@2x.png" alt="">
+			<span>11960.00</span>
+			<span class="amount">x1</span>
+		</div>
+	</div>
+	<!-- <div class="productNumber">
+		<img src="img/减－@2x.png" alt="">
+		<span class="number">1</span>
+		<img src="img/加＋@2x.png" alt="">
+	</div> -->
+</div>
+
+<!-- 销售门店，设计师和技师， 还有配送方式三个栏 -->
+<div class="three-columns">
+	<div class="salesOutlet">
+		<span>销售门店：</span>
+		<span>小野发艺哈西店</span>
+	</div>
+	<div class="stylistAndTech clearfloat">
+		<div class="left">
+			<span>设计师：</span>
+			<span class="name">阿爆</span>
+		</div>
+		<div class="right">
+			<span>技师：</span>
+			<span class="name">小爆</span>
+		</div>
+	</div>
+	<div class="delivery-way clearfloat">
+		<div class="left"><label for="">配送方式：</label></div>
+		<div class="right">邮寄</div>
+	</div>
+</div>
+
+<!-- 添加配送信息 -->
+<div class="deliveryInfo">
+	<span class="strip"></span>
+	<div class="content">
+		<div class="name">
+			<span>取件人姓名：</span>
+			<input type="text" placeholder="请输入姓名">
+		</div>
+		<div class="phone">
+			<span>联系电话：</span>
+			<input type="text" placeholder="手机号">
+		</div>
+		<div class="area clearfloat">
+			<div class="left">
+				<span>所在地区：</span>
+			</div>
+			<div class="right">
+				<input type="text" id="demo1" placeholder="必选" readonly="readonly">
+				<input id="value1" type="hidden">
+				<img src="img/进入箭头@3x.png" alt="">
+			</div>
+		</div>
+		<div class="street clearfloat">
+			<div class="left">
+				<span>街道：</span>
+			</div>
+			<div class="right">
+				<input type="text" id="demo2" placeholder="必选" readonly="readonly">
+				<input id="value2" type="hidden">
+				<img src="img/进入箭头@3x.png" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 固定在底部的提交订单栏 -->
+<div class="submitOrder clearfloat">
+	<div class="left">
+		<label for="" class="total">合计：</label>
+		<span class="totalValue">
+			<span>22元</span>
+			/
+			<span>11960美币</span>
+		</span>
+	</div>
+	<div class="right">
+		<a class="submit_order" href="">提交订单</a>
+	</div>
+</div>
+
+
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<!-- <script src="js/LAreaData1.js"></script>
+<script src="js/LAreaData2.js"></script> -->
+<script src="js/LArea.js"></script>
+<script>
+	$(function() {
+
+		$("#demo1").change(function() {
+			alert("111");
+		});
+
+			var myData = [{
+				"id": "1",
+				"name": "黑龙江省",
+				"child": [{
+					"id": "11",
+					"name": "哈尔滨市",
+					"child": [{
+						"id":"01",
+						"name": "南岗区"
+					},{
+						"id":"02",
+						"name": "松北区"
+					}]
+				},{
+					"id": "12",
+					"name": "齐齐哈尔市",
+					"child":[{
+						"id":"03",
+						"name": "龙沙区"
+					},{
+						"id":"03",
+						"name": "建华区"
+					}]
+				}]
+			}]; 
+
+
+			var area1 = new LArea();
+	    area1.init({
+	      'trigger': '#demo1', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+	      'valueTo': '#value1', //选择完毕后id属性输出到该位置
+	      'keys': {
+	          id: 'id',
+	          name: 'name'
+	      }, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+	      'type': 1, //数据源类型
+	      'data': myData //数据源
+	    });
+
+	    var streets = [{
+	    	"id": "10",
+	    	"name": "和兴路街道"
+	    },{
+	    	"id": "20",
+	    	"name": "南马路街道"
+	    }];
+
+	    var area2 = new LArea();
+	    area2.init({
+	      'trigger': '#demo2', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+	      'valueTo': '#value2', //选择完毕后id属性输出到该位置
+	      'keys': {
+	          id: 'id',
+	          name: 'name'
+	      }, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+	      'type': 1, //数据源类型
+	      'data': streets //数据源
+	    });
+
+	    setInterval(function() {
+  	   	$("#demo1,#demo2").blur();
+  	   	$("body").css({
+  	   		"overflow-x":"hidden"
+  	   	});
+  	   },50);
+
+	    $("#demo1,#demo2").focus(function(e){
+	    	e.preventDefault();
+	    });
+
+
+    	$("#demo2").click(function(){
+    		$(".area_roll:eq(0) > div:eq(2), .area_roll:eq(0) > div:eq(1)").hide();
+    	});
+
+    	$("#demo1").click(function(){
+    		$(".area_roll:eq(0) > div:eq(2)").hide();
+    	});
+	})
+</script>	
+</body>
+</html>

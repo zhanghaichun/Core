@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>发型详情</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			/*font-size: 3em;*/
+			background: #ededed;
+			padding-bottom: 20%;
+			/*overflow: hidden;*/
+			/*font-family: "微软雅黑";*/
+		}
+
+		/* 设置返回和微收藏 */
+		.no-collection,
+		.return {
+			position: absolute;
+		}
+
+		.return {
+			top: 1em;
+			left: 1em;
+		}
+
+		.return a {
+			display: block;
+		}
+
+		.return img {
+			width: 40px;
+		}
+
+
+		.no-collection {
+			right: 1em;
+			top: 1em;
+		}
+
+		.collection-num {
+			display: inline-block;
+			width: 40px;
+			height: 43.5px;
+			color: #fff;
+			text-align: center;
+			line-height: 43.5px;
+			background-image: url("../img/Image/已收藏2@3x.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+			transform: translate(8px ,-15.2px);
+			z-index: 5;
+		}
+
+		.no-collection img {
+			display: inline-block;
+			width: 40px;
+		}
+
+		/* 顶部的发型介绍 */
+		.intro-content > img{
+			width: 100%;
+			height: 300px;
+		}
+
+		.intro-content > .intro {
+			height: 44px;
+			line-height: 44px;
+			padding: .5em;
+			background: #fff;
+		}
+
+		.intro > .share {
+			float: right;
+			text-align: right;
+			line-height: .8;
+		}
+
+		.intro > .share i {
+			display: inline-block;
+			float: left;
+			height: 2.5em;
+			border-right: 2px solid #ebebeb;
+			transform: translate(5vw,.3rem);
+		}
+
+		.intro > .share img {
+			width: 30px;
+			transform: translateX(-42%);
+		}
+
+		.intro > .share span {
+			display: inline-block;
+			transform: translateX(10%);
+		}
+
+		.intro-content > .intro span {
+			display: inline-block;
+			float: left;
+			width: 65%;
+			padding: .2em .6em;
+		}
+
+
+		/* 发型师介绍 */
+		/* 页面的主体部分(包括发型师和发型的介绍)  */
+		.stylistIntro {
+			background: #fff;
+			padding-right: 1em;
+			font-size: .7em;
+			padding-top: 2%;
+		  padding-bottom: 1%;
+		  margin-top: 10px;
+		}
+
+		.stylistIntro a {
+			display: block;
+		}
+
+		.hp {
+			margin-left: 2vw;
+			margin-right: 2vw;
+			float: left;
+		}
+
+		.hp img {
+			width: 50px;
+			height: 50px;
+		}
+
+		.stylistIntro .intro {
+			float: left;
+		}
+
+		.stylistIntro .intro .name {
+			font-weight: bold;
+			zoom: 1.3;
+		}
+
+		.stylistIntro .intro .motto {
+			min-height: 1rem;
+		}
+
+		.stylistIntro .intro .level {
+			display: inline-block;
+			color: #f00;
+			padding: .1em .4em;
+			margin-left: 16px;
+			box-sizing: border-box;
+			border: 1px solid #f00;
+			border-radius: 3px;
+			transform: translateY(-.2rem);
+		}
+
+		.stylistIntro ul {
+			padding-left: 0;
+			list-style: none;
+			margin: 0;
+		}
+
+		.stylistIntro ul li {
+			display: inline-block;
+		}
+
+		.appoint {
+			float: right;
+			transform: translateY(.2rem);
+		}
+
+		.appoint a {
+			display: block;
+		}
+
+		.appoint img {
+			width: 12vw;
+		}
+
+		.img-circle {
+			border-radius: 50%;
+		}
+
+		.text-danger {
+			color: #f00;
+			font-family: "微软雅黑";
+		}
+
+		.text-muted {
+			color: #bbb;
+		}
+
+		/* 设置发型图片 */
+		.hairdo .col-xs-12 img {
+			/*height: 800px;
+			margin-top: .8em;*/
+		}
+
+		/* 设计推荐设计师分隔栏 */
+		.recom-stylist {
+			background: #fff;
+			padding: .6em;
+			text-align: center;
+		}
+
+		.recom-stylist .txt {
+			display: inline-block;
+			text-align: center;
+		}
+
+		.recom-stylist > i {
+			display: inline-block;
+			width: 32%;
+			border-bottom: 4px solid gray;
+			vertical-align: middle;
+			transform: translateY(-.5em);
+		}
+
+		/*.recom-stylist .before {
+			float: left;
+		}
+
+		.recom-stylist .after {
+			float: right;
+		}*/
+
+		.recom-stylist > span {
+			display: block;
+		}
+
+		.recom-stylist .txt span:last-child {
+			text-transform: uppercase;
+		}
+
+		/* 设置推荐设计师图片 */
+		.image-intro {
+			position: relative;
+			background: #fff;
+		}
+
+		.image-intro > img {
+			height: 460px;
+		}
+
+		.image-intro > div {
+			font-size: .8em;
+		}
+
+		.row-stylist {
+			box-sizing: border-box;
+			padding-left: 6px;
+		}
+
+		.col-xs-6 .intro {
+			position: absolute;
+			top: 8em;
+			width: 100%;
+			background: rgba(0,0,0,.5);
+			color: #fff;
+			padding-left: 1em;
+			padding-top: .5em;
+			padding-bottom: .5em;
+			box-sizing: border-box;
+		}
+
+		.nap {
+			margin-bottom: .3em;
+		}
+
+		.position {
+			display: inline-block;
+			margin-left: 1em;
+			font-size: .8em;
+			color: #f00;
+			padding: .2em .5em;
+			border: 3px solid #f00;
+			border-radius: .2em;
+		}
+
+		.serv > * {
+			font-size: .8em;
+		}
+
+		.serv  span.price {
+			color: #f00;
+		}
+
+		.order-imme {
+			margin-top: .9em;
+			padding-bottom: .9em;
+			text-align: center;
+		}
+
+
+		.order-imme > img {
+			vertical-align: middle;
+		}
+
+		.order-imme > .txt {
+			display: inline-block;
+			transform: translateY(10px);
+		}
+
+		/* 设置底部的查看更多 */
+		.see-more {
+			background: transparent;
+			padding: .5em .7em;
+			margin-top: 1em;
+			text-align: center;
+		}
+
+		.see-more > .button {
+			display: inline-block;
+			text-align: center;
+			border: 4px solid #bbb;
+			padding: .3em 2em;
+			border-radius: 1.5em;
+		}
+
+		.see-more > .button span {
+			display: block;
+			color: #bbb;
+			font-size: .8em
+		}
+
+		.see-more > .button span:last-child {
+			text-transform: uppercase;
+			font-size: .6em;
+		}
+
+		.see-more > i {
+			display: inline-block;
+			width: 28%;
+			border-bottom: 4px solid #ccc;
+			vertical-align: middle;
+			transform: translateY(-.5em);
+		}
+
+		/* 定义发型详情页中下滑时的效果 */
+		.scroll {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			height: 44px;
+			line-height: 44px;
+			display: none;
+			background: #fff;
+			text-align: center;
+			padding-left: 3%;
+		}
+
+		.scroll .state {
+			display: inline-block;
+			overflow: hidden;
+			width: 13em;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		.collection-number {
+			display: inline-block;
+			color: gray;
+		}
+
+		.scroll .left {
+			float: left;
+		}
+
+		.scroll .left a {
+			display: block;
+		}
+
+		.scroll .left  img,
+		.scroll .right  img {
+			vertical-align: middle;
+			width: 25px;
+			margin-top: -3px;
+		}
+
+		.scroll .right {
+			float: right;
+			margin-right: 6%;
+		}
+
+
+		/* 设置响应式图片 */	
+		.img-responsive {
+			display: block;
+			max-width: 100%;
+			height: 300px;
+		}
+
+		/* 设置清除浮动 */
+		.clearfloat:before,
+		.clearfloat:after {
+			display: table;
+			content: "";
+		}
+
+		.clearfloat:after {
+			clear: both;
+		}
+
+		/* 设置栅格系统 */
+		.row {
+			margin-top: 10px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+		.row .col {
+			margin-bottom: 10px;
+		}
+
+		a {
+			text-decoration: none;
+			color: #000;
+			-webkit-tap-highlight-color:rgba(0,0,0,0);
+		}
+
+	</style>
+</head>
+<body>
+<!-- 设置返回和微收藏 -->
+<div class="return">
+	<a href="javascript: history.go(-1);"><img src="img/Image/iconImage/page设计师内页icon/3x/nav/返回@3x.png" alt=""></a>
+</div>
+
+<div class="no-collection">
+	<span class="collection-num">45</span>
+	<span class="img"><img src="img/Image/已收藏-+nub--拷贝1@3x.png" alt=""></span>
+</div>
+<!-- 设置顶部的发型介绍 -->
+<div class="intro-content">
+	<img class="img-responsive" src="img/Self/bridge.jpg" alt="">
+	<div class="intro clearfloat">
+		<span class="desc">2016年流行色发布</span>
+		<div class="share">
+			<i></i>
+			<img src="img/Image/iconImage/others-icon/发型详情分享@3x.png" alt="">
+			<span>分享</span>
+		</div>
+	</div>
+</div>
+
+<!-- 发型师介绍 -->
+<div class="stylistIntro clearfloat">
+	<a href="stylist-details.html"><div class="hp"><img  class="img-circle" src="img/Self/ninetales.jpg" alt=""></div>
+		<div class="intro">
+			<span class="name">汤尼</span>
+			<span class="level">高级技术总监</span>
+			<div class="motto text-muted">发型改变气质，你也可以成为明星</div>
+			<ul>
+				<li><span>656</span> 收藏</li>
+				<li>|</li>
+				<li><span>3489</span> 美单</li>
+				<li>|</li>
+				<li>洗剪吹 <span class="text-danger">￥89</span></li>
+			</ul>
+		</div></a>
+		
+	<div class="appoint">
+		<a href="appoint.html"><img src="img/Images.xcassets/homeImage/发型详情.imageset/发型详情@3x.png" alt=""></a>
+	</div>
+</div>
+
+
+<!-- 设置发型图片 -->
+<div class="row">
+	<div class="col"><img class="img-responsive" src="img/Self/fall.jpg" alt=""></div>
+	<div class="col"><img class="img-responsive" src="img/Self/forest.jpg" alt=""></div>
+</div>
+
+<!-- 设计推荐设计师分隔栏 -->
+<!-- <div class="recom-stylist clearfloat">
+	<i class="before"></i>
+	<div class="txt">
+		<span>推荐设计师</span><br>
+		<span>stylist</span>
+	</div>
+	<i class="after"></i>
+</div> -->
+
+<!-- 设置推荐设计师图片 -->
+<!-- <div class="clearfloat row row-stylist">
+	<div class="col-xs-6">
+		<div class="image-intro">
+			<img class="img-responsive" src="img/Self/hack.jpg" alt="">
+			<div class="intro">
+				<div class="nap"><span class="name">莎莎</span><span class="position">高级技术总监</span></div>
+				<div class="serv">
+					<span class="orders"><span class="num">3243</span>美单</span>
+					<span class="ss">洗剪吹<span class="price">￥999</span></span>
+				</div>
+			</div>
+			<div class="order-imme">
+				<img src="img/Image/iconImage/page设计师内页icon/3x/立即预约@3x.png" alt="">
+				<span class="txt">立即预约</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-6">
+		<div class="image-intro">
+			<img class="img-responsive" src="img/Self/1.jpg" alt="">
+			<div class="intro">
+				<div class="nap"><span class="name">莎莎</span><span class="position">高级技术总监</span></div>
+				<div class="serv">
+					<span class="orders"><span class="num">3243</span>美单</span>
+					<span class="ss">洗剪吹<span class="price">￥999</span></span>
+				</div>
+			</div>
+			<div class="order-imme">
+				<img src="img/Image/iconImage/page设计师内页icon/3x/立即预约@3x.png" alt="">
+				<span class="txt">立即预约</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-6">
+		<div class="image-intro">
+			<img class="img-responsive" src="img/Self/1.jpg" alt="">
+			<div class="intro">
+				<div class="nap"><span class="name">莎莎</span><span class="position">高级技术总监</span></div>
+				<div class="serv">
+					<span class="orders"><span class="num">3243</span>美单</span>
+					<span class="ss">洗剪吹<span class="price">￥999</span></span>
+				</div>
+			</div>
+			<div class="order-imme">
+				<img src="img/Image/iconImage/page设计师内页icon/3x/立即预约@3x.png" alt="">
+				<span class="txt">立即预约</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-xs-6">
+		<div class="image-intro">
+			<img class="img-responsive" src="img/Self/1.jpg" alt="">
+			<div class="intro">
+				<div class="nap"><span class="name">莎莎</span><span class="position">高级技术总监</span></div>
+				<div class="serv">
+					<span class="orders"><span class="num">3243</span>美单</span>
+					<span class="ss">洗剪吹<span class="price">￥999</span></span>
+				</div>
+			</div>
+			<div class="order-imme">
+				<img src="img/Image/iconImage/page设计师内页icon/3x/立即预约@3x.png" alt="">
+				<span class="txt">立即预约</span>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<!-- 设置底部的查看更多 -->
+<!-- <div class="see-more">
+	<i></i>
+	<div class="button">
+		<span>查看更多</span>
+		<span>view more</span>
+	</div>
+	<i></i>
+</div> -->
+
+<!-- 定义发型详情页中下滑时的效果 -->
+<div class="scroll clearfloat">
+	<div class="left">
+		<a href="javascript: history.go(-1)"><img src="img/Image/iconImage/others-icon/nav-返回@3x.png" alt=""></a>
+	</div>
+	<div class="state">2016年流行色发布</div>
+	<div class="right">
+		<span class="collection-number">4750</span>
+		<img src="img/Image/iconImage/page设计师内页icon/3x/1/未收藏@2x.png" alt="">
+	</div>
+</div>
+
+
+
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+		// alert( $(".img > img").attr("src") );
+
+		// 点击收藏的时候，提示效果
+		$(".no-collection").click(function() {
+			$(".img > img").attr("src","img/Image/已收藏-+nub--拷贝@3x.png");
+
+			$(".collection-num").text( parseInt( $(".collection-num").text() ) + 1 );
+
+			$(this).unbind("click");
+
+			if($(".img > img").attr("src") == "img/Image/已收藏-+nub--拷贝@3x.png") {
+				$(".scroll .right img").attr("src","img/Image/iconImage/page设计师内页icon/3x/1/已收藏-小@3x.png");
+				$(".collection-number").text( parseInt( $(".collection-number").text() ) + 1 );
+			}
+
+			// $(".row-stylist .col-xs-6:odd").css({"margin-right": "-5px"});
+		})
+
+		// 当窗口下滑的时候显示的效果，当scrollTop() == 0时，也就是滚动条没有下滑的
+		// 时候，
+		setInterval(function() {
+			$(window).scroll(function() {
+				$(".scroll").fadeIn(300);
+			})
+
+			if($(window).scrollTop() == 0) {
+				$(".scroll").fadeOut(100);
+			}
+
+		},300);
+
+
+	})
+</script>
+
+</body>
+</html>

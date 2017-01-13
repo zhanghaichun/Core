@@ -1,0 +1,94 @@
+{
+    "lists":[
+        {
+            "location-txt":"远大s+",
+            "stylist":"img/Self/1.jpg",
+            "name":"布兰妮",
+            "level":"高级技术总监",
+            "colls": "349",
+            "mos": "555",
+            "price": "￥54"
+        },
+        {
+            "location-txt":"小野A店",
+            "stylist":"img/Self/1.jpg",
+            "name":"李天龙",
+            "level":"高级设计师",
+            "colls": "543",
+            "mos": "2354",
+            "price": "￥76"
+        },
+        {
+            "location-txt":"齐齐哈尔沙龙店",
+            "stylist":"img/Self/1.jpg",
+            "name":"郑义",
+            "level":"风格设计师",
+            "colls": "342",
+            "mos": "76534",
+            "price": "￥238"
+        },
+        {
+           "location-txt":"南岗区理发店",
+            "stylist":"img/Self/1.jpg",
+            "name":"张易凯",
+            "level":"普通发型师",
+            "colls": "543",
+            "mos": "654754",
+            "price": "￥493"
+        },
+        {
+            "location-txt":"道外店",
+            "stylist":"img/Self/1.jpg",
+            "name":"李梦佳",
+            "level":"首席发型师",
+            "colls": "4523",
+            "mos": "564",
+            "price": "￥673"
+        },
+        {
+            "location-txt":"道里区晋安店",
+            "stylist":"img/Self/1.jpg",
+            "name":"袁世凯",
+            "level":"资深发型师",
+            "colls": "453",
+            "mos": "234",
+            "price": "￥657"
+        },
+        {
+            "location-txt":"平房区旗舰店",
+            "stylist":"img/Self/1.jpg",
+            "name":"王正义",
+            "level":"首席发型师",
+            "colls": "675",
+            "mos": "786",
+            "price": "￥765"
+        },
+        {
+           "location-txt":"呼兰区旗舰店",
+            "stylist":"img/Self/1.jpg",
+            "name":"孙坚",
+            "level":"高级发型师",
+            "colls": "234",
+            "mos": "2345",
+            "price": "￥56645"
+        },
+        {
+            "location-txt":"道里区新发店",
+            "stylist":"img/Self/1.jpg",
+            "name":"汪精卫",
+            "level":"高级设计师",
+            "colls": "654",
+            "mos": "8545",
+            "price": "￥45"
+        },
+        {
+            "location-txt":"平房区民族店",
+            "stylist":"img/Self/1.jpg",
+            "name":"联众",
+            "level":"老总",
+            "colls": "265",
+            "mos": "64335",
+            "price": "￥5654"
+        }
+    ]
+}

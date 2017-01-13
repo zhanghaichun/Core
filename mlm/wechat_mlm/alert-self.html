@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/sweetalert.css">
+	<style>
+		button {
+			font-size: 16px;
+			background: transparent;
+			border: none;
+			width: 48%;
+			padding: 14px;
+			border: none;
+			outline: none;
+		}
+		.pullup {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: none;
+			background: rgba(0,0,0,.4);
+
+		}
+
+		.pullup .content {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 80%;
+			height: 150px;
+			margin: auto;
+			background: rgba(255,255,255,.9);
+			border-radius: 8px;
+			text-align: center;
+			box-sizing: border-box;
+		}
+
+		.pullup .btn-group {
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			text-align: center;
+			border-top: 1px solid #ddd;
+		}
+
+		.pullup i {
+			border-left: 2px solid #ddd;
+		}
+		
+		/* 尺寸动画 */
+		.scale {
+			-webkit-animation: scale .4s linear;
+			animation: scale .4s linear;
+		}
+
+		@-webkit-keyframes scale {
+			0% {
+				-webkit-transform: scale(.7);
+				transform: scale(.7);
+			}
+
+			25% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+			}
+
+			50% {
+				-webkit-transform: scale(.9);
+				transform: scale(.9);
+			}
+
+			100% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+			}
+		}
+
+		@keyframes scale {
+					0% {
+						-webkit-transform: scale(.7);
+						transform: scale(.7);
+					}
+
+					25% {
+						-webkit-transform: scale(1.05);
+						transform: scale(1.05);
+					}
+
+					50% {
+						-webkit-transform: scale(.95);
+						transform: scale(.95);
+					}
+
+					100% {
+						-webkit-transform: scale(1);
+						transform: scale(1);
+					}
+				}
+		
+		/* 移动动画 */
+		.translate {
+			-webkit-animation: translate .3s linear;
+			animation: translate .3s linear;
+		}
+
+		@-webkit-keyframes translate {
+			0% {
+				-webkit-transform: translateY(-70vh);
+				transform: translateY(-70vh);
+			}
+
+			100% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+			}
+		}
+
+		@keyframes translate {
+			0% {
+				-webkit-transform: translateY(-70vh);
+				transform: translateY(-70vh);
+			}
+
+			100% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+			}
+		}
+
+		.translateup {
+			-webkit-animation: translateup .3s linear forwards;
+			animation: translateup .3s linear forwards;
+		}
+
+		@-webkit-keyframes translateup {
+			0% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+			}
+
+			100% {
+				-webkit-transform: translateY(-70vh);
+				transform: translateY(-70vh);
+			}
+		}
+
+		@keyframes translateup {
+			0% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+			}
+
+			100% {
+				-webkit-transform: translateY(-70vh);
+				transform: translateY(-70vh);
+			}
+		}
+
+	</style>
+</head>
+<body>
+<button class="click">点击</button>
+<div class="pullup">
+	<div class="content translate">
+		<h3 class="prompt">温馨提示</h3>
+		<span>请选择预约时间!</span>
+		<div class="btn-group">
+			<button class="dis">确认</button>
+			<i></i>
+			<button class="dis">取消</button>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/sweetalert-dev.js"></script>
+<script>
+	$(function() {
+		$(".click").click(function() {
+			$(".pullup .content").addClass("translate").removeClass("translateup");
+			$(".pullup").fadeIn();
+		});
+
+		$(".dis").click(function() {
+			$(".pullup .content").addClass("translateup").removeClass("translate");
+			$(".pullup").fadeOut(500);
+		});
+
+	})
+
+</script>
+</body>
+</html>

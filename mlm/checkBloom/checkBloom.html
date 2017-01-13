@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>试验版签到开花</title>
+	<!-- Reset 浏览器的默认对所有元素的样式设置，但是不必全部都重置 -->
+	<link rel="stylesheet" href="css/normalize.css">
+
+	<!-- 这是html文档中的主要的css文件 -->
+	<link rel="stylesheet" href="css/checkBloom.css">
+</head>
+<body>
+<!-- 设置奖品图标的位置--> 
+<div class="prizeList">
+	<img src="images/prizeList.png" alt="奖品列表按钮" title="点击查看奖品清单">
+</div>
+
+<!-- 设置成熟度进度条 -->
+<section class="container">
+	<!-- 进度条-->
+	<div class="progress">
+		<span></span>
+	</div> 
+	
+	<!-- 成熟度文字-->
+	<div class="maturity">
+		<span class="text">成熟度：</span>
+		<span class="value">0</span>
+	</div> 
+</section>
+
+<!-- 设置浇花的水壶的样式 -->
+<div class="water-pot">
+	<img src="images/water-pot.png" alt="这是一个水壶" title="用来浇花的水壶">
+</div>
+
+<!-- 设置花盆的样式 -->
+<div class="bubbleAndFlower">
+	<div class="flowerpot">
+		<img src="images/day0.png" alt="带有花的一个花盆">
+	</div>
+	<div class="bubble">
+		<img src="images/plus1.png" alt="带有花的一个花盆">
+	</div>
+</div>
+
+
+<!-- 设置活动规则按钮 -->
+<div class="activity-rule">
+	<a href="#"><img src="images/activity-rule.png" alt=""></a>
+</div>
+
+<!-- 设置浇花和采摘按钮 -->
+<ul class="waterAndPick">
+	<li class="water"><a href="#"><img src="images/water.png" alt=""></a></li>
+	<li class="pick"><a href="#"><img src="images/兑换至灰@2x.png" alt=""></a></li>
+</ul>
+
+<!-- 设置采摘之后和未采摘的花盆图片的样式 -->
+<ul class="small-flowerpot">
+	<li class="week1 locked"><img src="images/locked.png"></li>
+	<li class="week2 locked"><img src="images/locked.png"></li>
+	<li class="week3 locked"><img src="images/locked.png"></li>
+	<li class="week4 locked"><img src="images/locked.png"></li>
+</ul>
+
+<!-- 设置活动规则弹出弹出的遮罩层内容 -->
+<div class="pullUp">
+	<div class="pullUp-content">
+		<div class="delete-button"><img src="images/叉@2x.png" alt=""></div>
+		<div class="modal-body">
+			<div class="partner-title">合伙人规则</div>
+			<div class="ac">
+				<div class="title">一、如何获得“合伙人”身份呢？</div>
+				<div class="item">①只需在APP内完成一笔任意金额订单（预约—到店接受服务—完成订单）</div>
+				<div class="item">②在【美币购买】内购买任意金额后，立即变为合伙人（美币可抵扣订单金额使用）成功升级为“合伙人”后，可获得专属的推荐二维码，在【我的】-【合伙人】内查看，此为识别身份的唯一象征，也是在经营美啦美过程中重要的通道。</div>
+			</div>
+
+			<div class="ac ac2">
+				<div class="title">二、“合伙人”的福利有哪些呢？</div>
+				<div class="item">合伙人可获得其金牌代言人美发订单实际金额13%的奖励、其银牌代言人美发订单实际金额3%的奖励，以现金红包的形式在订单完成时直接进入到用户的账户内。</div>
+				<div class="item">奖励可在【我的】-【合伙人】内查看并可随时申请提现（申请提现金额需大于100元）。推荐关系一直存在，推荐奖励终身享受。</div>
+			</div>
+
+			<div class="ac ac3">
+				<div class="title">三、什么是金牌/银牌代言人？</div>
+				<div class="item">美啦美的推荐关系分为三级，分别为合伙人、金牌代言人和银牌代言人。</div>
+				<div class="item">用户B通过扫描合伙人A的专属推广二维码注册美啦美后，即用户B为合伙人A的金牌代言人。</div>
+				<div class="item">用户C通过扫描合伙人B（即A的金牌代言人）的专属推广二维码并注册美啦美后，即成为合伙人A的银牌代言人，同理用户C也是合伙人B的金牌代言人。</div>
+				<div class="item">金牌/银牌代言人只要满足条件也可变成美啦美的合伙人，拥有自己的推广二维码。</div>
+			</div>
+	</div>
+	</div>
+	
+</div>
+
+
+
+<!-- 设置礼品列表弹出的遮罩层 -->
+<div class="prizeList-pullUp">
+	<div class="pullUp-content">
+		<div class="delete-button"><img src="images/叉@2x.png" alt=""></div>
+		<div class="modal-body">
+			<div class="item clearfloat">
+				<span class="left">5元剪发抵用券</span>
+				<span class="right">有效期：<span class="limit">3个月</span>&nbsp;&nbsp;领取时间：<span class="getTime">2017.08.30</span></span>
+			</div>
+
+			<div class="item clearfloat">
+				<span class="left">5元剪发抵用券</span>
+				<span class="right">有效期：<span class="limit">3个月</span>&nbsp;&nbsp;领取时间：<span class="getTime">2017.08.30</span></span>
+			</div>
+
+			<div class="item clearfloat">
+				<span class="left">5元剪发抵用券</span>
+				<span class="right">有效期：<span class="limit">3个月</span>&nbsp;&nbsp;领取时间：<span class="getTime">2017.08.30</span></span>
+			</div>
+
+			<div class="item clearfloat">
+				<span class="left">5元剪发抵用券</span>
+				<span class="right">有效期：<span class="limit">3个月</span>&nbsp;&nbsp;领取时间：<span class="getTime">2017.08.30</span></span>
+			</div>
+
+			<div class="item clearfloat">
+				<span class="left">5元剪发抵用券</span>
+				<span class="right">有效期：<span class="limit">3个月</span>&nbsp;&nbsp;领取时间：<span class="getTime">2017.08.30</span></span>
+			</div>
+
+			<div class="item clearfloat">
+				<span class="left">5元剪发抵用券</span>
+				<span class="right">有效期：<span class="limit">3个月</span>&nbsp;&nbsp;领取时间：<span class="getTime">2017.08.30</span></span>
+			</div>
+
+			<div class="item clearfloat">
+				<span class="left">5元剪发抵用券</span>
+				<span class="right">有效期：<span class="limit">3个月</span>&nbsp;&nbsp;领取时间：<span class="getTime">2017.08.30</span></span>
+			</div>
+
+			<div class="item clearfloat">
+				<span class="left">5元剪发抵用券</span>
+				<span class="right">有效期：<span class="limit">3个月</span>&nbsp;&nbsp;领取时间：<span class="getTime">2017.08.30</span></span>
+			</div>
+
+			<div class="item clearfloat">
+				<span class="left">5元剪发抵用券</span>
+				<span class="right">有效期：<span class="limit">3个月</span>&nbsp;&nbsp;领取时间：<span class="getTime">2017.08.30</span></span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 选择奖励弹出框 -->
+<div class="selectAward-pullUp">
+	<div class="haloAndNumber">
+		<img src="images/矩形-1-拷贝-31@2x.png" alt="">
+		<span class="number">3</span>
+	</div>
+	<div class="btn-group">
+		<div class="leaveLater"></div>
+		<div class="convert">
+			<input type="img">
+		</div>
+	</div>
+
+	<!-- 定义奖励卡片 -->
+	<div class="awardFiche">
+		<div class="fiche1">
+			<img class="over" src="images/形状-5@2x.png" alt="">
+			<span>5</span>
+			<img class="checked" src="images/选中@2x.png" alt="">
+		</div>
+		<div class="fiche2">
+			<img class="over" src="images/形状-5@2x.png" alt="">
+			<span>10</span>
+			<img class="checked" src="images/选中@2x.png" alt="">
+		</div>
+		<div class="fiche3">
+			<img class="over" src="images/形状-5@2x.png" alt="">
+			<span>15</span>
+			<img class="checked" src="images/选中@2x.png" alt="">
+		</div>
+		<div class="fiche4">
+			<img class="over" src="images/形状-5@2x.png" alt="">
+			<span>20</span>
+			<img class="checked" src="images/选中@2x.png" alt="">
+		</div>
+	</div>
+</div>
+
+<!-- 恭喜获得奖励弹出框 -->
+<div class="congratulation-pullUp">
+	<img src="images/叉@2x.png" alt="">
+	<div class="congratulation-content">
+		<div class="coupon"><span class="num">5</span>元剪发抵用券</div>
+		<div class="validity">有效期：<span>90</span>天</div>
+		<div class="txt">剪发金额超50元可以使用</div>
+	</div>
+
+	<div class="gotoUse">
+		<a href=""></a>
+	</div>
+</div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/checkBloom.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>修改昵称</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			padding-top: 54px;
+			padding-bottom: 20%;
+			overflow: hidden;
+			background: #ededed;
+			/*font-family: "微软雅黑";*/
+		}
+
+		/* 设置标题 */
+		.title {
+			position: fixed;
+			top: 0%;
+			height: 44px;
+			line-height: 44px;
+			background: #fff;
+			text-align: center;
+			width: 100%;
+			z-index: 2;
+			border-bottom: 1px solid #eee;
+		}
+
+
+		.title span {
+			display: block;
+			width: 85px;
+			margin: auto;
+		}
+
+		.title a {
+			float: left;
+			height: 44px;
+			line-height: 44px;
+		}
+
+		.title img {
+			width: 25px;
+		  vertical-align: middle;
+		  margin-top: -5px;
+		}
+		
+		/* 昵称输入框 */
+		.nickname {
+			/*margin-top: 1em;*/
+			margin-bottom: 1em;
+			background: #fff;
+			padding: .4em;
+			padding-left: 5%;
+			padding-right: 5%;
+		}
+
+		.nickname input {
+			font-size: .9em;
+			border: none; 
+			outline: none;
+			overflow: hidden;
+		}
+
+		.nickname img {
+			display: none;
+			float: right;
+			width: 20px;
+		}
+
+		.confirm {
+			width: 90%;
+			background: #F00;
+			color: #fff;
+			border-radius: .2em;
+			margin: auto;
+			padding: .4em;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<!-- 标题 -->
+<div class="title">
+	<a href="javascript: history.go(-1)"><img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt=""></a>
+	<span>修改昵称</span>
+</div>
+
+<div class="nickname">
+	<input type="text" placeholder="请输入昵称" maxlength="10">
+	<img  class="deleteTxt" src="img/Image/删除.png" alt="">
+</div>
+
+<div class="confirm">确认修改</div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+		// 点击删除按钮后删除文字
+		$(".deleteTxt").click(function() {
+			$("input").val("");
+		});
+
+		setInterval(function() {
+			if ($("input").val() != "") {
+				$(".deleteTxt").show();
+			}else {
+				$(".deleteTxt").hide();
+			}
+		});
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>meilamei</title>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/idangerous.swiper.css">
+    <script src="public/js/jquery.min.js"></script>
+    <script src="public/js/idangerous.swiper.min.js"></script>
+    <style>
+      body{
+        background: #e0e0e0;
+        position: relative;
+      }
+      .section{
+        width: 1200px;
+        margin: 0 auto;
+      }
+      .nav{
+        background: #4c4c4c;
+        height: 30px;
+        line-height: 30px;
+      }
+      .nav a{
+        color: #fff;
+        padding-right: 20px;
+        font-family: FKLTZHK-GBK1-0;
+      }
+      .full-img img{
+        width: 100%;
+      }
+      #profile{
+        height:563px;
+        background: url('public/images/main_02.png')
+      }
+      #profile .left{
+        float: left;
+        width: 420px;
+        margin-left: 180px;
+        padding-top: 20px;
+      }
+      #profile .title .english{
+        color: #ccc;
+        font-size: 18px;
+        font-family:arialnarrow;
+      }
+      #profile .title .chinese{
+        font-size: 25px;
+        line-height: 2px;
+        font-family: '微软雅黑';
+        padding-left: 5px;
+      }
+      #profile .title .chinese span{
+        font-size: 20px;
+      }
+      #profile .content{
+        font-family: '微软雅黑';
+        font-size:16px;
+        padding-top: 30px;
+        color: #7d8086;
+        padding-bottom: 40px;
+      }
+      #profile .tab{
+        font-family: '微软雅黑';
+        font-size: 16px;
+        padding-top: 30px;
+        color: #7d8086;
+      }
+      #profile .tab-nav{
+        height: 30px;
+        line-height: 28px;
+        text-align: center;
+        font-size: 18px;
+      }
+      #profile .tab-nav span{
+        display: block;
+        width: 129px;
+        float: left;
+        color: #555b64;
+        border: 1px solid #eee;
+        cursor: pointer;
+      }
+      #profile .tab-nav .active{
+        color: #fff;
+        background: #ea2929;
+        border-color: #ea2929;
+      }
+      #profile .tab-content{
+        box-shadow: 0 0 10px #ccc;
+        -webkit-box-shadow: 0 0 10px #ccc;
+        -moz-box-shadow: 0 0 10px #ccc;
+        -ms-box-shadow: 0 0 10px #ccc;
+        -o-box-shadow: 0 0 10px #ccc;
+        padding: 15px 25px;
+        padding-right: 0;
+      }
+      #profile .tab-content:last-child{
+        display: none;
+      }
+      #profile .tab-content li{
+        list-style:none;
+        margin-bottom: 8px;
+        line-height: 18px;
+        position: relative;
+      }
+      #profile .tab-content li:after{
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: -15px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #f49494;
+      }
+      #profile .tab-content li:first-child:after{
+        background: #ea2929;
+      }
+      #profile .right{
+        float: left;
+        width: 191px;
+        padding-top: 137px;
+        margin-left: 129px;
+      }
+      #profile .swiper-banner-container{
+        height: 336px;
+        background: #fff;
+      }
+      #profile .pagination {
+        position: absolute;
+        z-index: 200;
+        left: 37%;
+        top: 300px;
+      }
+      .swiper-pagination-switch {
+        display: block;
+        float: left;
+        width: 6px;
+        height: 6px;
+        background: url('public/images/round2.png') no-repeat;
+        margin-right: 8px;
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      .swiper-active-switch {
+        background: url('public/images/round1.png') no-repeat;
+      }
+      .ground{
+        height:1157px;
+        background: url('public/images/main_04.png');
+        padding-top:148px;
+        padding-left: 13px;
+        font-family: '微软雅黑';
+      }
+      .flip-container {
+        float: left;
+        width: 350px;
+        height: 420px;
+        padding: 25px;
+        margin-right: 60px;
+        margin-bottom: 60px;
+        position: relative;
+        perspective: 1000;
+        -webkit-perspective: 1000px;
+        -moz-perspective: 1000px;
+        -ms-perspective: 1000px;
+        -o-perspective: 1000px;
+        perspective: 1000px;
+      }
+      .flip-container:nth-child(3n){
+        margin-right: 0;
+      }
+      .flip-container:hover .back {
+        transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        z-index:2;
+      }
+      .flip-container:hover .front {
+        transform: rotateY(180deg);
+        -webkit-transform: rotateY(180deg);
+        -moz-transform: rotateY(180deg);
+        -ms-transform: rotateY(180deg);
+        -o-transform: rotateY(180deg);
+        z-index:1
+      }
+      .flipper {
+        transition:transform 0.6s ease-out;
+        transition: transform .5s ease-in-out;
+        -webkit-transition: transform .5s ease-in-out;
+        -moz-transition: transform .5s ease-in-out;
+        -ms-transition: transform .5s ease-in-out;
+        -o-transition: transform .5s ease-in-out;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        display:block;position: relative;}
+      .front, .back {
+        backface-visibility: hidden;
+        transition: 0.6s ease-out;
+        -webkit-transition: .6s ease-out;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .front {
+        background: rgba(255, 255, 255, 0.3);
+        width: 300px;
+        height: 370px;
+        margin: auto;
+        text-align: center;
+        color: #fff;
+        padding-top: 80px;
+        font-size: 28px;
+        z-index: 2;
+        transform: rotateY(0deg);
+        transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+      }
+      .front p{
+        margin-bottom: 25px;
+      }
+      .back {
+        padding-left: 33px;
+        padding-right: 33px;
+        font-size: 14px;
+        color: #150f0f;
+        background: #fff;
+        width: 300px;
+        height: 370px;
+        margin: auto;
+        text-align: center;
+        padding-top: 80px;
+        z-index:1;transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
+        -ms-transform: rotateY(-180deg);
+        -o-transform: rotateY(-180deg);
+      }
+      .back .title{
+        font-size: 22px;
+        padding-bottom: 40px;
+      }
+      .back .content{
+        text-align: left;
+      }
+      #retrunTop{
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        margin-left: -15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav" id="top">
+      <div class="section">
+        <a href="#">首页</a>
+        <a href="#profile">关于美啦美</a>
+        <a href="#down">app下载</a>
+      </div>
+    </div>
+    <div class="full-img">
+      <img src="public/images/banner_01.png" alt="">
+    </div>
+    <div class="section" id="profile">
+      <div class="left">
+        <div class="title">
+          <div class="english">MLM INTERNET EXCLUSIVE HAIR SALON</div>
+          <div class="chinese"><span>专属</span>  - 互联网美发沙龙</div>
+        </div>
+        <div class="content">
+          <span style="color: #ea2929;font-size: 34px;float: left;line-height: 40px;font-weight: bold;">美</span>
+          <span style="color:#ea2929">啦美</span>是一个移动互联网APP应用，致力于提供用户和</br>
+          发型师之间体验式互动平台，减少试错成本且避免等</br>待，为爱美人士提供优质，便捷的高端品质服务。美啦美</br>线下拥有200多位签约专业美发师 ，并逐步邀请更多优秀</br>设计师加盟，统一品牌管理，建立线上美业体系，实现用</br>户与发型师的共赢。
+        </div>
+        <div class="title">
+          <div class="english">RECONSTRUCTION OF THE BEAUTY INDUSTRY</div>
+          <div class="chinese"><span>重构美业</span> - 全新体验尽在美啦美</div>
+        </div>
+        <div class="tab">
+          <div class="tab-nav">
+            <span class="active">使用流程</span>
+            <span>支持门店</span>
+          </div>
+          <ul class="tab-content">
+            <li>用户通过“美啦美”APP可以直观的查看设计师风采美发作品，服务价格，历史评价</li>
+            <li>如果有心仪设计师直接点击预约，选择时间与服务类型</li>
+            <li>一切选择全凭自主掌控</li>
+            <li>接下来只要按时到店享受变美的过程即可</li>
+          </ul>
+          <ul class="tab-content">
+            <li>独有形象店：美啦美旗舰店（通江店）</li>
+            <li>首家入驻品牌：小野发艺连锁机构</li>
+            <li>目前开通地区：哈尔滨，齐齐哈尔</li>
+            <li>已入驻精品门店13家，优秀设计师近200名</li>
+            <li>其他品牌，地区的入驻正在接洽中...</li>
+          </ul>
+        </div>
+      </div>
+      <div class="right">
+        <div class="swiper-container swiper-banner-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="public/images/banner1.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="public/images/banner2.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="public/images/banner3.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="public/images/banner4.png" alt="">
+            </div>
+          </div>
+          <div class="pagination"></div>
+        </div>
+      </div>
+    </div>
+    <div class="full-img" id="down">
+      <img src="public/images/main_03.png" alt="">
+    </div>
+    <div class="section ground">
+      <div class="flip-container">
+        <div class="flipper">
+          <div class="front">
+            <span>可自主查看设计师</span></br>
+            <span><履历> <作品></span></br>
+            <span><评价></span>
+          </div>
+          <div class="back">
+            <div class="title">可自主查看设计师</div>
+            <div class="content">顶级明星设计师的从业经历、所获荣誉一览无余，新潮发型任你挑选，用户体验后的真实评价可供参考，不再盲目。 </div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-container">
+        <div class="flipper">
+          <div class="front">
+            <p>极致性价比</p>
+            <p>线上超多优惠活动</p>
+          </div>
+          <div class="back">
+            <div class="title">极致性价比</div>
+            <div class="content">无需办卡即可享受VIP优惠，绝无仅有的诱人活动、超值优惠均可参加，折后价格低于门店，轻奢美发轻松美丽。</div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-container">
+        <div class="flipper">
+          <div class="front">
+            <p>拒绝排队等位</p>
+            <p>一键预约心仪设计师</p>
+          </div>
+          <div class="back">
+            <div class="title">拒绝排队等位</div>
+            <div class="content">拥有对设计师的绝对选择权，线上预约，选择需要的服务，设计师会在约定时间等候为您服务，节约时间。</div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-container">
+        <div class="flipper">
+          <div class="front">
+            <p>产品价格明示</p>
+            <p>服务全程放心透明</p>
+          </div>
+          <div class="back">
+            <div class="title">产品价格明示</div>
+            <div class="content">所有设计师、产品的价格在APP内均可查看，不存在强制消费、隐性消费，告别无尽推销，让选择更简单。</div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-container">
+        <div class="flipper">
+          <div class="front">
+            <p>美优MALL线上商场</p>
+            <p>保证真品邮寄到家</p>
+          </div>
+          <div class="back">
+            <div class="title">美优MALL线上商场</div>
+            <div class="content">种类齐全的洗发护发产品均由厂家直供，权威品牌正品保障，可到店自取亦可送货上门，不用纠结，直接买买买。</div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-container">
+        <div class="flipper">
+          <div class="front">
+            <p>合伙人创新模式</p>
+            <p>终身享受现金分红</p>
+          </div>
+          <div class="back">
+            <div class="title">合伙人创新模式</div>
+            <div class="content">打破传统的终身合伙人模式，推荐即可享受13%+3%的现金分红，简单的分享即可坐享其成，与数万合伙人一起经营美啦美。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="full-img">
+      <img src="public/images/footer_05.png" alt="">
+    </div>
+    <a href="#top" id="retrunTop"><img src="public/images/top_06.png" alt=""></a>
+    <script>
+      $(function () {
+        $('.tab-nav').find('span').each(function(index) {
+            $(this).click(function() {
+                $(this).siblings().removeClass('active');
+                $(this).addClass('active');
+                $('.tab-content').hide();
+                $('.tab-content').eq(index).fadeIn();
+            });
+        });
+        var swiper_banner = new Swiper('.swiper-banner-container', {
+            autoplay: 3000,
+            pagination: '.pagination',
+            paginationClickable: true,
+            loop:true,
+            // autoplay : 5000,
+        })
+      })
+    </script>
+  </body>
+</html>

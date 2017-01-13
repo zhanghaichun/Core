@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>美币购买</title>
+	<link rel="stylesheet" href="css/mb-buy.css">
+</head>
+<body>
+<!-- 定义标题 -->
+<div class="title">
+	<a href="javascript: history.go(-1)"><img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt=""></a>
+	<span>美币购买</span>
+</div>
+
+
+<!-- banner图和文字 -->
+<div class="banner-container">
+	<img class="img-res" src="img/Image/mb.png" alt="">
+	<div class="content">
+		<div class="txt1">充<span class="big">58</span>元</div>
+		<div>加赠<span class="second">142</span>美币,可得<span class="three">200</span>美币</div>
+	</div>
+</div>
+
+<!-- 美币选择 -->
+<div class="mb-select">
+	<div class="content">
+		<span class="fe">￥58</span><!--
+		--><span class="th">￥300</span><!--
+		--><span class="fh">￥500</span><!--
+		--><span class="os">￥1000</span><!--
+		--><span class="osf">￥1500</span><!--
+		--><span class="ts">￥2000</span>
+	</div>
+</div>
+
+<!-- 立即购买 -->
+<div class="buy-container">
+	<div class="buy-imme">
+		<a href="mb-pay.html"><img class="img-res" src="img/Image/立即购买@3x.png" alt=""></a>
+		<div class="txt">点击立即购买，即表示你已经同意<a href="javascript:;">《美币购买协议》</a></div>
+	</div>
+</div>
+
+<!-- 当前美币和活动规则 -->
+<div class="mb-rules">
+	<div class="content">
+		<span>当前美币：<span class="mb-count">0</span></span>
+		<i></i>
+		<a href="javascript:;">活动规则</a>
+	</div>
+</div>
+
+<!-- 底部图片 -->
+<div class="footer"><img class="img-res" src="img/Image/底.png" alt=""></div>
+
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+		// 默认的选中项
+		$(".fe").addClass("border");
+		$(".mb-select span").click(function() {
+
+			if ($(this).hasClass("border")) {
+				$(this).removeClass("border");
+			} else {
+				$(this).addClass("border");
+				$(this).siblings().removeClass("border");
+			}
+			
+
+		});
+
+		selected(".fe",58,142,200);
+		selected(".th",300,300,600);
+		selected(".fh",500,500,1000);
+		selected(".os",1000,1000,2000);
+		selected(".osf",1500,1500,3000);
+		selected(".ts",2000,2000,4000);
+
+
+	})
+
+	function selected(selector,bigNum,secondNum,threeNum) {
+		$(selector).click(function() {
+			$(".big").text(bigNum);
+			$(".second").text(secondNum);
+			$(".three").text(threeNum);
+		});
+	}
+</script>
+</body>
+</html>

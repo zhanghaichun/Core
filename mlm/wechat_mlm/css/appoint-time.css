@@ -1,0 +1,169 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 20%;
+	/*font-size: 3em;*/
+	background: #ededed;
+	/*font-family: "微软雅黑";*/
+}
+
+/* 设置顶部预约标题 */
+.title {
+	background: #fff;
+	text-align: center;
+	height: 44px;
+	line-height: 44px;
+}
+
+.title a {
+	float: left;
+	display: block;
+}
+
+.title img {
+	width: 30px;
+	vertical-align: middle;
+	margin-top: -5px;
+}
+
+/* 确定预约时间的底部栏 */
+.mkapp-time {
+	position: fixed;
+	bottom: 0;
+	height: 44px;
+	width: 100%;
+	background: #fff;
+	box-sizing: border-box;
+	padding-left: 3%;
+  padding-right: 3%;
+}
+
+.mkapp-time a {
+	color: #f00;
+}
+
+.mkapp-time .left {
+	float: left;
+	transform: translateY(.2rem);
+}
+
+.mkapp-time .left span {
+	color: #f00;
+}
+
+.mkapp-time .right {
+	float: right;
+	color: #f00;
+	border: 1px solid #f00;
+	padding: .2em .7em;
+	border-radius: .2em;
+	transform: translateY(.5rem);
+}
+
+/* 设置时间栏  */
+.swiper-2 .swiper-slide {
+	background: #fff;
+	box-sizing: border-box;
+	padding-left: 5%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.swiper-2 .swiper-wrapper {
+	background: #fff;
+}
+
+.time-list > div {
+	float: right;
+	margin-top: 12px;
+}
+
+.time-list {
+	width: 90%;
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+}
+
+img.time-arrow {
+	width: 20px;
+	transform: translateY(.2rem);
+}
+
+.time-list2 {
+	display: inline;
+	padding: 0;
+}
+
+.time-list li,
+.time-list2 li {
+	display: inline-block;
+	font-size: .8em;
+	padding-bottom: 5px;
+	margin-right: .2em;
+	text-align: center;
+	border-bottom: none;
+	width: 21%;
+}
+
+
+
+.time-list li span,
+.time-list2 li span {
+	display: block;
+	color: #bbb;
+}
+
+
+/* 使用swiper来设置滚动的可预约的时间 */
+.swiper-container1 {
+	background: #fff;
+	/*height: 14em;*/
+}
+
+.swiper-container1 .swiper-wrapper {
+	padding: .8em 6vw;
+}
+
+.bookable {
+	display: table;
+	float: left;
+	width: 20%;
+	margin-right: .5em;
+	border: 1px solid #f00;
+	text-align: center;
+	margin-bottom: 1em;
+	border-radius: 50%;
+}
+
+.bookable > span {
+	display: table-cell;
+	vertical-align: middle;
+	/*font-size: .8em;*/
+	color: #f00;
+}
+
+/* 设置清除浮动 */
+.clearfloat:before,
+.clearfloat:after {
+	display: table;
+	content: "";
+}
+
+.clearfloat:after {
+	clear: both;
+}
+
+.w {
+	background: #f00;
+}
+
+.r {
+	color: #fff;
+}
+
+a {
+	text-decoration: none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}

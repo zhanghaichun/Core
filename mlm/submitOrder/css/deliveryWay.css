@@ -1,0 +1,244 @@
+body {
+	padding: 0;
+	margin: 0;
+	background: #EEF2FB;
+	/*font-size: 3em;*/
+	font-family: "微软雅黑";
+	overflow-x: hidden;
+}
+
+
+/* 设置页头 */
+.top {
+	position: fixed;
+	top: 0;
+  width: 100%;
+	text-align: center;
+	padding: .5em;
+	background: #F6F6F6;
+}
+
+.top a {
+	float: left;
+	display: inline-block;
+	/*width: 40px;*/
+}
+
+.top img {
+	width: 10px;
+  height: 20px;
+}
+
+/* 商品展示和数量的添加 */
+.product-show {
+	position: relative;
+  margin-top: 2.75em;
+  background: #FBFBFB;
+  padding-left: 1.5em;
+  padding-top: .7em;
+  padding-bottom: .7em;
+}
+
+.product-show > img {
+	float: left;
+	margin-right: 1em;
+	width: 70px;
+	height: 70px;
+}
+
+.product-show .content {
+	font-size: .9em;
+	transform: translateY(.5em);
+	color: #EA2929;
+}
+
+.product-show .content .name {
+	color: #3D4245;
+	margin-bottom: .7em;
+}
+
+.product-show .content .coinPrice {
+	padding-right: .5em;
+}
+
+.product-show .content .amount {
+	float: right;
+}
+
+.product-show .content img {
+	width: 15px;
+	height: 15px;
+}
+
+.product-show .productNumber {
+	position: absolute;
+	top: .3em;
+  right: .5em;
+  height: 2em;
+  line-height: 2em;
+}
+
+.product-show .productNumber img {
+	vertical-align: middle;
+}
+
+.product-show .productNumber .number {
+	display: inline-block;
+	max-width: 1.5em;
+	text-align: center;
+	transform: translateY(.2em);
+}
+
+.product-show .productNumber > * {
+	height: 100%;
+}
+
+/* 销售门店，设计师和技师， 还有配送方式三个栏 */
+.three-columns {
+	margin-top: .7em;
+	background: #fff;
+	font-size: .9em;
+}
+
+.three-columns > div {
+	line-height: 2.5em;
+	height: 2.5em;
+	padding: 0 .5em;
+	border-bottom: 1px solid #EAEAEB;
+}
+
+.three-columns label {
+	font-weight: 600;
+}
+
+.three-columns .left {
+	float: left;
+}
+
+.three-columns .right {
+	float: right;
+}
+
+.three-columns .stylistAndTech .name {
+	color: #8F8D8D;
+}
+
+.three-columns .delivery-way .right {
+	color: #EA2929;
+}
+
+/* 添加配送信息 */
+.deliveryInfo {
+	margin-top: .7em;
+	background: #fff;
+	font-size: .9em;
+	color: #8190A7;
+	margin-bottom: 5em;
+}
+
+.deliveryInfo .content .left {
+	float: left;
+}
+
+.deliveryInfo .content .right {
+	float: right;
+}
+
+.deliveryInfo .content input {
+	height: 2em;
+	font-size: 100%;
+	padding-left: .5em;
+	border: none;
+	outline: none;
+}
+
+.deliveryInfo .right img {
+	width: 20px;
+	height: 15px;
+}
+
+.deliveryInfo .strip {
+	display: block;
+	height: 8px;
+	background: url(../img/邮寄条@2x.png) no-repeat;
+	background-size: cover;
+}
+
+.deliveryInfo .content > div {
+	line-height: 3em;
+	height: 3em;
+	padding: 0 .5em;
+	border-bottom: 1px solid #EAEAEB;
+}
+
+#demo1,
+#demo2 {
+	border: none;
+	font-size: 1em;
+	color: #8190A7;
+	font-family: "微软雅黑";
+	text-align: right;
+	outline: none;
+}
+
+#demo1::-webkit-input-placeholder,
+#demo2::-webkit-input-placeholder {
+	font-family: "微软雅黑";
+	color: #f00;
+}
+
+
+#demo1::-moz-placeholder,
+#demo2::-moz-placeholder {
+	font-family: "微软雅黑";
+	color: #f00;
+}
+
+
+
+
+
+/* 固定在底部的提交订单栏 */
+.submitOrder {
+	position: fixed;
+	padding-left: .3em;
+	bottom: 0;
+	width: 100%;
+	background: #F8F8F8;
+	/*font-size: .8em;*/
+}
+
+.submitOrder .left {
+	float: left;
+	line-height: 3.2em;
+	color: #6B6F75;
+}
+
+.submitOrder .left label {
+	color: #f00;
+}
+
+.submitOrder .right {
+	float: right;
+}
+
+.submitOrder .right a {
+	  text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    background: #E22929;
+    padding: 1em;
+}
+
+
+
+/* 清除浮动的代码 */
+.clearfloat:before,
+.clearfloat:after {
+	display: table;
+	content: "";
+}
+
+.clearfloat:after {
+	clear: both;
+}

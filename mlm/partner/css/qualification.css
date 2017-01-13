@@ -1,0 +1,524 @@
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: url("../images/partner_bj.png") no-repeat;
+	background-size: 100vw 100vh;
+	overflow: hidden;
+}
+
+/*.topHeader {
+	background: #fff;
+	width: 100%;
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1.5em;
+}
+
+.topHeader span {
+	display: inline-block;
+	transform: translate(-.2em,.2em);
+	font-size: 1.5em;
+}
+    
+.topHeader a {
+	float: left;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.topHeader img {
+	width: 33px;
+	height: 36px;
+}
+
+@media screen and (max-width: 330px) {
+	.topHeader {
+		padding-bottom: .9em;
+	}
+
+	.topHeader span {
+		font-size: 1.2em;
+	}
+
+	.topHeader img {
+		display: inline-block;
+		transform: translateY(-.2em);
+		width: 35px;
+		height: 33px;
+	}
+}
+
+@media screen and (min-width: 330px) and (max-width: 380px) {
+	.topHeader {
+		padding-bottom: 1.2em;
+	}
+}*/
+
+/* 第多少位合伙人 */
+.ranking {
+	font-size: 6.3vw;
+  color: #f00;
+  font-family: 微软雅黑;
+ /* margin-left: 42%;
+  margin-top: 32.5%; */
+  position: relative;
+  top: 9.7vh;
+  left: 43.7vw;
+  width: 13vh;
+  text-align: center;
+}
+
+/* 中间的代言人和累积财富等等 */
+/* 金牌代言人 */
+.goldShow {
+	position: absolute;
+	display: inline-block;
+	/*margin-left: 23%;
+	margin-top: 4%;*/
+	top: 19vh;
+	left: 22vw;
+}
+
+.goldShow a {
+	display: block;
+	text-decoration: none;
+	color: #000;
+}
+
+.gold {
+	display: inline-block;
+	width: 19vw;
+	height: 5vh;
+	background: url("../images/金牌.png") no-repeat;
+	background-size: 100% 100%;
+	transform: translateY(-.5vh);
+}
+
+.goldShow .number{
+	text-align: center;
+	font-family: "微软雅黑";
+}
+
+.goldShow .people {
+	font-weight: bold;
+}
+
+.goldShow .number .money {
+  display: inline-block;
+  transform: translateY(-.5em);
+	font-size: 80%;
+}
+
+.goldShow .txt {
+	display: none;
+	position: absolute;
+	z-index: 2;
+  top: 2vh;
+  left: -5vw;
+	width: 73vw;
+	height: 15vh;
+	background: url("../images/点击金牌.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+/* 银牌代言人 */
+.silverShow {
+	position: absolute;
+	display: inline-block;
+	/*margin-left: 13%;*/
+	top: 19vh;
+	left: 60vw;
+}
+
+.silverShow a {
+	display: block;
+	text-decoration: none;
+	color: #000;
+}
+
+.silver {
+	display: inline-block;
+	width: 19vw;
+	height: 5vh;
+	background: url("../images/银牌.png") no-repeat;
+	background-size: 100% 100%;
+	transform: translateY(-.5vh);
+}
+
+.silverShow .number{
+	text-align: center;
+	font-family: "微软雅黑";
+}
+
+.silverShow .people {
+	font-weight: bold;
+}
+
+.silverShow .number .money {
+  display: inline-block;
+  transform: translateY(-.5em);
+	font-size: 80%;
+}
+
+.silverShow .txt {
+	display: none;
+	position: absolute;
+	z-index: 2;
+  top: 2vh;
+  left: -47vw;
+	width: 73vw;
+	height: 15vh;
+	background: url("../images/点击银牌 拷贝.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+/* 累积财富 */
+.wealthShow {
+	position: absolute;
+	display: inline-block;
+	/*margin-left: 26.3%;*/
+	top: 35.8vh;
+	left: 24vw;
+}
+
+.wealthShow a {
+	display: block;
+	text-decoration: none;
+	color: #000;
+}
+
+.wealth {
+	display: inline-block;
+	width: 16vw;
+	height: 5vh;
+	background: url("../images/累积财富.png") no-repeat;
+	background-size: 100% 100%;
+	transform: translateY(-1vh);
+	/*transform: translateY(-.1em);
+	-webkit-transform: translateY(-.1em);*/
+}
+
+.wealthShow .number{
+	text-align: center;
+	font-family: "微软雅黑";
+}
+
+.wealthShow .people {
+	font-weight: bold;
+}
+
+.wealthShow .txt {
+	display: none;
+	position: absolute;
+	z-index: 2;
+  top: 2vh;
+  left: -4vw;
+	width: 73vw;
+	height: 10vh;
+	background: url("../images/点击累积财富.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+/* 可提现金额 */
+.withdrawShow {
+	position: absolute;
+	display: inline-block;
+	/*margin-left: 12%;*/
+	top: 34.3vh;
+	left: 58.5vw;
+}
+
+.withdrawShow a {
+	display: block;
+	text-decoration: none;
+	color: #000;
+}
+
+.withdraw {
+	display: inline-block;
+	width: 23vw;
+  height: 6.5vh;
+	background: url("../images/可提现金额 (2).png") no-repeat;
+	background-size: 100% 100%;
+	transform: translateY(-1vh);
+	/*transform: translateY(-.1em);*/
+	/*-webkit-transform: translateY(-.1em);*/
+}
+
+.withdrawShow .number{
+	text-align: center;
+	font-family: "微软雅黑";
+}
+
+.withdrawShow .people {
+	font-weight: bold;
+}
+
+.withdrawShow .txt {
+	display: none;
+	position: absolute;
+	z-index: 2;
+  top: 6vw;
+  left: -46vw;
+	width: 73vw;
+	height: 9vh;
+	background: url("../images/可提现金额文字.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+/* 二维码 */
+.tdCode {
+	display: inline-block;
+	position: absolute;
+  z-index: 1;
+  top: 56.6vh;
+  left: 35vw;
+  /*margin-left: 35%;*/
+  /*margin-top: 19.2%;*/
+  width: 30.5vw;
+  height: 19vh;
+	background: url("../images/tdCode.png");
+	background-size: 100% 100%;
+}
+
+/* 制作点我邀请好友 */
+.clickMe {
+	display: inline-block;
+	position: absolute;
+  bottom: 11vh;
+  left: 28.4vw;
+  width: 43vw;
+  height: 7vh;
+  background: url("../images/点我邀请好友.png") no-repeat;
+  background-size: 75% 45%;
+  background-position: top center;
+}
+
+.opacity {
+	animation: opacity 0.5s ease infinite;
+}
+
+/* 制作查看细则和申请提现链接按钮 */
+.btnGroup {
+	position: absolute;
+	display: inline-block;
+	width: 55vw;
+	height: 4vh;
+	bottom: 4vh;
+	left: 28.5vw;
+}
+
+.btnGroup a:first-child {
+	margin-right: 3vw;
+}
+
+.btnGroup a {
+	display: inline-block;
+	width: 19vw;
+	height: 4vh;
+}
+
+.checkRules {
+	background: url("../images/查看细则2.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+.apply-with {
+	background: url("../images/申请提现.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+/* 合伙人规则弹窗 */
+.popup {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+	z-index: 1;
+	background: url("../images/弹框背景.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+.popup .rules {
+	position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  width: 90%;
+  height: 70%;
+  border-radius: .3em;
+  margin: auto;
+	font-size: 80%;
+	color: #5C6F82;
+  box-sizing: border-box;
+}
+
+.popup .modal-body {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.modal-footer {
+	position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.modal-footer button {
+	background: #fff;
+  border: none;
+  border-top: 1px solid #E5E5E5;
+  width: 100%;
+  line-height: 3em;
+  font-size: 1.3em;
+  color: #f00;
+  font-family: "微软雅黑";
+}
+
+/* 设置点击闪烁的动画 */
+@keyframes opacity {
+	from { opacity: 0;  }
+	to { opacity: 1;  }
+}
+
+/* 响应式图片 */
+.img-res {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* 适配iphone6 */
+/*@media screen and (min-width: 370px) and (max-width: 380px) {
+	.ranking {
+		top: 6em;
+		left: 8.3em;
+	}
+
+	.goldShow {
+		top: 9.4em;
+		left: 5em;
+	}
+
+	.goldShow .txt {
+		width: 17em;
+		left: -1.3em;
+	}
+
+	.silverShow {
+		top: 9.4em;
+		left: 10em;
+	}
+
+	.silverShow .txt {
+		width: 17em;
+		left: -11.5em;
+	}
+
+	.wealthShow {
+		top: 14.3em;
+		left: -3.5em;
+	}
+
+	.wealthShow .txt {
+		width: 17em;
+		left: -1.3em;
+	}
+
+	.withdrawShow {
+		top: 14.3em;
+		left: 2em;
+	}
+
+	.withdrawShow .txt {
+		width: 17em;
+		left: -11em;
+	}
+
+	.tdCode {
+		top: 25.4em;
+    left: 8.2em;
+    width: 7em;
+    height: 7em;
+	}
+
+	.clickMe {
+		bottom: 4.5em;
+		left: 7em;
+	}
+
+	.btnGroup {
+		left: 7.5em;
+	}
+
+}*/
+
+/* 适配iphone6 plus*/
+/*@media screen and (min-width: 380px) {
+	.ranking {
+		top: 6.7em;
+		left: 9em;
+	}
+
+	.goldShow {
+		top: 11em;
+		left: 6em;
+	}
+
+	.goldShow .txt {
+		width: 17em;
+		left: -1.3em;
+	}
+
+	.silverShow {
+		top: 11em;
+		left: 11em;
+	}
+
+	.silverShow .txt {
+		width: 17em;
+		left: -11.5em;
+	}
+
+	.wealthShow {
+		top: 16.3em;
+		left: -2.5em;
+	}
+
+	.wealthShow .txt {
+		width: 17em;
+		left: -1.3em;
+	}
+
+	.withdrawShow {
+		top: 16.3em;
+		left: 3em;
+	}
+
+	.withdrawShow .txt {
+		width: 17em;
+		left: -11em;
+	}
+
+	.tdCode {
+		top: 27.9em;
+    left: 8.9em;
+    width: 8em;
+    height: 8em;
+	}
+
+	.clickMe {
+		bottom: 4.5em;
+		left: 8em;
+	}
+
+	.btnGroup {
+		left: 8.5em;
+	}
+}*/
+

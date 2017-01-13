@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>预约美发选择项</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<link rel="stylesheet" href="css/appoint_select.css">
+</head>
+<body>
+<!-- 定义预约标题 -->
+<div class="title">
+	<img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt="">
+	<span>烫发</span>
+</div>
+
+
+<!-- 定义需要处理的部位（整体或局部） -->
+<!-- <div class="fair-len">
+	<span class="len whole">整体</span>
+	<span class="len part">局部</span>
+</div> -->
+
+<!-- 定义头发的长度 -->
+<div class="fair-len">
+	<span class="len short">短发</span>
+	<span class="len middle">中发</span>
+	<span class="len long">长发</span>
+</div>
+
+<!-- 设置造型样式列表 -->
+<div class="type-list">
+	<div class="list-item clearfloat">
+		<div class="left"><img src="img/Image/未选中@2x.png" alt=""><span>菲灵</span></div>
+		<div class="right"><del>￥198</del><span>￥268</span></div>
+	</div>
+	<div class="list-item clearfloat">
+		<div class="left"><img src="img/Image/未选中@2x.png" alt=""><span>巴黎欧莱雅</span></div>
+		<div class="right"><del>￥198</del><span>￥268</span></div>
+	</div>
+	<div class="list-item clearfloat">
+		<div class="left"><img src="img/Image/未选中@2x.png" alt=""><span>玫丽盼</span></div>
+		<div class="right"><del>￥198</del><span>￥268</span></div>
+	</div>
+	<div class="list-item clearfloat">
+		<div class="left"><img src="img/Image/未选中@2x.png" alt=""><span>资生堂</span></div>
+		<div class="right"><del>￥198</del><span>￥268</span></div>
+	</div>
+</div>
+
+<!-- 设计底部的确定和取消按钮 -->
+<div class="opera-btn clearfloat">
+	<button class="btn" type="button">确定</button>
+	<button class="btn" type="button">取消</button>
+</div>
+
+
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+
+		// 选择类型按钮点击之后的效果
+		$(".fair-len .len").each(function(index, element) {
+			$(element).click(function() {
+				$(this).css({
+					"background": "#f00",
+					"color": "#fff"
+				});
+
+				$(this).siblings().css({
+					"background": "#fff",
+					"color": "#000"
+				});
+			})
+		})
+
+		// 当选中对应类型的时候更改为选中的图片，否则则取消选中
+		$(".list-item .left").click(function() {
+
+			// 点击单选按钮，如果单选按钮是选中状态则取消选中，否则即为选中
+			if ( $(this).find("img").attr('src') == "img/Image/未选中@2x.png" ) {
+				$(this).find("img").attr('src',"img/Image/选中@2x.png");
+			} else {
+				$(this).find("img").attr('src',"img/Image/未选中@2x.png");
+			}
+		})
+
+
+
+	})
+</script>	
+</body>
+</html>

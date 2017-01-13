@@ -1,0 +1,132 @@
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: url("../images/partner_un_bj.png") no-repeat;
+	background-size: 100vw 100vh;
+	overflow: hidden;
+}
+
+/*.topHeader {
+	background: #fff;
+	width: 100%;
+	text-align: center;
+	padding-top: 1em;
+	padding-bottom: 1.5em;
+}
+
+.topHeader span {
+	display: inline-block;
+	transform: translate(-.2em,.2em);
+	font-size: 1.5em;
+}
+    
+.topHeader a {
+	float: left;
+	display: inline-block;
+	text-decoration: none;
+}
+
+.topHeader img {
+	width: 33px;
+	height: 36px;
+}
+
+@media screen and (max-width: 330px) {
+	.topHeader {
+		padding-bottom: .9em;
+	}
+
+	.topHeader span {
+		font-size: 1.2em;
+	}
+
+	.topHeader img {
+		display: inline-block;
+		transform: translateY(-.2em);
+		width: 35px;
+		height: 33px;
+	}
+}
+
+@media screen and (min-width: 330px) and (max-width: 380px) {
+	.topHeader {
+		padding-bottom: 1.2em;
+	}
+}*/
+
+/* 充值 */
+.recharge {
+	position: absolute;
+  bottom: 1em;
+  left: 50%;
+  margin-left: -4em;
+	display: inline-block;
+	width: 8em;
+	height: 3em;
+	background: url("../images/充值按钮.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+/* 查看规则 */
+.checkRules {
+	position: absolute;
+  bottom: .5em;
+  right: .5em;
+	width: 5em;
+	height: 5em;
+	background: url("../images/查看细则.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+/* 合伙人规则弹窗 */
+.popup {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+	z-index: 1;
+	background: url("../images/弹框背景.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+.popup .rules {
+	position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  width: 90%;
+  height: 70%;
+  border-radius: .3em;
+  margin: auto;
+	font-size: 80%;
+	color: #5C6F82;
+  box-sizing: border-box;
+}
+
+.popup .modal-body {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.modal-footer {
+	position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.modal-footer button {
+	background: #fff;
+  border: none;
+  border-top: 1px solid #E5E5E5;
+  width: 100%;
+  line-height: 3em;
+  font-size: 1.3em;
+  color: #f00;
+  font-family: "微软雅黑";
+}
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>订单详情(全款)</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<link rel="stylesheet" href="css/order-details2.css">
+</head>
+<body>
+<!-- 定义订单详情标题 -->
+<div class="title">
+	<img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt="">
+	<span>订单详情</span>
+</div>
+
+<!-- 定义设计师选择 -->
+<div class="stylist clearfloat">
+	<div class="iconAndTxt">
+		<img src="img/Images.xcassets/AppIcon.appiconset/Icon-Small@3x.png.png" alt="">
+		<span class="txt">David</span>
+	</div>
+	<div class="enter">
+		<span>风格设计师</span>
+	</div>
+</div>
+
+
+<!-- 展示服务项目 -->
+<ul class="serv-list">
+	<li>
+		<span class="item">烫染套餐</span>
+		<span class="price">￥898</span>
+		<ul>
+			<li><span>烫发</span> - <span>优资堂 <span>(短发)</span></span></li>
+			<li><span>染发</span> - <span>山水 <span>(短发)</span></span></li>
+		</ul>
+	</li>
+	<li>
+		<span class="item"><span>护理 </span>- <span>欧娜 <span>(短发)</span></span></span>
+		<span class="price">￥898</span>
+	</li>
+</ul>
+
+<!-- 合计栏 -->
+<div class="total clearfloat">
+	<div class="left">合计</div>
+	<div class="right">￥387</div>
+</div>
+
+<!-- 设计用户昵称、预约时间、服务门店 -->
+<div class="container1">
+	<div class="nickname">
+		<div class="left">用户昵称</div>
+		<div class="right">Bunny</div>
+	</div>
+	<div class="appoint-time">
+		<div class="left">预约时间</div>
+		<div class="right">2016-03-02 15:30</div>
+	</div>
+	<div class="serv-outlet">
+		<div class="left">服务门店</div>
+		<div class="right">西大直街123号</div>
+	</div>
+</div>
+
+
+<!-- 设置优惠券、可用积分与实付金额 -->
+<div class="container1">
+	<div class="coupon">
+		<div class="left">优惠券</div>
+		<div class="right">10元洗剪吹</div>
+	</div>
+	<div class="avail-integral">
+		<div class="left">积分抵扣</div>
+		<div class="right">-￥23</div>
+	</div>
+	<div class="real-money">
+		<div class="left">订单金额</div>
+		<div class="right">￥207</div>
+	</div>
+</div>
+
+
+
+
+<!-- 设置支付与取消订单底部栏 -->
+<div class="no-pay clearfloat">
+	<div class="left">
+		<span>实付金额：</span>
+		<span class="price">￥157</span>
+		<span class="have-done">(已完成)</span>
+	</div>
+	<div class="btn-group right">
+		<button class="btn" type="button">去评价</button>
+	</div>
+</div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+		// 清除浮动
+		$(".container1 > div").addClass("clearfloat");
+	})
+</script>
+</body>
+</html>

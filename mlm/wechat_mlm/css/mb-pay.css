@@ -1,0 +1,183 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-top: 54px;
+	padding-bottom: 20%;
+	overflow: hidden;
+	background: #ededed;
+	/*font-family: "微软雅黑";*/
+}
+
+/* 设置标题 */
+.title {
+	position: fixed;
+	top: 0%;
+	height: 44px;
+	line-height: 44px;
+	background: #fff;
+	text-align: center;
+	width: 100%;
+	z-index: 2;
+	border-bottom: 1px solid #eee;
+}
+
+
+.title span {
+	display: block;
+	width: 85px;
+	margin: auto;
+}
+
+.title a {
+	float: left;
+	height: 44px;
+	line-height: 44px;
+}
+
+.title img {
+	width: 25px;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+
+/* 销售门店 */
+
+.sales-outlet {
+	background: #fff;
+	padding-left: 3%;
+}
+.sales-outlet > div {
+	height: 50px;
+	line-height: 50px;
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+	padding-right: 3%;
+}
+
+.sales-outlet .outlet {
+	height: 34px;
+	line-height: 34px;
+}
+
+.sales-outlet .left {
+	float: left;
+	color: #f00;
+}
+
+.right {
+	float: right;
+}
+
+.sales-outlet input {
+	padding-right: 14px;
+	font-size: 1rem;
+	text-align: right;
+	background: url("../img/Image/进入箭头@2x.png") no-repeat;
+	background-size: 16px 16px;
+	background-position: center right;
+	border: none;
+	outline: none;
+}
+
+#demo1::-webkit-input-placeholder,
+#demo2::-webkit-input-placeholder,
+#demo3::-webkit-input-placeholder {
+	/*font-family: "微软雅黑";*/
+	color: #f00;
+}
+
+
+#demo1::-moz-placeholder,
+#demo2::-moz-placeholder,
+#demo3::-moz-placeholder, {
+	/*font-family: "微软雅黑";*/
+	color: #f00;
+}
+
+/* 支付方式 */
+.pay-way {
+	margin-top: 10px;
+	background: #fff;
+	padding-left: 3%;
+}
+
+.pay-way > div {
+	height: 50px;
+	line-height: 50px;
+	padding-right: 3%;
+	border-bottom: 1px solid #ddd;
+}
+
+.pay-way .way {
+	height: 34px;
+	line-height: 34px;
+
+}
+
+.pay-way .left {
+	float: left;
+}
+
+.pay-way .left img,
+ .pay-way .right img{
+	width: 20px;
+	vertical-align: middle;
+	transform: translateY(-.1rem);
+	-webkit-transform: translateY(-.1rem);
+}
+
+.pay-way .right {
+	float: right;
+}
+
+/* 底部支付栏 */
+.pay-column {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background: #fff;
+	height: 44px;
+	line-height: 44px;
+}
+
+.pay-column .content {
+	padding-left: 3%;
+}
+
+.pay-column .left {
+	float: left;
+	font-size: 90%;
+}
+
+.pay-column .right {
+	float: right;
+}
+
+.pay-column a {
+	display: inline-block;
+	color: #fff;
+	background: #f00;
+	padding: 0 4vw;
+}
+
+
+/* 设置清除浮动 */
+.clearfloat:before,
+.clearfloat:after {
+	display: table;
+	content: "";
+}
+
+.clearfloat:after {
+	clear: both;
+}
+
+.yahei {
+	font-family: "微软雅黑";
+}
+
+a {
+	text-decoration: none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+

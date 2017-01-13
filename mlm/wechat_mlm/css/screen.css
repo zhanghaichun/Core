@@ -1,0 +1,92 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 20%;
+	background: #ededed;
+	overflow: hidden;
+	/*font-family: "微软雅黑";*/
+}
+
+/* 设置顶部预约标题 */
+.title {
+	background: #fff;
+	text-align: center;
+	height: 44px;
+	line-height: 44px;
+	padding-left: 3%;
+	border-bottom: 1px solid #ddd;
+}
+
+.title .cancel {
+	float: left;
+	/*color: #bbb;*/
+}
+
+/* 列出设计师的职位 */
+.stylist-position {
+	background: #fff;
+}
+
+.stylist-position .label {
+	padding: 2%;
+}
+
+.stylist-position .container {
+	padding: 10px 20px;
+}
+
+.stylist-position .container > span {
+	display: inline-block;
+	padding: .2em .5em;
+	font-size: .8em;
+	border: 1px solid #aaa;
+	margin-bottom: 10px;
+	border-radius: .1em;
+}
+
+/* 列出设计师的职位 */
+.heat {
+	background: #fff;
+}
+
+.heat .label {
+	padding: 2%;
+}
+
+.heat .container {
+	padding: 10px 20px;
+}
+
+.heat .container > span {
+	display: inline-block;
+	padding: .2em 1em;
+	font-size: .8em;
+	border: 1px solid #aaa;
+	margin-bottom: 10px;
+	border-radius: .1em;
+}
+
+/* 设置确定按钮 */
+.make-sure {
+	background: #F00;
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
+	width: 90%;
+	margin: auto;
+	margin-top: 1rem;
+	border-radius: 5px;
+}
+
+.stress {
+	color: #f00;
+	border: 1px solid #f00 !important;
+	background: url('../img/Image/筛选角标@2x.png') bottom right no-repeat;
+	background-size: 12px 10px;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}

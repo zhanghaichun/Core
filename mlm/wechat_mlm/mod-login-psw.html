@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>修改登录密码</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			padding-top: 54px;
+			padding-bottom: 20%;
+			overflow: hidden;
+			background: #ededed;
+			/*font-family: "微软雅黑";*/
+		}
+
+		/* 设置标题 */
+		.title {
+			position: fixed;
+			top: 0%;
+			height: 44px;
+			line-height: 44px;
+			background: #fff;
+			text-align: center;
+			width: 100%;
+			z-index: 2;
+			border-bottom: 1px solid #eee;
+		}
+
+
+		.title span {
+			display: block;
+			width: 100px;
+			margin: auto;
+		}
+
+		.title a {
+			float: left;
+			height: 44px;
+			line-height: 44px;
+		}
+
+		.title img {
+			width: 25px;
+		  vertical-align: middle;
+		  margin-top: -5px;
+		}
+
+
+		/* 修改登录密码 */
+		.container {
+			background: #fff;
+			padding-left: 3%;
+		}
+
+		.container > div {
+			height: 40px;
+			line-height: 40px;
+			border-bottom: 1px solid #ddd;
+		}
+
+		input {
+			border:none;
+			width: 90%;
+			padding: .3em;
+			outline: none;
+		}
+
+		input,
+		button {
+			font-size: inherit;
+		}
+
+		.ve-code {
+			padding-right: 3%;
+		}
+
+		.ve-code input {
+			width: 64%;
+		}
+
+		.ve-code span {
+			display: inline-block;
+			float: right;
+			font-size: 90%;
+			color: #f00;
+			border: 1px solid #f00;
+			line-height: normal;
+			padding: 3px 4px;
+	    border-radius: 3px;
+	    transform: translateY(.5rem);
+	    -webkit-transform: translateY(.5rem);
+		}
+
+		button {
+			display: block;
+			margin: auto;
+			margin-top: 1em;
+			color: #fff;
+			background: #f00;
+			width: 90%;
+			padding: .5em;
+			border: none;
+			border-radius: .2em;
+		}
+	</style>
+</head>
+<body>
+<!-- 标题 -->
+<div class="title">
+	<a href="javascript: history.go(-1)"><img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt=""></a>
+	<span>修改登录密码</span>
+</div>
+
+<!-- 文字提示 -->
+
+<div class="container">
+	<div class="old"><input type="text" placeholder="请输入注册手机号码"></div>
+	<div class="ve-code">
+		<input type="text" placeholder="请输入短信验证码">
+		<span>发送验证码</span>
+	</div>
+	<div class="new"><input type="passwoord" placeholder="请输入6-16位新登录密码"></div>
+</div>
+
+<button class="btn">确认修改</button>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+
+	})
+</script>	
+</body>
+</html>

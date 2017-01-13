@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>待支付</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<link rel="stylesheet" href="css/no_pay.css">
+</head>
+<body>
+<!-- 定义标题 -->
+<div class="title">
+	<a href="appoint.html"><img src="img/Image/CLOSE@3x.png" alt=""></a>
+	<span>待支付</span>
+</div>
+
+<!-- 定义设计师选择 -->
+<div class="stylist clearfloat">
+	<div class="content clearfloat">
+		<div class="iconAndTxt">
+			<img src="img/Images.xcassets/AppIcon.appiconset/Icon-Small@3x.png.png" alt="">
+			<span class="txt">David</span>
+		</div>
+		<div class="enter">
+			<span>风格设计师</span>
+		</div>
+	</div>
+</div>
+
+
+<!-- 展示服务项目 -->
+<ul class="serv-list">
+	<li>
+		<span class="item">烫染套餐</span>
+		<span class="price yahei">￥898</span>
+		<ul>
+			<li><span>烫发</span> - <span>优资堂 <span>(短发)</span></span></li>
+			<li><span>染发</span> - <span>山水 <span>(短发)</span></span></li>
+		</ul>
+	</li>
+	<li>
+		<span class="item"><span>护理 </span>- <span>欧娜 <span>(短发)</span></span></span>
+		<span class="price yahei">￥898</span>
+	</li>
+</ul>
+
+<!-- 合计栏 -->
+<div class="total clearfloat">
+	<div class="left">合计</div>
+	<div class="right yahei">￥387</div>
+</div>
+
+<!-- 设计用户昵称、预约时间、服务门店 -->
+<div class="container1">
+	<div class="nickname">
+		<div class="left">用户昵称</div>
+		<div class="right">Bunny</div>
+	</div>
+	<div class="appoint-time">
+		<div class="left">预约时间</div>
+		<div class="right">2016-03-02 15:30</div>
+	</div>
+	<div class="serv-outlet">
+		<div class="left">服务门店</div>
+		<div class="right">西大直街123号</div>
+	</div>
+</div>
+
+
+<!-- 设置优惠券、可用积分与实付金额 -->
+<div class="container1">
+	<div class="coupon">
+		<div class="left">优惠券</div>
+		<div class="right"><span class="yahei">10</span>元洗剪吹</div>
+	</div>
+	<div class="avail-integral">
+		<div class="left">积分抵扣</div>
+		<div class="right yahei">-￥23</div>
+	</div>
+	<div class="real-money">
+		<div class="left">实付金额</div>
+		<div class="right yahei">￥207</div>
+	</div>
+</div>
+
+<!-- 设置仅支付定金 -->
+<div class="down-payment">
+	仅支付定金<span class="payment yahei">￥50</span><span class="label">(服务完成后许付尾款<span class="final-pay yahei">￥157</span>)</span>
+	<img class="right" src="img/Image/注册协议icon@3x.png" alt="">
+</div>
+
+
+<!-- 设置支付与取消订单底部栏 -->
+<div class="no-pay clearfloat">
+	<div class="left"><span>待支付金额：</span><span class="price yahei">￥0</span></div>
+	<div class="btn-group right">
+		<a href="javascript:;" class="btn cancel-order">取消订单</a>
+		<a href="pay_order.html" class="btn">去支付</a>
+	</div>
+</div>
+
+<!-- 显示确认取消订单弹窗 -->
+<!-- <div class="overlay">
+	<div class="content">
+		<div class="confirm">
+			<img src="img/Image/iconImage/others-icon/弹出icon@2x.png" alt="">
+			<span class="prompt">温馨提示</span>
+			<span class="con">是否确认取消订单?</span>
+		</div>
+		<div class="btn-group">
+			<button class="btn confirm-cancel">确认</button>
+			<button class="btn">先不取消</button>
+		</div>
+	</div>
+	
+</div> -->
+
+
+
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+
+		// 清除浮动
+		$(".container1 > div").addClass("clearfloat");
+
+		// 点击取消订单按钮，提示是否确定取消
+		$(".cancel-order").click(function() { $(".overlay").show(); })
+		$(".confirm-cancel").click(function() { $(".overlay").hide(); })
+	})
+</script>
+</body>
+</html>
+
+

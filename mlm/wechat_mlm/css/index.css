@@ -1,0 +1,233 @@
+html,body {
+	width: 100%;
+}
+
+#box {
+	height: 100%;
+	/*overflow: hidden;*/
+}
+
+body {
+	font-family: "微软雅黑";
+	padding-bottom: 50px;
+	background: #ededed;
+	/*overflow: hidden;*/
+}
+
+.fluid1 {
+	padding-left: 0;
+	padding-right: 0;
+ }
+
+.carousel {
+	margin-bottom: 10px;
+}
+
+.carousel .item {
+	height: 150px;
+}
+
+.carousel-inner .item img {
+	width: 100%;
+}
+
+/* 对轮播图的指示器进行设置 */
+.carousel .carousel-indicators {
+	position: absolute;
+	width: 80vw;
+	bottom: 3px;
+	left: 50%;
+	font-size: 0;
+	z-index: 15;
+	list-style: none;
+}
+
+.carousel .carousel-indicators li {
+	display: inline-block;
+	width: 52px;
+	height: 4px;
+	background: #fff;
+	margin: -1px;
+}
+
+.carousel .carousel-indicators .active {
+	background: #f00;
+}
+/* 结束对轮播图指示器的设置 */
+
+
+.stylist, .hairstyle {
+	border-left: 2px solid #f00;
+	padding-left: 12px;
+	text-transform: uppercase;
+}
+
+.stylist-con, .hairstyle-con {
+	margin-bottom: 14px;
+	padding-left: 6%;
+	padding-top: 2%;
+  padding-bottom: 2%;
+	background: #fff;
+}
+
+.hairstyle-con {
+	margin-top: 14px;
+}
+
+/* 明星设计师轮播图设计 */
+/* 使用swiper的设计 */
+.swiper-container {
+	/*background: #f7f7f7;*/
+}
+.swiper-wrapper {
+	height: 130px;
+	/*background: #f7f7f7;*/
+}
+
+.swiper-slide {
+	width: 83% !important;
+	height: 100%;
+	/*background: #f7f7f7;*/
+}
+
+.swiper-slide img {
+	width: 100%;
+	height: 130px;
+}
+
+.swiper-slide .see_more {
+	display: inline-block;
+	width: 100%;
+	height: 130px;
+	padding-top: 3.5rem;
+	text-align: center;
+	background: #ddd;
+}
+
+.swiper-slide .see_more span {
+	color: #aaa;
+}
+
+
+
+
+
+/* 设置预约项 */
+.fs-container {
+	/*background: #f7f7f7;*/
+}
+
+.fs-container a:active,
+.fs-container a:visited {
+	color: #fff;
+}
+
+.banner-wrapper {
+	position: relative;
+	height: 230px;
+	margin-bottom: 15px;
+}
+
+.fair-banner img {
+	width: 100%;
+	height: 230px;
+}
+
+.appAndDes {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+}
+
+.des {
+	position: absolute;
+  z-index: 3;
+  bottom: .5rem;
+  left: 20%;
+}
+
+/*.app {
+	float: left;
+	position: relative;
+	left: 90px;
+	top: -60px;
+}
+
+
+
+.app .txt {
+	margin-left: 12px;
+	color: #fff;
+}
+
+.ac {
+	display: block;
+	border-radius: 50%;
+	padding: 14px;
+	margin-bottom: 2px;
+	background: rgba(0,0,0,.5);
+}*/
+
+.ac img {
+	width: 100%;
+	height: 9vh;
+}
+
+/* 这只回到顶部标签的样式 */	
+.anchor {
+	position: fixed;
+	display: none;
+	bottom: 50px;
+	right: 1%;
+}
+
+.anchor img {
+	width: 40px;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: #fff;
+}
+
+
+area {
+	outline: none;
+}
+
+.opacity{
+    -webkit-animation: opacity 0.5s linear;
+    animation: opacity 0.5s linear;
+}
+@-webkit-keyframes opacity {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@keyframes opacity {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+
+
+
+
+
+

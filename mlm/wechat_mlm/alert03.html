@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/sweetalert.css">
+	<style>
+		button {
+			background-color: #AEDEF4;
+			color: white;
+			border: none;
+			box-shadow: none;
+			font-size: 17px;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+
+		.sweet-alert {
+			/*border: 1px solid rgba(71, 0, 255, 0.7);*/
+			padding-bottom: 0 !important;
+			padding: 0;
+			padding-top: 10px;
+		}
+
+		.sweet-alert h2 {
+			color: #575757;
+	    font-size: 22px;
+	    text-align: center;
+	    font-weight: 400;
+	    text-transform: none;
+	    position: relative;
+	    margin: 0 !important; 
+	    padding: 0;
+	    /* line-height: 40px; */
+	    display: block;
+		}
+
+		.sweet-alert p {
+			font-size: 14px;
+			/*padding: 0 !important;*/
+			padding-top: 10px;
+		}
+		
+		.sweet-alert .sa-icon {
+			margin: 6px auto;
+		}
+
+		.sweet-alert button {
+			background-color: #fff;
+	    color: #000;
+	    border: none;
+	    box-shadow: none !important;
+	    font-size: 18px;
+	    -webkit-border-radius: 4px;
+	    border-radius: 5px;
+	    cursor: pointer;
+	    width: 49%;
+	    margin: 0;
+	    /*margin-top: 20px;*/
+		}
+
+		.sweet-alert button:hover,
+		.sweet-alert button:active {
+			background: #fff;
+		}
+
+		button {
+			-webkit-tap-highlight-color:rgba(0,0,0,0);
+		}
+
+		i {
+			border-left: 2px solid #eee;
+			transform: translateX();
+		}
+		
+
+		fieldset,
+		.sweet-alert .sa-error-container,
+		.sweet-alert .sa-button-container {
+			display: none;
+		}
+
+		.btn-group {
+			margin-top: 15px;
+			border-top: 1px solid #efffff;
+		}
+
+		.btn-group .txt {
+			/*margin-bottom: 10px;*/
+		}
+
+		.btn-group .btn:first-child {
+			/*margin-left: -15px;*/
+			color: #00f;
+		}
+
+		.btn-group .btn:last-child {
+			/*margin-right: -15px;*/
+			color: #00f;
+		} 
+
+
+	</style>
+</head>
+<body>
+<div class="show">
+	<button class="btn">go to pay</button>
+</div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/sweetalert-dev.js"></script>
+<script>
+	$(function() {
+		$(".btn").click(function() {
+			swal({
+				title: '温馨提示',
+			  text: '<span class="txt">请选择预约时间!</span><div class="btn-group"><button class="btn con">确定</button><i></i><button class="btn can">取消</button></div>',
+			  showConfirmButton: false,
+			  showCancelButton: false,
+			  html: true
+			});
+		});
+
+		$(".btn").css("font-weight","normal");
+
+
+	})
+
+</script>
+</body>
+</html>

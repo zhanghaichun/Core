@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no,maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>注册新页</title>
+	<style>
+		html {
+			width: 100%;
+			height: 100%;
+			font-size: 100%;
+		}
+
+		html {
+		    font-size: 62.5%;
+		}
+		@media only screen and (min-width: 481px){
+		    html {
+		        font-size: 94%!important;
+		    }
+		}
+		@media only screen and (min-width: 561px){
+		    html {
+		        font-size: 109%!important;
+		    }
+		}
+		@media only screen and (min-width: 641px){
+		    html {
+		        font-size: 125%!important;
+		    }
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-size: 100%;
+		}
+		
+		/* 背景图像 */
+		img.doc-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: -1;
+		}
+
+		/* 设置主要的表单内容 */
+		#register-form {
+			font-family: "微软雅黑";
+			margin-top: 14rem;
+			text-align: center;
+		}
+
+		#register-form input {
+			font-family: "微软雅黑";
+			font-size: 14px;
+			border: none;
+			outline: none;
+			background: transparent;
+			width: 58vw;
+		}
+
+
+
+		.form-item {
+			display: inline-block;
+			height: 40px;
+			line-height: 40px;
+			border: 1px solid #aaa;
+			background: rgba(255,255,255,.4);
+			border-radius: 6px;
+			margin-bottom: 10px;
+			padding: 0 1rem;
+			padding-right: 10vw; 
+		}
+
+		.form-item input,
+		.form-item label {
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+		}
+
+		.vertify-item {
+      padding-right:0;
+    }
+
+		.password {
+			/*padding-right: 0rem;*/
+		}
+
+		.form-item img {
+			width: 30px;
+			vertical-align: middle;
+		}
+
+		#register-form .form-item .vertify-input {
+			width: 35vw;
+		}
+
+		#register-form .form-item .send-vcode {
+			display: inline-block;
+      color: #f00;
+      width: 31vw;;
+		}
+
+
+
+		/* 自行设计的radio-button */
+		.radio-container {
+			display: inline-block;
+			position: absolute;
+			top: .2vw;
+			right: 5vw;
+		}
+
+		.radio-container div {
+			display: inline-block;
+		}
+
+		.radio-input {
+			float: left;
+			margin-right: 10px;
+		}
+
+		input[type="radio"] {
+			opacity: 0;
+			display: none;
+		}
+
+		.radio-input label {
+			display: inline-block;
+			width: 8px;
+			height: 8px;
+			border: 1px solid #aaa;
+			padding: 2px;
+			border-radius: 50%;
+			background-clip: content-box;
+			background-color: #fff;
+			margin-right: 5px;
+		}
+
+		.bg-red {
+			background-color: red !important;
+		}
+
+		.posr {
+			position: relative;
+		}
+
+		/* 注册按钮 */
+		.register-btn {
+			width: 85vw;
+			text-align: center;
+			/*padding: 1vw auto;*/
+			background: #f00;
+			margin: auto;
+			color: white;
+			border-radius: 4px;
+			margin-top: 3vw;
+		}
+
+		#register-form .register-btn input {
+			display: inline-block;
+			width: 100%;
+			color: white;
+			padding: 3vw 0;
+		}
+
+		/* 注册分享图片 */
+		.share-img-vessel {
+			position: absolute;
+			top: 22px;
+			right: 0;
+			width: 10vw;
+		}
+
+		/* 清除浮动 */
+		.clearfloat:after,
+		.clearfloat:before {
+			display: table;
+			content: '';
+		}
+
+		.clearfloat:after {
+			clear: both;
+		}
+
+		/* 响应式图片 */
+		.img-res {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+
+		/* 自制的小弹窗 */
+		.shade {
+			position: fixed;
+			display: none;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: rgba(0,0,0,.4);
+			font-family: '微软雅黑';
+			font-size: 16px;
+		}
+
+		.shade .shade-vessel {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 80%;
+			height: 50vw;
+			margin: auto;
+			background: url('images/tc_bg.png') no-repeat;
+			background-size: 100% 100%;
+		}
+
+		.shade .tip {
+			width: 90%;
+			margin: auto;
+			text-align: center;
+			margin-top: 20vw;
+		}
+
+		.shade .btn-con {
+			position: absolute;
+			width: 100%;
+			bottom: 1rem;
+		}
+
+		.shade button {
+			display: block;
+			width: 90%;
+			margin: auto;
+			background: #f00;
+			border-radius: 6px;
+			color: white;
+			padding: .5rem 0;
+			font-size: 16px;
+		}
+
+
+	
+
+	</style>
+</head>
+<body>
+<!-- 背景图 -->
+<img class="doc-bg" src="images/register-bg.png" alt="">
+
+<!-- 表单元素 -->
+<form id="register-form" name="register-form" action="" >
+	<div class="form-container">
+		<div class="form-item">
+			<img src="images/phone.png" alt="">
+			<input class="phone-input" type="number" placeholder="请输入您的手机号" maxlength="11">
+		</div>
+		
+		<div class="form-item vertify-item">
+			<img src="images/vertify-code.png" alt="">
+			<input class="vertify-input" type="number" placeholder="请输入验证码" maxlength="6">
+			<input id="sendRegisterCode" class="send-vcode" name="auth_code2" type="button" value="发送验证码">
+		</div>
+		
+		<div class="form-item password">
+			<img src="images/psw.png" alt="">
+			<input class="psw-input" type="password" placeholder="请输入6-16为数字和字母组合密码" maxlength="16">
+		</div>
+		
+		<div class="form-item">
+			<img src="images/psw.png" alt="">
+			<input class="repeat-psw-input" type="password" placeholder="请确认密码">
+		</div>
+		
+		<div class="form-item posr">
+			<img src="images/nickname.png" alt="">
+			<input class="nickname-input" type="password" placeholder="请输入用户昵称">
+			<div class="radio-container clearfloat">
+				<div class="radio-input">
+					<label for="female" class="female"></label><input type="radio" name="sex" id="female">女
+				</div>
+				<div class="radio-input">
+					<label for="male" class="male"></label><input type="radio" name="sex" id="male" checked>男
+				</div>
+			</div>
+		</div>
+
+		<div class="register-btn">
+			<input type="button" value="注册">
+		</div>
+	</div>
+
+</form>
+
+<!-- 注册分享 -->
+<!-- <div class="share-img-vessel">
+	<img class="share-image img-res" src="images/register-share.png" alt="">
+</div> -->
+
+<!-- 自制的小弹窗 -->
+<div class="shade">
+	<div class="shade-vessel">
+		<div class="tip">手机号的格式错误！</div>
+		<div class="btn-con">
+			<button>好</button>
+		</div>
+	</div>
+</div>
+
+
+
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// radio-button 的默认选中项
+		$('.female').addClass('bg-red');
+
+		// 性别切换
+		$("input[type='radio']").click(function() {
+			if ($(this).is(":checked")) {
+				$(this).siblings('label').addClass('bg-red');
+				$(this).parent().siblings().find('label').removeClass('bg-red');
+			}
+		});
+
+		// 将按钮的宽度设置成和表单元素的宽度相等
+		var formItemWidth = $('.form-item').outerWidth();
+		$('.register-btn').width(formItemWidth);
+
+		// 保持输入验证码一栏的宽度与其他表单元素等宽
+		$('.vertify-item').outerWidth(formItemWidth);
+
+		// 注册表单提交按钮 点击事件
+		$('.register-btn input').click(function() {
+			shadeUp('两次的密码不一致！');
+		});
+
+		/* 弹窗提示操作 */
+		$('.shade button').click(function() {
+			$('.shade').hide();
+		});
+
+		function shadeUp(msg) {
+			$('.shade .tip').text(msg);
+			$('.shade').show();
+		}
+
+		
+
+
+	})
+
+	// 验证手机号
+	function checkMobile(phoneNumber) {
+		var mobileReg = /1\d{10}/g;
+		return mobileReg.test(phoneNumber);
+	}
+
+	// 检查输入的密码
+	function checkPsw(password) {
+		var pswReg = /(?!^[0-9]+$)(?!^[A-z]+$)(?!^[^A-z0-9]+$)^.{6,16}$/g;
+		return pswReg.test(password);
+	}
+</script>
+</body>
+</html>

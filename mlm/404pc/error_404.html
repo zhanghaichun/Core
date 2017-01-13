@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="error_404.css"> -->
+	<title>404错误</title>
+	<style>
+		body {
+			position: relative;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			background: url("errorbg_404.png") no-repeat;
+			background-size: cover;
+			overflow: hidden;
+			font-family: "微软雅黑";
+		}
+
+		.error_wrapper {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			/*bottom: 0;*/
+			width: 100%;
+			height: 80%;
+			margin: auto;
+			/*background: url("error_pic.png") no-repeat;
+			background-size: 100% 100%;
+			background-position: center top;*/
+			overflow-x: hidden;
+		}
+
+
+
+		.error_wrapper .content {
+			position: absolute;
+			top: 31vh;
+			/*bottom: 39vh;*/
+			width: 100%;
+			text-align: center;
+		}
+
+		/* 图片 */
+		.error_wrapper img {
+			display: block;
+			max-width: 100%;
+			height: 50vh;
+			margin: auto;
+		}
+
+		.error_page_btn a {
+			display: inline-block;
+			width: 120px;
+			height: 32px;
+			background: url("error_btn.png") no-repeat;
+			background-position: 0 -64px;
+		}
+
+		@media screen and (max-width: 500px) {
+			.error_wrapper .content {
+				bottom: 35vh;
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="error_wrapper">
+	<!-- 图片 -->
+	<img src="error_pic.png" alt="">
+	<!-- 提示和返回按钮 -->
+	<div class="content">
+		<div class="error_page_txt">
+			<h3>抱歉！页面无法访问...</h3>
+		</div>
+		<div class="error_page_btn">
+			<a href="#"></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

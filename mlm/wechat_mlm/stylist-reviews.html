@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>设计师评价</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<link rel="stylesheet" href="css/stylist-reviews.css">
+	<link rel="stylesheet" href="css/dropload.css">
+	<style>
+		.other-reviews {
+			background: #fff;
+			color: #C09469;
+			padding-left: 5%;
+		}
+
+		.other-reviews .content {
+			border-top: 1px solid #aaa;
+		}
+
+		.other-reviews .flip {
+			height: 50px;
+			line-height: 50px;
+			padding-right: 5%;
+			padding-left: 13%;
+		}
+
+		.other-reviews .other-content {
+			padding-top: 1rem;
+   		padding-bottom: 5px;
+   		padding-left: 13%;
+		}
+
+		.flip .left {
+			float: left;
+		}
+
+		.flip .right {
+			float: right;
+		}
+
+		.flip .p {
+			display: inline-block;
+		}
+
+		.flip .p img {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			vertical-align: middle;
+		}
+
+		.review .left img {
+			height: 35px;
+		}
+	</style>
+</head>
+<body>
+<!-- 定义设计师评价标题 -->
+<div class="title">
+	<a href="javascript: history.go(-1)"><img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt=""></a>
+	<span>设计师评价</span>
+</div>
+
+<div class="reviews">
+
+	<!-- <div class="no-reviews">
+		<div class="content">
+			<span>暂无评价记录</span>
+		</div>
+	</div> -->
+	<!-- 发型师介绍 -->
+	<div class="stylistIntro clearfloat">
+		<div class="hp"><img  class="img-circle" src="img/Self/ninetales.jpg" alt=""></div>
+	
+		<div class="intro">
+			<span class="name">汤尼</span>
+			<span class="level">高级技术总监</span>
+			<div class="motto text-muted">发型改变气质，你也可以成为明星</div>
+			<ul>
+				<li><span>656</span> 收藏</li>
+				<li>|</li>
+				<li><span>3489</span> 美单</li>
+				<li>|</li>
+				<li>洗剪吹 <span class="text-danger">￥89</span></li>
+			</ul>
+		</div>
+			
+		<div class="appoint">
+			<a href="appoint.html"><img src="img/Images.xcassets/homeImage/发型详情.imageset/发型详情@3x.png" alt=""></a>
+		</div>
+	</div>
+	
+	
+	<!-- 设计师评价的外层容器 -->
+	<div class="outer-container">
+		<div class="state">设计师评价</div>
+		<div class="outer">
+			<div class="inner">
+				<div class="main-content">
+					<div class="review clearfloat">
+						<div class="left"><img src="img/Image/iconImage/logo144.png" alt=""></div>
+						<div class="right">
+							<span class="nickname">destiny</span>
+							<span class="timestamp text-muted"><span class="date">2016-03-10</span></span>
+							<div class="review-content text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eos totam, delectus fuga minus dolorum labore vitae quaerat ducimus perferendis?</div>
+						</div>
+					</div>
+					
+					<div class="row clearfloat">
+						<div class="col-xs-4"><img class="img-responsive" src="img/Self/cat.jpg" alt=""></div>
+						<div class="col-xs-4"><img class="img-responsive" src="img/Self/1.jpg" alt=""></div>
+						<div class="col-xs-4"><img class="img-responsive" src="img/Self/fall.jpg" alt=""></div>
+					</div>
+				
+					<div class="other-reviews">
+						<div class="content clearfloat">
+							<div class="flip clearfloat">
+								<div class="left time">2016-11-21 16:56</div>
+								<div class="right">
+									<span class="n">小龙</span>
+									<div class="p"><img src="img/Self/home.jpg" alt=""></div>
+								</div>
+							</div>
+				
+							<div class="other-content">
+								大厅经理说的的今天几点睡
+							</div>
+						</div>
+					</div>
+				</div>
+					
+				<div class="main-content clearfloat">
+					<div class="review clearfloat">
+						<div class="left"><img src="img/Image/iconImage/logo144.png" alt=""></div>
+						<div class="right">
+							<span class="nickname">destiny</span>
+							<span class="timestamp text-muted"><span class="date">2016-03-10</span></span>
+							<div class="review-content text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam eos totam, delectus fuga minus dolorum labore vitae quaerat ducimus perferendis?</div>
+						</div>
+					</div>
+					<!-- <div class="row clearfloat">
+						<div class="col-xs-4"><img class="img-responsive" src="img/Self/cat.jpg" alt=""></div>
+						<div class="col-xs-4"><img class="img-responsive" src="img/Self/1.jpg" alt=""></div>
+						<div class="col-xs-4"><img class="img-responsive" src="img/Self/fall.jpg" alt=""></div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/dropload.min.js"></script>
+<script>
+	$(function() {
+
+		// 清除浮动
+		$(".review").addClass("clearfloat");
+
+			// 分页显示
+			var counter = 0;
+			// 每页展示4个
+			var num = 4;
+			var pageStart = 0,pageEnd = 0;
+
+			// dropload
+			$('.outer').dropload({
+		  	scrollArea : window,
+		    // 每一次下拉的时候都执行一次该函数
+		    loadDownFn : function(me){
+		      $.ajax({
+		        type: 'GET',
+		        url: './json/reviews.json',
+		        dataType: 'json',
+		        success: function(data){
+		          console.log(1);
+		          var result = '';
+		          counter++; // 1 2 3
+		          pageEnd = num * counter; // 4 8 12
+		          pageStart = pageEnd - num; // 0 4 8
+
+		          for(var i = pageStart; i < pageEnd; i++){
+		            result += '<div class="main-content"><div class="review clearfloat"><div class="left"><img src="'+ data.lists[i]["main-hp"] +'"></div><div class="right"><span class="nickname">' + data.lists[i]["main-name"] + '</span><span class="timestamp text-muted"><span class="date">' + data.lists[i]["main-time"] + '</span></span><div class="review-content text-muted">' + data.lists[i]["main-content"] + '</div></div></div><div class="row clearfloat"><div class="col-xs-4"><img class="img-responsive" src="'+ data.lists[i].photos[0] +'"></div><div class="col-xs-4"><img class="img-responsive" src="'+ data.lists[i].photos[1] +'"></div><div class="col-xs-4"><img class="img-responsive" src="'+ data.lists[i].photos[2] +'"></div></div><div class="other-reviews"><div class="content clearfloat"><div class="flip clearfloat"><div class="left time">' + data.lists[i]["second-time"] + '</div><div class="right"><span class="n">' + data.lists[i]["second-name"] + '</span> <div class="p"><img src="'+ data.lists[i]["second-hp"] +'"></div></div></div><div class="other-content">' + data.lists[i]["second-content"] + '</div></div></div></div>';
+		            if((i + 1) >= data.lists.length){
+		              // 锁定
+		              me.lock();
+		              // 无数据
+		              me.noData();
+		              break;
+		            }
+
+		              
+		          } // for -->
+
+		          // 为了测试，延迟1秒加载
+		          // $("body").one("touchend",function() {
+		          	setTimeout(function(){
+		          		// $(window).on("touchend",function() {
+		          			$('.inner').append(result);
+		          			// 每次数据加载完，必须重置
+		          			me.resetload();
+
+		          			// $(document.body).unbind("touchmove");
+		          		// });
+		          	  
+		          	},1000);
+		          	
+		          // })
+		          
+		        },
+		        error: function(xhr, type){
+		          alert('Ajax error!');
+		          // 即使加载出错，也得重置
+		          me.resetload();
+		        }
+		      }); // ajax -->
+		    } // loadDownFn -->
+			}); // dropload -->
+	})
+</script>	
+</body>
+</html>

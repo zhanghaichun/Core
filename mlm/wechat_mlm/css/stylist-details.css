@@ -1,0 +1,330 @@
+html {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url("../img/Image/背景@2x.png");
+	background-size: cover; 
+}
+
+/* 设计师详情顶部的图标 */
+.top-container {
+	height: 44px;
+	line-height: 44px;
+	background: transparent;
+	text-align: center;
+	padding: .5em 1em;
+}
+
+.top-container img {
+	width: 44px;
+}
+.top-container span {
+	display: inline-block;
+	vertical-align: middle;
+	color: #fff;
+	font-size: 1.2em;
+	/*transform: translateY(18px);*/
+}
+
+.top-container a {
+	display: inline-block;
+}
+
+.top-container .return {
+	float: left;
+}
+
+.top-container .share {
+	float: right;
+}
+
+/* 设置swiper轮播图 */
+.swiper-container {
+	margin-top: 3vh !important;
+	height: 80% !important;
+	overflow: hidden;
+}
+
+
+.swiper-slide {
+	width: 85.5% !important;
+}
+
+.swiper-slide > img {
+	height: 27em;
+	width: 100%;
+}
+
+/* 页面的主体部分(包括发型师和发型的介绍)  */
+.stylistIntro {
+	background: transparent;
+	padding-right: 1em;
+	padding-bottom: 1em;
+	font-size: .7em;
+}
+
+.hp {
+	float: left;
+	margin-right: 4px;
+}
+
+.hp a {
+	display: block;
+}
+
+.hp img {
+	width: 50px;
+	height: 50px;
+	transform: translate(-8%,.2rem);
+}
+
+.intro {
+	float: left;
+}
+
+.intro .name {
+	font-weight: bold;
+	font-size: 1.5em;
+	color: #fff;
+}
+
+.intro .motto {
+	min-height: 1em;
+	max-width: 16em;
+	margin-top: .3em;
+	margin-bottom: .3em;
+}
+
+.intro .level {
+	display: inline-block;
+	color: #f00;
+	padding: .1em .4em;
+	margin-left: 8px;
+	box-sizing: border-box;
+	border: 1px solid #f00;
+	font-size: .7em;
+	border-radius: 3px;
+}
+
+.intro .cost {
+	font-family: "微软雅黑";
+	color: #f00; 
+}
+
+.stylistIntro ul {
+	padding-left: 0;
+	list-style: none;
+	margin: 0;
+	color: #bbb;
+}
+
+.stylistIntro ul li {
+	display: inline-block;
+}
+
+
+.img-circle {
+	border-radius: 50%;
+}
+
+.text-danger {
+	color: #f00;
+}
+
+.text-muted {
+	color: #bbb;
+}
+
+.select-items {
+	list-style: none;
+	padding: 0;
+	padding-left: 2%;
+	margin: -.4em;
+	margin-bottom: 1em;
+}
+
+.select-items li {
+	display: inline-block;
+}
+
+.select-items li img {
+	vertical-align: middle;
+	width: 16px;
+}
+
+.select-items li span {
+	display: inline-block;
+	margin-left: .2em;
+	color: #fff;
+	font-size: .8em;
+}
+
+.spirit,
+.prize {
+	color: #fff;
+	font-size: .9em;
+	padding-right: 3%;
+}
+
+.prize {
+	margin-top: 1em;
+}
+
+.check-reviews {
+	background: rgba(255,255,255,.4);
+	margin-top: 1em;
+	color: #fff;
+	font-size: .9em;
+	padding: .2em .4em;
+	border-radius: .2em;
+	width: 90%;
+}
+
+.check-reviews a {
+	display: block;
+}
+
+.check-reviews img {
+	vertical-align: middle;
+	margin-right: .4em;
+	width: 20px;
+}
+
+/* 设计师评价 */
+.review {
+	font-size: .7em;
+	background: transparent;
+	padding: 1em 0;
+}
+
+.review .left {
+	float: left;
+}
+
+.review .right {
+	float: right;
+	width: 86%;
+}
+
+.timestamp {
+	margin-left: .8em;
+}
+
+.review-content {
+	margin-top: .2em;
+	padding-right: 2%;
+}
+
+.nickname {
+	font-size: 1.7em;
+	font-weight: bold;
+	color: #fff;
+}
+
+
+.review .left img {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+/* 设计设计师详情页中的立即预约 */
+.content {
+	background: #fff;
+	height: 76vh;
+	border-radius: .3em;
+	padding: .2em .5em;
+	box-sizing: border-box;
+}
+
+.collection {
+	text-align: center;
+	line-height: .7;
+	float: right;
+	margin-bottom: .5em;
+}
+
+.collection > img {
+	display: block;
+	width: 32px;
+}
+
+.img-con  img {
+	display: block;
+	width: 98%;
+	height: 50vh;
+	margin: auto;
+}
+
+.img-con a {
+	display: block;
+}
+
+.description {
+	color: #bbb;
+	font-size: .8em;
+	margin-top: .4em;
+	padding-left: .4em;
+	min-height: 1em;
+}
+
+.content .appoint {
+	position: absolute;
+  right: 3%;
+  bottom: .5rem;
+	float: right;
+	/*margin-top: 4%;*/
+}
+
+.content .appoint a {
+	display: block;
+}
+
+.content .appoint img {
+	vertical-align: middle;
+	width: 30px;
+}
+
+.content .appoint span {
+	display: inline-block;
+	transform: translateY(3px);
+}
+
+
+/* 设置响应式图片 */	
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* 设置清除浮动 */
+.clearfloat:before,
+.clearfloat:after {
+	display: table;
+	content: "";
+}
+
+.clearfloat:after {
+	clear: both;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+a:visited {
+	color: #000;
+}
+
+.check-reviews a,
+.check-reviews a:visited {
+	color: #fff;
+}
+

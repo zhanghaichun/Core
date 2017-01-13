@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>账户余额页</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<link rel="stylesheet" href="css/account-balance.css">
+</head>
+<body>
+<!-- 定义积分记录标题 -->
+<div class="title">
+	<img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt="">
+	<span>账户余额</span>
+</div>
+
+<!-- 设计积分记录主项 -->
+<div class="records-container">
+	<div class="record">
+		<div class="left"><span>收入</span><span class="integral-balance" >积分余额</span></div>
+		<div class="right"><span>2016-03-08 12:34:22</span><span class="amount">+1980</span></div>
+	</div>
+	<div class="record">
+		<div class="left"><span>支出</span><span class="integral-balance" >积分余额</span></div>
+		<div class="right"><span>2016-03-08 12:34:22</span><span class="amount">-1000</span></div>
+	</div>
+</div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		// 清除浮动
+		$(".record").addClass("clearfloat");
+
+	})
+</script>	
+</body>
+</html>

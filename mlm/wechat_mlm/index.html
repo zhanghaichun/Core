@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="full-screen" content="yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no,maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>首页</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/dropload.css">
+	<link rel="stylesheet" href="css/index.css">
+	<style>
+		/*.fs-container {
+			height: 500px;
+			overflow: scroll;
+		}*/
+		body {
+      margin: 0;
+      padding-bottom: 50px;
+      background: #ededed;
+		}
+
+		body::-webkit-scrollbar{
+		   display: none;
+		}
+
+    nav {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 50px;
+      align-items: center;
+      background: #fff;
+      line-height: .9;
+      z-index: 3;
+      font-family: normal;
+      font-size: 14px;
+    }
+
+    nav a {
+      flex: 1;
+      text-align: center;
+    }
+
+    nav a span {
+      font-size: 90%;
+      /*line-height: .8;*/
+    }
+
+    nav a div {
+      margin: 0;
+      padding: 0;
+      line-height: .7;
+    }
+
+    nav img {
+      width: 25px;
+      /*height: 20px;*/
+    }
+
+    nav img.ap {
+      width: 40px;
+      /*height: 40px;*/
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+    }
+
+    nav a:visited,
+    nav a:hover {
+      color: #000;
+      text-decoration: none;
+    }
+	</style>
+</head>
+<body>
+	<!-- 设置最顶部的轮播图 -->
+	<div class="container-fluid fluid1">
+		<div id="carousel-example-generic" class=" top-banner carousel slide" data-ride="carousel">
+
+			<!-- Indicators -->
+			<ul class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+			</ul>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+		    <div class="item active">
+		      <a href="javascript:;"><img class="img-responsive" src="img/Self/1.jpg" alt="..."></a>
+		    </div>
+		    <div class="item">
+		      <a href="javascript:;"><img class="img-responsive" src="img/Self/bridge.jpg" alt="..."></a>
+		    </div>
+		    <div class="item">
+		      <a href="javascript:;"><img class="img-responsive" src="img/Self/cat.jpg" alt="..."></a>
+		    </div>
+		    <div class="item">
+		      <a href="javascript:;"><img class="img-responsive" src="img/Self/fall.jpg" alt="..."></a>
+		    </div>
+		    <div class="item">
+		      <a href="javascript:;"><img class="img-responsive" src="img/Self/forest.jpg" alt="..."></a>
+		    </div>
+		  </div>
+		</div>
+	</div>
+
+	<div class="stylist-con">
+		<div class="stylist">stylist 明星设计师</div>
+	</div>
+
+
+	<!-- 第二个banner图的设计 -->
+	<div class="swiper-container">
+	  <div class="swiper-wrapper">
+	    <div class="swiper-slide swiperact"><a href="stylist-details.html"><img class="img-responsive" src="img/Self/heart.jpg" alt=""></a></div>
+	    <div class="swiper-slide"><a href="stylist-details.html"><img class="img-responsive" src="img/Self/home.jpg" alt=""></a></div>
+	    <div class="swiper-slide"><a href="stylist-details.html"><img class="img-responsive" src="img/Self/naruto.jpg" alt=""></a></div>
+	    <div class="swiper-slide"><a href="stylist-details.html"><img class="img-responsive" src="img/Self/village.jpg" alt=""></a></div>
+	    <div class="swiper-slide"><a href="stylist-details.html"><img class="img-responsive" src="img/Self/ninetales.jpg" alt=""></a></div>
+	    <div class="swiper-slide"><a class="see_more" href="stylist.html">
+	   	 <span>查看更多<br>MORE</span>
+	    </a></div>
+	  </div>
+	</div>
+
+	<div class="hairstyle-con">
+		<div class="hairstyle">hairstyle 热门发型</div>
+	</div>
+
+	<!-- 热门发型 -->
+	<div class="container-fluid fs-container">
+		<div class="container-content">
+			<a href="hairdo-details2.html"><div class="banner-wrapper">
+					<div class="fair-banner"><img class="img-responsive hp" src="img/Self/home.jpg" alt=""></div>
+					<div class="appAndDes">
+						<div class="app">
+							<span class="ac">
+								<img src="img\Images.xcassets\homeImage\首页预约.imageset\首页预约@3x.png" alt="" usemap="#mymap">
+								<map name="mymap">
+			  						<!-- <area shape="rect" coords="10,0,110,260" href ="appoint.html" alt="Sun" /> -->
+			  						<area shape="rect" coords="14,1,57,55" href ="appoint.html" alt="Sun" />
+								</map>
+							</span>
+						</div>
+						<span class="des">2016年度流行色</span>
+					</div>
+				</div></a>
+			
+			<a href="hairdo-details2.html"><div class="banner-wrapper">
+					<div class="fair-banner"><img class="img-responsive hp" src="img/Self/naruto.jpg" alt=""></div>
+					<div class="appAndDes">
+						<div class="app">
+								<span class="ac">
+									<img src="img\Images.xcassets\homeImage\首页预约.imageset\首页预约@3x.png" alt="" usemap="#mymap">
+									<map name="mymap">
+			  						<area shape="rect" coords="10,0,110,260" href ="appoint.html" alt="Sun" />
+								</map>
+								</span>
+							</div>
+						<span class="des">2016年度流行色</span>
+					</div>
+				</div></a>
+		</div><!-- /. container-content -->
+	</div>
+
+	<!-- 在页面的右下角添加一个回到顶部的锚 -->
+	<div class="anchor"><img class="img-responsive" src="img/Images.xcassets/homeImage/ReturnTop.imageset/ReturnTop@3x.png" alt=""></div>
+
+	<nav>
+	  <a class="nav1" href="<?php echo U('index/index')?>">
+	    <div><img src="img/Image/iconImage/tabbar-icon/bar首页@3x.png" alt=""></div>
+	    <span>首页</span>
+	  </a>
+	  <a class="nav2" href="<?php echo U('stylist/stylist')?>">
+	    <div><img src="img/Image/iconImage/tabbar-icon/bar设计师@3x.png" alt=""></div>
+	    <span>设计师</span>
+	  </a>
+	  <a class="nav3" href="javascript:;">
+	    <div><img class="ap" src="img/Image/iconImage/tabbar-icon/bar预约@3x.png" alt=""></div>
+	  </a>
+	  <a class="nav4" href="<?php echo U('opus/opus_list')?>">
+	    <div><img src="img/Image/iconImage/tabbar-icon/bar发型@3x.png" alt=""></div>
+	    <span>发型</span>
+	  </a>
+	  <a class="nav5" href="javascript:;">
+	    <div><img src="img/Image/iconImage/tabbar-icon/bar我的@3x.png" alt=""></div>
+	    <span>我的</span>
+	  </a>
+	</nav>
+
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jgestures.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/dropload.js"></script>
+<script>
+	function stopDrop() {
+	    var lastY;//最后一次y坐标点
+	    $(document.body).on('touchstart', function(event) {
+	    		//点击屏幕时记录最后一次Y度坐标。
+	        lastY = event.originalEvent.changedTouches[0].clientY;
+	    });
+	    $(document.body).on('touchmove', function(event) {
+	        var y = event.originalEvent.changedTouches[0].clientY;
+	        var st = $(this).scrollTop(); //滚动条高度
+	        //如果滚动条高度小于0，可以理解为到顶了，且是下拉情况下，阻止touchmove事件。  
+	        if (y >= lastY && st <= 2) {
+	            lastY = y;
+	            event.preventDefault();
+	        }
+	        lastY = y;
+	 
+	    });
+	}
+
+	$(function(){
+		stopDrop();
+
+		$("nav a").css("color","#000");
+
+		$(".carousel-indicators").css("margin-left","-"+$(".carousel-indicators").width()/2+"px");
+
+		var len = $(".carousel-indicators li").length;
+		$(".carousel-indicators li").css("width",$(".carousel-indicators").width()/len + "px");
+
+		// setTimeout(function() {
+		// 	$('#myCarousel, .top-banner').carousel('pause');
+		// },30);
+
+		// 定义自动执行函数，实现触屏滑动功能。
+		(function swiper(selector) {
+			// 手势向左
+			$(selector).bind('swiperleft swipeleftup swipeleftdown', function() {
+				$(this).carousel('next');
+			});
+
+			// 手势向右
+			$(selector).bind('swiperright swiperightup swiperightdown', function() {
+				$(this).carousel('prev');
+			});
+		})('.top-banner, #myCarousel');
+
+		var mySwiper = new Swiper('.swiper-container', {
+			autoplay: false,//可选选项，自动滑动
+			spaceBetween : 10,
+			width: $(".swiper-slide").width(),
+			slidesOffsetBefore : 30,
+		})
+
+		// setInterval(function() {
+		// 	$(".swiper-slide-active").css({
+		// 		"padding-left": "30px",
+		// 	});
+		// },20);
+
+		// 设置回到顶部锚的显示方式
+		/* 首先是利用jquery在页面加载的时候，给回到顶部的img标签套一层a标签，a标签中的href属性指向的是页面的顶部，之后在body的滚动条滚动的时候才会显示出回到顶部链接，当跳回到顶部的时候
+		回到顶部这个链接会消失的 */
+
+			$(".anchor img").wrap("<a href='#top'>");
+
+			
+
+			// setInterval(function() {
+			// 	if ( $(window).scrollTop() == 0 ) {
+			// 		$(".anchor").fadeOut(50);
+			// 	}
+			// },30)
+
+			$(window).scroll(function() {
+				$(".anchor").fadeIn(100);
+				if ( $(window).scrollTop() == 0 ) {
+					$(".anchor").fadeOut(50);
+				}
+			})
+
+			// 禁止body页面滚动
+			// $(document.body).on("touchmove",function(e) {
+			// 	e.preventDefault();
+			// });
+
+			// 分页显示
+			var counter = 0;
+			// 每页展示4个
+			var num = 4;
+			var pageStart = 0,pageEnd = 0;
+
+			// dropload
+			$('.fs-container').dropload({
+		  	scrollArea : window,
+		    // 每一次下拉的时候都执行一次该函数
+		    loadDownFn : function(me){
+		      $.ajax({
+		        type: 'GET',
+		        url: './json/index.json',
+		        dataType: 'json',
+		        success: function(data){
+		          // console.log(1);
+		          var result = '';
+		          counter++; // 1 2 3
+		          pageEnd = num * counter; // 4 8 12
+		          pageStart = pageEnd - num; // 0 4 8
+
+		          for(var i = pageStart; i < pageEnd; i++){
+		            result += '<a class="opacity" href="hairdo-details2.html"><div class="banner-wrapper"><div class="fair-banner"><img class="img-responsive hp" src="'+ data.lists[i].hp +'"></div><div class="appAndDes"><div class="app"><span class="ac"><img src="img/Images.xcassets/homeImage/首页预约.imageset/首页预约@3x.png" usemap="#mymap"><map name="mymap"><area shape="rect" coords="10,0,110,260" href="appoint.html"></map></span></div><span class="des">' + data.lists[i].des + '</span></div></div></a>';
+		            if((i + 1) >= data.lists.length){
+		              // 锁定
+		              me.lock();
+		              // 无数据
+		              me.noData();
+		              break;
+		            }
+
+		              
+		          } // for -->
+
+		          // 为了测试，延迟1秒加载
+		          // $("body").one("touchend",function() {
+		          	setTimeout(function(){
+		          		// $(window).on("touchend",function() {
+		          			$('.container-content').append(result);
+		          			// 每次数据加载完，必须重置
+		          			me.resetload();
+
+		          			// $(document.body).unbind("touchmove");
+		          		// });
+		          	  
+		          	},200);
+		          	
+		          // })
+		          
+		        },
+		        error: function(xhr, type){
+		          alert('Ajax error!');
+		          // 即使加载出错，也得重置
+		          me.resetload();
+		        }
+		      }); // ajax -->
+		    } // loadDownFn -->
+			}); // dropload -->
+		
+			// document.documentElement.style.overflow='hidden';
+
+	})
+</script>
+</body>
+</html>

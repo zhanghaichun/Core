@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>我的美单</title>
+	<link rel="stylesheet" href="css/mine-orders.css">
+</head>
+<body>
+<!-- 定义标题 -->
+<div class="title">
+	<a href="javascript: history.go(-1)"><img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt=""></a>
+	<span>我的美单</span>
+</div>
+
+
+<!-- 设置选项卡 -->	
+<div class="tab">
+	<span class="active index">全部</span><!--
+	--><span class="index">未支付</span><!--
+	--><span class="index">已支付</span><!--
+	--><span class="index">已完成</span><!--
+	--><span class="index">退款</span>
+</div>
+
+<!-- 设置选项卡内容 -->
+<div class="all tab-content">
+	<!-- <div class="no-orders">
+		<div class="content">
+			<span>暂无订单记录</span>
+		</div>
+	</div> -->
+
+	<div class="item">
+		<div class="stylist clearfloat">
+			<div class="content clearfloat">
+				<div class="iconAndTxt">
+					<img src="img/Images.xcassets/AppIcon.appiconset/Icon-Small@3x.png.png" alt="">
+					<span class="txt">David</span>
+					<span class="bage">资深设计师</span>
+				</div>
+				<div class="enter">
+					<span>已消费</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container1">
+			<div class="sn clearfloat">
+				<div class="left">订单编号</div>
+				<div class="right">21067832787123881273718</div>
+			</div>
+			<div class="appoint-time clearfloat">
+				<div class="left">预约时间</div>
+				<div class="right">2016-03-02 15:30</div>
+			</div>
+			<div class="serv-outlet clearfloat">
+				<div class="left">服务门店</div>
+				<div class="right">西大直街123号院内</div>
+			</div>
+			<div class="wcb clearfloat">
+				<div class="left">洗剪吹</div>
+				<div class="right">￥324</div>
+			</div>
+			<div class="wb clearfloat">
+				<div class="left">洗吹</div>
+				<div class="right">￥324</div>
+			</div>
+		</div>		
+		<div class="go-pay clearfloat">
+			<div class="left"><span>订单金额：</span><span class="price">￥0</span></div>
+			<div class="right">
+				<a href="javascript:;" class="btn">追加订单</a>
+				<a href="javascript:;" class="btn">确认完成</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="item">
+		<div class="stylist clearfloat">
+			<div class="content clearfloat">
+				<div class="iconAndTxt">
+					<img src="img/Images.xcassets/AppIcon.appiconset/Icon-Small@3x.png.png" alt="">
+					<span class="txt">David</span>
+					<span class="bage">资深设计师</span>
+				</div>
+				<div class="enter">
+					<span>已完成</span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container1">
+			<div class="sn clearfloat">
+				<div class="left">订单编号</div>
+				<div class="right">21067832787123881273718</div>
+			</div>
+			<div class="appoint-time clearfloat">
+				<div class="left">预约时间</div>
+				<div class="right">2016-03-02 15:30</div>
+			</div>
+			<div class="serv-outlet clearfloat">
+				<div class="left">服务门店</div>
+				<div class="right">西大直街123号院内</div>
+			</div>
+			<div class="wcb clearfloat">
+				<div class="left">洗剪吹</div>
+				<div class="right">￥324</div>
+			</div>
+			<div class="wb clearfloat">
+				<div class="left">洗吹</div>
+				<div class="right">￥324</div>
+			</div>
+		</div>		
+		<div class="go-pay clearfloat">
+			<div class="left"><span>订单金额：</span><span class="price">￥0</span></div>
+			<div class="right">
+				<a href="javascript:;" class="btn">去评价</a> 
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="no-pay tab-content">
+	<div class="no-orders">
+		<div class="content">
+			<span>暂无订单记录</span>
+		</div>
+	</div>
+</div>
+
+<div class="pay tab-content">
+	<div class="no-orders">
+		<div class="content">
+			<span>暂无订单记录</span>
+		</div>
+	</div>
+</div>
+
+<div class="done tab-content">
+	<div class="no-orders">
+		<div class="content">
+			<span>暂无订单记录</span>
+		</div>
+	</div>
+</div>
+
+<div class="refund tab-content">
+	<div class="no-orders">
+		<div class="content">
+			<span>暂无订单记录</span>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+		$("div.all").show();
+
+		// 美单情况选项卡切换
+		$("span.index").each(function(index) {
+			$(this).click(function() {
+				$(this).addClass("active");
+				$(this).siblings().removeClass("active");
+
+				$(".tab-content").hide();
+				$(".tab-content").eq(index).show();
+			});
+			
+		});
+	})
+</script>
+</body>
+</html>

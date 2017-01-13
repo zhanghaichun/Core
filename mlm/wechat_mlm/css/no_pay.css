@@ -1,0 +1,352 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-top: 54px;
+	padding-bottom: 20%;
+	/*overflow: hidden;*/
+	background: #ededed;
+	/*font-family: "微软雅黑";*/
+}
+
+/* 设置标题 */
+.title {
+	position: fixed;
+	top: 0%;
+	height: 44px;
+	line-height: 44px;
+	background: #fff;
+	text-align: center;
+	width: 100%;
+	z-index: 2;
+	border-bottom: 1px solid #eee;
+	padding-left: 3%;
+	box-sizing: border-box;
+}
+
+
+.title span {
+	display: block;
+	width: 85px;
+	margin: auto;
+}
+
+.title a {
+	float: left;
+	height: 44px;
+	line-height: 44px;
+}
+
+.title img {
+	width: 25px;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+
+
+
+
+
+/* 设计选择设计师项的样式 */
+.stylist {
+	height: 50px;
+	line-height: 50px;
+	background: #fff;
+	padding-left: 3%;
+}
+
+.stylist .content {
+	padding-right: 3%;
+	border-bottom: 1px solid #ddd;
+}
+
+.iconAndTxt {
+	float: left;
+}
+
+.iconAndTxt .txt {
+	display: inline-block;
+	padding-left: 5px;
+	/*transform: translateY(-20px);*/
+}
+
+.enter {
+	float: right;
+	/*margin-top: 18px;*/
+}
+
+.iconAndTxt img {
+	width: 40px;
+	border-radius: 50%;
+	vertical-align: middle;
+	transform: translateY(-.1rem);
+	-webkit-transform: translateY(-.1rem);
+}
+
+
+/*展示服务项目*/
+.serv-list {
+	margin: 0;
+	padding: 0;
+	padding-top: 3%;
+	background: #fff;
+	color: #bbb;
+}
+
+.serv-list > li {
+	padding-right: 3%;
+	margin-left: 8%;
+	color: #777;
+}
+
+.serv-list > li > ul {
+	padding-left: 5%;
+	color: #bbb;
+	list-style: none;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.serv-list > li > ul li {
+	line-height: 1.7;
+}
+
+.serv-list .price {
+	float: right;
+}
+
+/*.serv-list .item {
+	float: left;
+}*/
+
+/* 设置合计栏 */
+.total {
+	height: 42px;
+	line-height: 42px;
+	background: #fff;
+	padding-left: 3%;
+	padding-right: 3%;
+	/*padding: 20px 40px;*/
+}
+
+.total .left {
+	float: left;
+}
+
+.total .right {
+	color: #f00;
+	float: right;
+	transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+}
+
+/* 设置三个可以重复使用样式的区域 */
+/* 设计用户昵称、预约时间、服务门店 */
+/* 设置优惠券、可用积分与实付金额 */
+/* 设置仅支付定金 */
+.container1 {
+	margin-top: 10px;
+	background: #fff;
+	padding-left: 3%;
+}
+
+.container1 > div {
+	background: inherit;
+	height: 40px;
+	line-height: 40px;
+	padding-right: 3%;
+	border-bottom: 1px solid #ddd;
+}
+
+.container1 .left {
+	float: left;
+}
+
+.container1 .right {
+	float: right;
+	font-size: 95%;
+	color: #ccc;
+}
+
+
+.coupon .right,
+.avail-integral .offset,
+.real-money .right,
+.payment,
+.final-pay {
+	color: #f00;
+}
+
+.coupon .right strong {
+	color: #ccc;
+}
+
+.right .mb {
+	width: 22px;
+	transform: translateY(.3rem);
+	-webkit-transform: translateY(.3rem);
+}
+
+
+/* 设置仅支付定金 */
+.down-payment {
+	height: 40px;
+	line-height: 40px;
+	padding-left: 3%;
+	padding-right: 3%;
+	margin-top: 10px;
+	background: #fff;
+}
+
+.down-payment .label {
+	font-size: .75em;
+	color: #bbb;
+}
+
+img.right {
+	float: right;
+	width: 22px;
+	vertical-align: middle;
+	transform: translateY(.5rem);
+	-webkit-transform: translateY(.5rem);
+}
+
+/* 设置支付与取消订单底部栏 */
+.no-pay {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 3%;
+	padding-right: 3%;
+	/*padding: 30px 40px;*/
+	background: #fff; 
+	box-sizing: border-box;
+}
+
+.no-pay .left {
+	float: left;
+	/*transform: translateY(15px);*/
+}
+
+.no-pay .right {
+	float: right;
+}
+
+.no-pay .price {
+	color: #f00;
+}
+
+.btn {
+	background: #fff;
+	color: #f00;
+	font-size: 90% !important;
+	font-size: inherit;
+	line-height: normal;
+	font-family: "微软雅黑";
+	border: 1px solid #f00;
+	border-radius: .2em;
+	padding: .2em .5em;
+	text-decoration: none;
+	transform: translate(-.5rem,.3rem);
+}
+
+.cancel-order {
+	border: 1px solid #bbb;
+	color: #bbb;
+}
+
+/* 显示确认取消订单弹窗 */
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+	background: rgba(0,0,0,.2);
+	text-align: center;
+
+}
+
+.overlay .content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 70%;
+	height: 40%;
+	padding-top: 8%;
+	margin: auto;
+	background: #fff;
+	border-radius: .5em;
+	box-sizing: border-box;
+}
+
+.content > div {
+	/*line-height: 1.4em;*/
+}
+
+.overlay .confirm img {
+	display: block;
+	margin: auto;
+}
+
+.overlay .confirm span {
+	display: block;
+}
+
+.confirm .prompt {
+	margin-top: 1em;
+}
+
+.confirm .con {
+	color: #bbb;
+	font-size: .8em;
+}
+
+.overlay .btn {
+	position: relative;
+	bottom: -2.5em;
+	display: inline-block;
+	width: 48%;
+	/*margin: 0;*/
+	padding: 1em;
+	background: #fff;
+	border: 1px solid #f7f7f7;
+	border-right: none;
+	font-size: inherit;
+}
+
+.overlay .btn:first-child {
+	color: #f00;
+	margin-right: -2%;
+}
+
+.overlay .btn:last-child {
+	margin-left: -2%;
+}
+
+/* 设置清除浮动 */
+.clearfloat:before,
+.clearfloat:after {
+	display: table;
+	content: "";
+}
+
+.clearfloat:after {
+	clear: both;
+}
+
+.yahei {
+	font-family: "微软雅黑";
+}
+
+a {
+	text-decoration: none;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+
+

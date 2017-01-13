@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>支付订单</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<link rel="stylesheet" href="css/pay_order.css">
+</head>
+<body>
+<!-- 定义预约标题 -->
+<div class="title">
+	<a href="no_pay.html"><img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt=""></a>
+	<span>支付订单</span>
+</div>
+
+
+<!-- 提示付款时间 -->
+<div class="pay-time text-center">请在15分钟之内付款，过期需要重新预约</div>
+
+
+<!-- 设置订单编号与支付金额栏目 -->
+<div class="container1">
+	<div class="order_num">
+		<div class="left">订单编号</div>
+		<div class="right yahei">37492384023482357</div>
+	</div>
+	<div class="pay_amount">
+		<div class="left">支付金额</div>
+		<div class="right yahei">￥3423.00</div>
+	</div>
+</div>
+
+<!-- 设置微信支付与支付宝支付 -->
+<div class="pay-type">
+	<div class="wc-pay">
+		<div class="left">
+			<img src="img/Image/iconImage/others-icon/微信@3x.png" alt="">
+			<span>微信支付</span>
+		</div>
+		<div class="right"><img src="img/Image/未选中@3x.png" alt=""></div>
+	</div>
+	<div class="alipay">
+		<div class="left">
+			<img src="img/Image/iconImage/others-icon/支付宝@3x.png" alt="">
+			<span>支付宝支付</span>
+		</div>
+		<div class="right"><img src="img/Image/未选中@3x.png" alt=""></div>
+	</div>
+</div>
+
+<!-- 确认支付按钮 -->
+<div class="confirm-pay text-center">确认支付</div>
+
+<!-- 定义支付失败提示 -->
+<div class="pay-fail text-center">支付失败</div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+
+		// 为.container1 和 .pay-type添加清除浮动效果
+		$(".container1 > div , .pay-type > div").addClass("clearfloat");
+
+		// 默认选中支付宝
+		$(".alipay .right img").attr("src","img/Image/选中@3x.png");
+
+		// 微信和支付宝选中状态设置
+		$(".wc-pay, .alipay").click(function() {
+
+			// 点击单选按钮，如果单选按钮是选中状态则取消选中，否则即为选中
+			if ( $(this).find(".right img").attr("src") == "img/Image/未选中@3x.png" ) {
+				$(this).find(".right img").attr("src","img/Image/选中@3x.png");
+				$(this).siblings().find(".right img").attr("src","img/Image/未选中@3x.png");
+			} else {
+				// $(this).find(".right img").attr('src',"img/Image/未选中@3x.png");
+			}
+
+		})
+
+		// 点击确认支付时，如果支付失败，会有相应的文字提示，同时文字提示隔一段事件就会消失
+		$(".confirm-pay").click(function() {
+
+			// 提示的渐入和渐出效果
+			// alert( (new Date).getTime() );
+			$(".pay-fail").fadeIn(700);
+			
+			setTimeout(function() {
+				$(".pay-fail").fadeOut(500);
+			},1000);
+		})
+	})
+</script>
+</body>
+</html>

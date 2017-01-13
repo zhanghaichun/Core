@@ -1,0 +1,100 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-top: 54px;
+	padding-bottom: 20%;
+	background: #ededed;
+	/*font-family: "微软雅黑";*/
+}
+
+/* 设置标题 */
+.title {
+	position: fixed;
+	top: 0%;
+	height: 44px;
+	line-height: 44px;
+	background: #fff;
+	text-align: center;
+	width: 100%;
+	z-index: 2;
+}
+
+
+.title span {
+	display: block;
+	width: 70px;
+	margin: auto;
+}
+
+.title a {
+	float: left;
+	height: 44px;
+	line-height: 44px;
+}
+
+.title img {
+	width: 25px;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+
+
+/* 美币记录 */
+.record {
+	background: #fff;
+	padding: .5em;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	/*font-size: .9em;*/
+	border-bottom: 1px solid #ddd;
+}
+
+.record span {
+	display: block;
+}
+
+.record .count {
+	display: inline;
+}
+
+.record .left {
+	float: left;
+}
+
+.record .right {
+	float: right;
+	text-align: right;
+}
+
+.integral-balance {
+	font-size: .9em;
+	color: #bbb;
+}
+
+.amount {
+	color: #f00;
+}
+/* 设置记录缺省 */
+.no-mb .content {
+	height: 25vh;
+	background: url("../img/Image/iconImage/记录缺省图/积分记录缺省@3x.png") no-repeat;
+	background-size: 30vw 30vw;
+	background-position: center center;
+	text-align: center;
+}
+
+.no-mb .content span {
+	display: inline-block;
+	margin-top: 22vh;
+}
+
+/* 设置清除浮动 */
+.clearfloat:before,
+.clearfloat:after {
+	display: table;
+	content: "";
+}
+
+.clearfloat:after {
+	clear: both;
+}

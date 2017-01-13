@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>我的推广-无资格</title>
+	<link rel="stylesheet" href="css/disqualification.css">
+</head>
+<body>
+<!-- 页头 我的推广 
+<div class="topHeader">
+	<a href="#">
+		<img src="images/nav-返回@2x.png" alt="">
+	</a>
+	<span>我的推广</span>
+</div>-->
+
+<!-- 充值按钮 -->
+<a href="#" class="recharge"></a>
+
+<!-- 查看规则 -->
+<div class="checkRules"></div>
+
+<!-- 合伙人规则弹窗 -->
+<div class="popup">
+	<div class="rules">
+		<div class="modal-content">
+			<div class="modal-body">
+
+				<h5>合伙人规则</h5>
+
+				<div>一、如何获得“合伙人”身份呢？</div>
+				<div>①只需在APP内完成一笔任意金额订单（预约—到店接受服务—完成订单）</div>
+				<div>②支付58元换购58积分（积分可在预约下单时抵扣等额现金）</div>
+				<div>二、“合伙人”的福利有哪些呢？</div>
+				<div>合伙人可获得其金牌代言人消费金额13%的奖励、其银牌代言人消费金额3%的奖励，以现金红包的形式在订单完成时直接进入到用户的账户内。</div>
+				<div>奖励可在【个人】-【合伙人】内查看并可随时申请提现（申请提现金额需大于100元）。</div>
+				<div>推荐关系一直存在，推荐奖励终身享受。</div>
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">确 定</button>
+			</div>
+	</div>
+</div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function () {
+
+		// 点击查看规则按钮显示合伙人规则
+		$(".checkRules").click(function() {
+			$(".popup").show();
+		});
+
+		// 点击合伙人规则中的确定按钮，弹窗消失
+		$(".modal-footer button").click(function () {
+			$(".popup").hide();
+		});
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>订单未支付页面</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<link rel="stylesheet" href="css/payed.css">
+</head>
+<body>
+<!-- 定义预约标题 -->
+<div class="title">
+	<img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt="">
+	<span>我的订单</span>
+</div>
+
+<!-- 定义选择项(包括选项：全部，未支付，预约成功，已完成，退款) -->
+<ul class="select-items">
+	<li><a href="#">全部</a></li>
+	<li><a href="#">未支付</a></li>
+	<li><a href="#">已支付</a></li>
+	<li><a href="#">已完成</a></li>
+	<li><a href="#">退款</a></li>
+</ul>
+
+<!-- 已支付项的整体 -->
+<div class="item">
+	<!-- 显示未支付的预约选择 -->
+	<div class="stylist clearfloat">
+		<div class="iconAndTxt">
+			<img src="img/Images.xcassets/AppIcon.appiconset/Icon-Small@3x.png.png" alt="">
+			<span class="txt">David</span>
+			<span class="bage">资深设计师</span>
+		</div>
+		<div class="enter">
+			<span>未支付</span>
+		</div>
+	</div>
+	
+	<!-- 设计服务信息 -->
+	<div class="container1">
+		<div class="order-number">
+			<div class="left">订单编号</div>
+			<div class="right">454646746546465</div>
+		</div>
+		<div class="appoint-time">
+			<div class="left">预约时间</div>
+			<div class="right">2016-03-02 15:30</div>
+		</div>
+		<div class="serv-outlet">
+			<div class="left">服务门店</div>
+			<div class="right">西大直街123号院内</div>
+		</div>
+		<div class="wcb">
+			<div class="left">洗剪吹</div>
+			<div class="right">￥324</div>
+		</div>
+		<div class="wb">
+			<div class="left">洗吹</div>
+			<div class="right">￥324</div>
+		</div>
+	</div>
+	
+	<!-- 设置已经支付页面中的退款或确认完成栏 -->
+	<div class="go-pay clearfloat">
+		<div class="left">
+			<span>订单金额：</span>
+			<span class="price">￥0</span>
+			<span class="earnest">(已支付定金<span class="earnest-amount">￥50</span>)</span>
+		</div>
+		<div class="right">
+			<button class="btn cancel-order" type="button">退款</button>
+		</div>
+	</div>
+</div>
+
+<!-- 已支付项的整体 -->
+<div class="item">
+	<!-- 显示未支付的预约选择 -->
+	<div class="stylist clearfloat">
+		<div class="iconAndTxt">
+			<img src="img/Images.xcassets/AppIcon.appiconset/Icon-Small@3x.png.png" alt="">
+			<span class="txt">David</span>
+			<span class="bage">资深设计师</span>
+		</div>
+		<div class="enter">
+			<span>已消费</span>
+		</div>
+	</div>
+	
+	<!-- 设计服务信息 -->
+	<div class="container1">
+		<div class="order-number">
+			<div class="left">订单编号</div>
+			<div class="right">454646746546465</div>
+		</div>
+		<div class="appoint-time">
+			<div class="left">预约时间</div>
+			<div class="right">2016-03-02 15:30</div>
+		</div>
+		<div class="serv-outlet">
+			<div class="left">服务门店</div>
+			<div class="right">西大直街123号院内</div>
+		</div>
+		<div class="wcb">
+			<div class="left">洗剪吹</div>
+			<div class="right">￥324</div>
+		</div>
+		<div class="wb">
+			<div class="left">洗吹</div>
+			<div class="right">￥324</div>
+		</div>
+	</div>
+	
+	<!-- 设置已经支付页面中的退款或确认完成栏 -->
+	<div class="go-pay clearfloat">
+		<div class="left">
+			<span>订单金额：</span>
+			<span class="price">￥0</span>
+			<span class="earnest">(已支付定金<span class="earnest-amount">￥50</span>)</span>
+		</div>
+		<div class="right">
+			<button class="btn cancel-order" type="button">确认完成</button>
+		</div>
+	</div>
+</div>
+
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+
+		// 制作顶部选择项的切换效果
+		$(".select-items li").click(function() {
+			$(this).css({"border-bottom": "3px solid #f00"});
+			$(this).find("a").css({"color": "#f00"});
+
+			$(this).siblings("li").css({"border-bottom": "none"});
+			$(this).siblings("li").find("a").css({"color": "#bbb"});
+		})
+
+
+		// 清除浮动
+		$(".container1 > div").addClass("clearfloat");
+	})
+</script>
+</body>
+</html>

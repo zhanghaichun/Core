@@ -1,0 +1,80 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 3em;
+}
+/* 显示确认支付订单弹窗 */
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	/*display: none;*/
+	background: rgba(0,0,0,.2);
+	text-align: center;
+
+}
+
+.overlay .content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 70%;
+	height: 40%;
+	padding-top: 3%;
+	margin: auto;
+	background: #fff;
+	border-radius: .5em;
+	box-sizing: border-box;
+}
+
+.content > div {
+	line-height: 1.4em;
+}
+
+.overlay .confirm img {
+	display: block;
+	margin: auto;
+}
+
+.overlay .confirm span {
+	display: block;
+}
+
+
+.confirm .con {
+	color: #bbb;
+	width: 59%;
+	margin: auto;
+	text-align: left;
+	font-size: .8em;
+}
+
+.confirm .txt-prompt {
+	margin-bottom: 2%;
+}
+
+.overlay .btn {
+	position: relative;
+	bottom: -1.5em;
+	display: inline-block;
+	width: 48%;
+	/*margin: 0;*/
+	padding: 1em;
+	background: #fff;
+	border: 1px solid #f7f7f7;
+	border-right: none;
+	font-size: inherit;
+}
+
+.overlay .btn:first-child {
+	margin-right: -2%;
+}
+
+.overlay .btn:last-child {
+	color: #f00;
+	margin-left: -2%;
+}

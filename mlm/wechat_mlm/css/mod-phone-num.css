@@ -1,0 +1,118 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-top: 54px;
+	padding-bottom: 20%;
+	overflow: hidden;
+	background: #ededed;
+	/*font-family: "微软雅黑";*/
+}
+
+/* 设置标题 */
+.title {
+	position: fixed;
+	top: 0%;
+	height: 44px;
+	line-height: 44px;
+	background: #fff;
+	text-align: center;
+	width: 100%;
+	z-index: 2;
+	border-bottom: 1px solid #eee;
+}
+
+
+.title span {
+	display: block;
+	width: 85px;
+	margin: auto;
+}
+
+.title a {
+	float: left;
+	height: 44px;
+	line-height: 44px;
+}
+
+.title img {
+	width: 25px;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+
+/*表单元素*/
+
+.container {
+	padding-left: 3%;
+	background: #fff;
+}
+
+.container > div {
+	height: 36px;
+	line-height: 36px;
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+	padding-right: 3%;
+	/*padding: .5em .5em;*/
+}
+
+.container .pn {
+	float: right;
+}
+
+div > input {
+	font-size: inherit;
+	border: none;
+	outline: none; 
+	font-size: .9em;
+}
+
+.psw input {
+	width: 70%;
+}
+
+
+
+.phone > img {
+	float: right;
+	display: none;
+}
+
+.ver-code span {
+	display: inline-block;
+	float: right;
+	font-size: .9em;
+	color: #f00;
+	border-radius: .2em;
+	border: 1px solid #f00;
+}
+
+.ver-code span.send {
+	display: inline-block;
+	line-height: normal;
+	margin-left: 0.2em;
+	padding: 1% 2%;
+	margin-top: .3rem;
+}
+
+.ver-code span.wait {
+	color: #bbb;
+	border: 2px solid #bbb;
+}
+
+.ver-code input {
+	width: 40%;
+}
+
+/* 注册 */
+.login {
+	background: #f00;
+	padding: .4em;
+	color: white;
+	text-align: center;
+	margin: auto;
+	margin-top: 1em;
+	margin-bottom: .8em;
+	width: 90%;
+	border-radius: .2em;
+}

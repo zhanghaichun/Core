@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>筛选页</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+<!-- 定义筛选标题 -->
+<div class="title">
+	<a href="javascript:history.go(-1);"><span class="cancel">取消</span></a>
+	<span>筛选</span>
+</div>
+
+
+<!-- 列出设计师的职位 -->
+<div class="stylist-position">
+	<div class="label">职位</div>
+	<div class="container">
+		<span class="item1">高级设计师</span>
+		<span class="item2">特级设计师</span>
+		<span class="item3">专业设计师</span>
+		<span class="item4">创意总监</span>
+		<span class="item5">中级设计师</span>
+	</div>
+</div>
+
+<!-- 列出热度 -->
+<div class="heat">
+	<div class="label">热度</div>
+	<div class="container">
+		<span class="item1">银钻</span>
+		<span class="item2">金钻</span>
+		<span class="item3">蓝钻</span>
+		<span class="item4">红钻</span>
+	</div>
+</div>
+
+<!-- 设置确定按钮 -->
+<div class="make-sure">确定</div>
+
+<form action="" class="list-form"></form>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+		var levlId = "";
+
+		// 设置职位标签在点击时的切换效果
+		$(".stylist-position .container > span, .heat .container > span").click(function(){
+			var self = $(this);
+			if ($(this).hasClass("stress")) {
+				$(this).removeClass("stress");
+				$(".list-form input."+$(this).attr('class')).remove();
+			} else {
+				$(this).addClass("stress");
+				$(".list-form").append("<input type='hidden' name='position[]' value='"+levlId+"' class='"+ $(this).attr("class") +"'>");
+				$(".list-form input").removeClass("stress");
+			}
+
+		})
+
+
+	})
+</script>
+</body>
+</html>

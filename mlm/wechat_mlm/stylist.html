@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>设计师首页</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<link rel="stylesheet" href="css/dropload.css">
+	<link rel="stylesheet" href="css/stylist.css">
+	<style>
+		html,body {
+			width: 100%;
+			/*height: 100%;*/
+			/*overflow: hidden;*/
+		}
+
+		.outer-container {
+			/*height: 80vh;*/
+			overflow: scroll;
+		}
+
+		/*#box {
+			width: 100%;
+			height: 100vh;
+			overflow: scroll;
+		}*/
+
+		.dropload-down {
+			margin-top: -1em;
+		}
+	</style>
+</head>
+<body>
+<div id="box">
+	<!-- 定义设计师标题 -->
+	<div class="title clearfloat">
+		<div class="left">
+			<a href="location.html"><span>哈尔滨</span><img src="img/Image/city－arrow－down@3x.png" alt=""></a>
+		</div>
+		<span>设计师</span>
+		<div class="right"><img src="img/Image/search/dsearch@3x.png" alt=""></div>
+	</div>
+	
+	
+	<!-- 设置设计师首页的筛选设计师选项，全部区域、智能排序和筛选 -->
+	<ul class="screen">
+		<li class=" red all-area gray"><span class="red">全部区域</span><img class="fil" src="img/Image/city－arrow－down@2x.png" alt=""></li>
+		<li class="red intel gray"><span>智能排序</span><img class="fil" src="img/Image/city－arrow－down@2x.png" alt=""></li>
+		<li class="filcrate gray">
+			<a href="screen.html"><span>筛选</span><img src="img/Image/筛选-default@2x.png" alt=""></a>
+		</li>
+	</ul>
+	
+	<!-- 设置搜索区域 -->
+	<div class="search">
+		<input type="text" placeholder="请输入设计师姓名">
+		<img src="img/Image/删除.png" alt="">
+		<span class="confirm">确定</span>
+		<span class="cancel-search">取消</span>
+	</div>
+	
+	<!-- 页面的主体部分(包括发型师和发型的介绍)-->
+	<div class="outer"><div class="outer-container">
+			<!-- dropload分页功能的选择起应该是 .stylist-container -->
+			<div class="stylist-container">
+				
+				<!-- ajax回传数据之后，向父元素添加子元素，父元素是 .row -->
+				<div class="row clearfloat">
+					<div class="col-xs-12">
+						<a href="stylist-details.html"><div class="img-content">
+								<div class="location">
+									<img src="img/image/pos.png" alt="">
+									<span class="location-txt">小野美发 远大店</span>
+								</div>
+								<ul class="first-minus">
+									<!-- <li><img src="img/Image/coupon2.png" alt=""><span>首单立减</span></li>
+									<li><img src="img/Image/coupon2.png" alt=""><span>首单立减</span></li>
+									<li><img src="img/Image/coupon2.png" alt=""><span>首单立减</span></li>
+									<li><img src="img/Image/coupon2.png" alt=""><span>首单立减</span></li> -->
+								</ul>
+								<img class="stylist" src="img/Self/1.jpg" alt="">
+							</div></a>
+						<div class="appoint-content">
+							
+							<div class="stylistIntro clearfloat">
+		
+								<div class="intro">
+									<a href="stylist-elegant.html"><span class="name">汤尼</span>
+										<span class="level">高级技术总监</span>
+										<ul>
+											<li><span>656</span> 收藏</li>
+											<li>|</li>
+											<li><span>3489</span> 美单</li>
+											<li>|</li>
+											<li>剪发 <span class="text-danger">￥89</span></li>
+										</ul></a>
+								</div>
+									
+								<div class="appoint">
+									<span class="line"></span>
+									<a href="appoint.html"><img src="img/Image/iconImage/others-icon/设计师列表(发型详情)-预约@3x.png" alt=""></a>
+								</div>
+							</div>
+						</div>
+					</div>
+		
+					<div class="col-xs-12">
+						<a href="stylist-details.html"><div class="img-content">
+								<div class="location">
+									<img src="img/image/pos.png" alt="">
+									<span class="location-txt">小野美发 远大店</span>
+								</div>
+								<ul class="first-minus">
+									<!-- <li><img src="img/Image/coupon2.png" alt=""><span>首单立减</span></li>
+									<li><img src="img/Image/coupon2.png" alt=""><span>首单立减</span></li>
+									<li><img src="img/Image/coupon2.png" alt=""><span>首单立减</span></li>
+									<li><img src="img/Image/coupon2.png" alt=""><span>首单立减</span></li> -->
+								</ul>
+								<img class="stylist" src="img/Self/1.jpg" alt="">
+							</div></a>
+						<div class="appoint-content">
+							
+							<div class="stylistIntro clearfloat">
+		
+								<div class="intro">
+									<a href="stylist-elegant.html"><span class="name">汤尼</span>
+										<span class="level">高级技术总监</span>
+										<ul>
+											<li><span class="colls">656</span> 收藏</li>
+											<li>|</li>
+											<li><span class="mos">3489</span> 美单</li>
+											<li>|</li>
+											<li>剪发 <span class="text-danger price">￥89</span></li>
+										</ul></a>
+								</div>
+									
+								<div class="appoint">
+									<span class="line"></span>
+									<a href="appoint.html"><img src="img/Image/iconImage/others-icon/设计师列表(发型详情)-预约@3x.png" alt=""></a>
+								</div>
+							</div>
+						</div> <!-- /. appoint-content-->
+					</div><!-- /. col-xs-12 -->
+		
+				</div><!-- /. row -->
+		
+			</div>
+		
+		</div> </div>
+	
+	
+	<!-- 定义遮罩层和发型分类列表项 -->
+	<div class="overlay">
+		<ul class="intel-sort">
+			<img class="arrow" src="img/Image/设计师筛选下啦框三角@3x.png">
+			<li class="default"><a href="javascript:;">智能排序</a></li>
+			<li><a href="javascript:;">美单最高</a></li>
+			<li><a href="javascript:;">价格最高</a></li>
+			<li><a href="javascript:;">价格最低</a></li>
+			<li><a href="javascript:;">距离最近</a></li>
+		</ul>
+	</div>
+	
+	<!-- 定义选择区域的遮罩层列表项 -->
+	<div class="overlay-allArea">
+		<div class="overlay-container">
+			<!-- 提示小三角 -->
+			<img class="arrow" src="img/Image/设计师筛选下啦框三角@3x.png">
+	
+			<div class="over1">
+				<ul class="allArea">
+					<li><a href="javascript:;">全部区域</a></li>
+					<li><a href="javascript:;">道里区</a></li>
+					<li><a href="javascript:;">道外区</a></li>
+					<li><a href="javascript:;">南岗区</a></li>
+				</ul>
+			</div>
+			
+			<div class="over">
+				<ul class="area-addr">
+					<li><a href="javascript:;">群力远大A+</a></li>
+					<li><a href="javascript:;">道里区晋安店</a></li>
+					<li><a href="javascript:;">南岗区索菲亚店</a></li>
+					<li><a href="javascript:;">香坊区红砖街店</a></li>
+					<li><a href="javascript:;">南岗区索菲亚店</a></li>
+					<li><a href="javascript:;">香坊区红砖街店</a></li>
+					<li><a href="javascript:;">香坊区红砖街店</a></li>
+					<li><a href="javascript:;">香坊区红砖街店</a></li>
+					<li><a href="javascript:;">香坊区红砖街店</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/dropload.min.js"></script>
+<script src="js/stylist.js"></script>
+<script type="text/javascript">
+	function stopDrop() {
+	    var lastY;//最后一次y坐标点
+	    $(document.body).on('touchstart', function(event) {
+	    		//点击屏幕时记录最后一次Y度坐标。
+	        lastY = event.originalEvent.changedTouches[0].clientY;
+	    });
+	    $(document.body).on('touchmove', function(event) {
+	        var y = event.originalEvent.changedTouches[0].clientY;
+	        var st = $(this).scrollTop(); //滚动条高度
+	        //如果滚动条高度小于0，可以理解为到顶了，且是下拉情况下，阻止touchmove事件。  
+	        if (y >= lastY && st <= 2) {
+	            lastY = y;
+	            event.preventDefault();
+	        }
+	        lastY = y;
+	 
+	    });
+	}
+
+	$(function() {
+		stopDrop();
+
+		// $(document.body).on("touchmove",function(e) {
+		// 	e.preventDefault();
+		// 	e.stopPropagation();
+		// },true);
+	})
+</script>
+</body>
+</html>

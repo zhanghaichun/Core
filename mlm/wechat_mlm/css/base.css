@@ -1,0 +1,29 @@
+*{ padding:0; margin:0; line-height:100%;}
+body{ font-size:12px; color:#000;}
+ul,ol{ list-style:none;}
+a{ text-decoration:none; color:#000;}
+h1,h2,h3,h4,h5,h6{ font-weight:normal; font-size:100%;}
+a img{ border:none;}
+img{ vertical-align:top;}
+b,strong{ font-weight:normal;}
+i,em{ font-style:normal;}
+.clearfix:after{ display:block; content:''; clear:both;}
+.clearfix{zoom:1;}
+input{ outline:none; border:none;}
+textarea{ resize:none; outline:none;}
+table{ border-collapse:collapse;}
+td,th{ border:1px solid #CCC;}
+.fl{ float:left !important;}
+.fr{ float:right !important;}
+
+
+
+
+
+
+
+
+
+
+
+

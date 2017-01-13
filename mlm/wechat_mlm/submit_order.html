@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>提交订单</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<link rel="stylesheet" href="css/submit_order.css">
+</head>
+<body>
+<!-- 定义标题 -->
+<div class="title">
+	<a href="javascript: history.go(-1)"><img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt=""></a>
+	<span>提交订单</span>
+</div>
+
+<!-- 定义设计师选择 -->
+<div class="stylist clearfloat">
+	<div class="content">
+		<div class="iconAndTxt">
+			<img src="img/Images.xcassets/AppIcon.appiconset/Icon-Small@3x.png.png" alt="">
+			<span class="txt">David</span>
+		</div>
+		<div class="enter">
+			<span>风格设计师</span>
+		</div>
+	</div>
+</div>
+
+
+<!-- 展示服务项目 -->
+<ul class="serv-list">
+	<li>
+		<span class="item">烫染套餐</span>
+		<span class="price yahei">￥898</span>
+		<ul>
+			<li><span>烫发</span> - <span>优资堂 <span>(短发)</span></span></li>
+			<li><span>染发</span> - <span>山水 <span>(短发)</span></span></li>
+		</ul>
+	</li>
+	<li>
+		<span class="item"><span>护理 </span>- <span>欧娜 <span>(短发)</span></span></span>
+		<span class="price yahei">￥898</span>
+	</li>
+</ul>
+
+<!-- 合计栏 -->
+<div class="total clearfloat">
+	<div class="left">合计</div>
+	<div class="right yahei">￥387</div>
+</div>
+
+<!-- 设计用户昵称、预约时间、服务门店 -->
+<div class="container1">
+	<div class="nickname">
+		<div class="left">用户昵称</div>
+		<div class="right">Bunny</div>
+	</div>
+	<div class="appoint-time">
+		<div class="left">预约时间</div>
+		<div class="right yahei">2016-03-02 15:30</div>
+	</div>
+	<div class="serv-outlet">
+		<div class="left">服务门店</div>
+		<div class="right">西大直街<span class="yahei">123</span>号</div>
+	</div>
+</div>
+
+
+<!-- 设置优惠券、可用积分与实付金额 -->
+<div class="container1">
+	<div class="coupon">
+		<div class="left">优惠券</div>
+		<div class="right">0张可用 <strong>></strong></div>
+	</div>
+	<div class="avail-integral">
+		<div class="left">
+			可用积分<span class="yahei">5940</span>抵<span class="offset yahei">￥59.40</span>
+		</div>
+		<div class="right">
+			<img class="mb" src="img/Image/注册协议icon@2x.png" alt="">
+		</div>
+	</div>
+	<div class="real-money">
+		<div class="left">实付金额</div>
+		<div class="right yahei">￥207</div>
+	</div>
+</div>
+
+<!-- 设置仅支付定金 -->
+<div class="down-payment">
+	仅支付定金<span class="payment yahei">￥50</span><span class="label">(服务完成后许付尾款<span class="final-pay yahei">￥157</span>)</span>
+	<img class="right" src="img/Image/未选中@3x.png" alt="">
+</div>
+
+<!-- 设置提交订单底部栏 -->
+<div class="order clearfloat">
+	<div class="left"><span>待支付金额：</span><span class="price yahei">￥0</span></div>
+	<a class="btn right" href="pay_order.html">提交订单</a>
+</div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+
+		// 服务项目中的大项li去除浮动效果
+		// $(".serv-list > li").addClass("clearfloat");
+
+		// 为container1中的所有子容器去除浮动效果，此文档中包含两个 .container1容器。
+		$(".container1 > div").addClass("clearfloat");
+
+		// 支付定金可选
+		$(".down-payment").click(function() {
+			if ($(this).find("img").attr("src") == "img/Image/未选中@3x.png") {
+				$(this).find("img").attr("src","img/Image/选中@3x.png");
+			} else {
+				$(this).find("img").attr("src","img/Image/未选中@3x.png");
+			}
+		});
+	})
+</script>
+</body>
+</html>

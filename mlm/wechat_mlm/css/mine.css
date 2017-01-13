@@ -1,0 +1,262 @@
+body {
+	padding: 0;
+	padding-bottom: 20%;
+	background: #ebebeb;
+	/*font-size: 3em;*/
+	margin: 0;
+}
+
+/* 设置最顶部的顾客信息，包括头像，收藏，美币金额，优惠券 */
+.customer-info {
+	height: 200px;
+	text-align: center;
+	padding-top: 30px;
+	background: url("../img/Image/我的背景图.png") no-repeat;
+	background-size: cover;
+	box-sizing: border-box;
+	font-size: .8em;
+	color: #fff;
+}
+
+.customer-info > div img {
+	width: 70px;
+	border-radius: 50%;
+}
+
+.list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-top: 7%;
+}
+
+.list li {
+	display: inline-block;
+	width: 31%;
+}
+
+.list li a {
+	color: #fff;
+}
+
+.list li > span {
+	display: inline-block;
+	margin-top: .2em;
+}
+
+.list li img {
+	width: 15px;
+	/*height: 40px;*/
+	transform: translate(.2em, .2em);
+}
+
+.collection,
+.mb {
+	border-right: 1px dashed #fff;
+}
+
+/* 定义我的美单  */
+.my-orders {
+	/*padding: 20px 30px;*/
+	padding-left: 2%;
+	padding-bottom: 4px;
+	height: 40px;
+	line-height: 40px;
+	background: #fff;
+}
+
+.my-orders .content {
+	padding-right: 3%;
+	border-bottom: 1px solid #ccc;
+}
+
+.my-orders .left img {
+	width: 30px;
+	vertical-align: middle;
+	transform: translateY(-.2rem);
+}
+
+.my-orders .cl-orders {
+	color: #bbb;
+}
+
+.left {
+	float: left;
+}
+
+.left .txt {
+	display: inline-block;
+}
+
+.right {
+	float: right;
+	/*margin-top: 18px;*/
+}
+
+
+/* 定义未支付、已支付、已完成和退款选项 */
+.select-items {
+	height: 60px;
+	padding: 0;
+	list-style: none;
+	background: #fff;
+	margin: 0;
+	/*margin-top: 1px;*/
+	/*padding: 15px 0;*/
+}
+
+.select-items li {
+	display: inline-block;
+	width: 25%;
+	text-align: center;
+	font-size: .9em;
+	transform: translateY(.3rem);
+}
+
+.select-items li img {
+	display: block;
+	width: 30px;
+	margin: auto;
+}
+
+.select-items li > span {
+	display: inline-block;
+	/*margin-top: 6px;*/
+}
+
+/* 美优MALL、 美币购买、签到有奖 */
+.container1 {
+	margin-top: 10px;
+	padding-left: 2%;
+	background: #fff;
+}
+
+.container1 .content {
+	padding-right: 3%;
+	border-bottom: 1px solid #ccc;
+}
+
+.container1 > div {
+	height: 40px;
+	line-height: 40px;
+	background: #fff;
+	padding-bottom: 2px;
+}
+
+.container1 .left img {
+	width: 30px;
+	vertical-align: middle;
+	transform: translateY(-.2rem);
+}
+
+.container1 .right {
+	float: right;
+	color: #bbb;
+}
+
+.check-prize .content{
+	border-bottom: none;
+}
+
+.small-font {
+	font-size: 84%;
+}
+
+/* 合伙人、我的评价、账号设置 */
+.container2 {
+	margin-top: 10px;
+	padding-left: 2%;
+	background: #fff;
+}
+.container2 > div {
+	height: 40px;
+	line-height: 40px;
+	background: #fff;
+	padding-bottom: 2px;
+	/*padding: 20px 30px;*/
+}
+
+.container2 .content {
+	padding-right: 3%;
+	border-bottom: 1px solid #ccc;
+}
+
+.container2 .left {
+	float: left;
+}
+
+.container2 .left img {
+	width: 30px;
+	vertical-align: middle;
+	transform: translateY(-.2rem);
+}
+
+.container2 .right {
+	float: right;
+	color: #bbb;
+}
+
+.account-set .content{
+	border-bottom: none;
+}
+
+/* 设置城市、门店地址、关于我们 */
+
+.container3 {
+	margin-top: 10px;
+	padding-left: 2%;
+	background: #fff;
+}
+.container3 > div {
+	height: 40px;
+	line-height: 40px;
+	background: #fff;
+	padding-bottom: 2px;
+	/*padding: 20px 30px;*/
+}
+
+.container3 .content {
+	padding-right: 3%;
+	border-bottom: 1px solid #ccc;
+}
+
+.container3 .left {
+	float: left;
+}
+
+.container3 .left img {
+	width: 30px;
+	vertical-align: middle;
+	transform: translateY(-.2rem);
+}
+
+.container3 .right {
+	float: right;
+	color: #bbb;
+}
+
+.aboutUs .content{
+	border-bottom: none;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+
+
+
+
+
+/* 设置清除浮动 */
+.clearfloat:before,
+.clearfloat:after {
+	display: table;
+	content: "";
+}
+
+.clearfloat:after {
+	clear: both;
+}

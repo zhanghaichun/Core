@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <link href="css/base.css" rel="stylesheet" type="text/css"/>
+    <link href="css/stylist-elegant.css" rel="stylesheet" type="text/css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+    <title>设计师风采</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+
+
+        function load(){
+    			//loadURL("load:loadData");//ios
+    			// window.partner.saveImage();//android
+           var data = {
+            "id":77,
+            "name":"大斌",
+            "leveName":"创意总监",
+            "awards":"图来看看这么大概也有很多事我会一直支持你们举行了！在线等于零点首映啊呀，我会告诉你们一起来看看我们家",
+            "adept":"",
+            "introduce":"后悔没咯咯破破破破破",
+            "bought":68,
+            "collected":4,
+            "starLevel":0,
+            "iconPhotoUrl":"http://121.40.92.117:991/s77/2016080601415614566477.png",
+            "photos":[
+                {
+                    "photoUrl":"http://121.40.92.117:991/sb77/1473836554696.jpg"
+                },
+                {
+                    "photoUrl":"http://121.40.92.117:991/sb77/1473836554708.jpg"
+                },
+                {
+                    "photoUrl":"http://121.40.92.117:991/sb77/1473836554720.jpg"
+                },
+                {
+                    "photoUrl":"http://121.40.92.117:991/sb77/1473836554729.png"
+                },
+                {
+                    "photoUrl":"http://121.40.92.117:991/sb77/1473836554737.png"
+                }
+            ],
+            "studio":{
+                "names":"远大A+",
+                "addr":"西大直街学府名苑",
+                "phone":"18646096853",
+                "city":"哈尔滨",
+                "shopDistrict":"南岗区",
+                "status":1,
+                "photoUrl":"studio1/1470257056128.jpg",
+                "longitude":"45.7726500000",
+                "latitude":"126.6909030000",
+                "id":1
+            }
+      }
+      setData(data);
+		}
+    function setData(data) {
+        var div = '';
+
+        //顶部图片
+        div = div + '<ul class="list_pic">';        
+        if (data.photos[0]) {
+            div = div + '<li><img src=';
+            div = div + data.photos[0].photoUrl+'>';
+            div= div+ '<div class="list_bg1"></div></li>';
+        }else{
+            div = div + '<li><img src="img/Image/pic6.png"/></li>';
+        }      
+        if(data.photos[1]){
+            div = div + '<li><img src=';
+            div = div + data.photos[1].photoUrl+'>'
+            div= div+ '<div class="list_bg2"></div></li>';
+        }
+        
+        div = div + '</ul> ';
+
+        //简介
+        div = div + '<div class="jieshao"><div class="js_content"><img src="img/Image/bg3.png"><span class="tips"><h5>简介 ：</h5><p>';
+        div = div + data.introduce + '</p></span></div></div>';
+
+        div = div + '<div class="jieshao1"><img src="';
+        div = div + data.iconPhotoUrl + '"/><span class="name">';
+        div = div + data.name + '</span><span class="leveName">';
+        div = div + data.leveName + '</span></div>';
+        //擅长
+        div = div + '<div class="jieshao2"><div class="js2_content"><img src="img/Image/bg4.png"><span class="span1">擅长：<br><p>&nbsp</p>';
+        div = div + data.adept + '</span><span  class="span2">曾获奖项：<br><p>&nbsp</p>';
+        div = div + data.awards + '</span></div><span class="ad">所属店铺：';
+        div = div + data.studio.city + data.studio.shopDistrict + data.studio.addr + data.studio.names + '</span></div>';
+
+        //底部图片
+
+        div = div + '<div class="footer">';
+        if(data.photos[2]){
+            div = div + '<div class="box1 clearfix"><div  class="no1 "><img src=' + data.photos[2].photoUrl + ' ></div><span class="note1">2016</span></div>';
+        }
+        if(data.photos[3]){
+            div = div + '<div class="box2 clearfix"><span class="note2">Meilamei</span><div  class="no2 fr"><img src=' + data.photos[3].photoUrl + '></div></div>';
+        }
+        if(data.photos[4]){
+            div = div + '<div class="box1 clearfix"><div class="no1 "><img src=' + data.photos[4].photoUrl + ' ></div><span class="note1">Fashion</span></div>';
+        }
+        div = div + '</div>';
+        
+
+        $("body").html(div);
+
+    }
+    $(function(){
+        // setData(data);
+        load();
+    })
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 20%;
+	font-size: 3em;
+	background: #ededed;
+	/*font-family: "微软雅黑";*/
+}
+
+/* 设置顶部预约标题 */
+.title {
+	background: #fff;
+	text-align: center;
+	padding: 15px 0 15px 15px;
+	/*margin-bottom: 40px;*/
+}
+
+.title img {
+	float: left;
+}
+
+/* 定义选择项(包括选项：全部，未支付，预约成功，已完成，退款) */
+.select-items {
+	background: #fff;
+	padding: 20px 0;
+	padding-bottom: 5px;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+}
+
+.select-items li {
+	font-size: .85em;
+	display: inline-block;
+	/*padding: 20px 0;*/
+	padding-bottom: 17px;
+	width: 17%;
+	/*border-bottom: 3px solid #f00;*/
+}
+
+.select-items li a {
+	display: inline-block;
+	color: #bbb;
+	text-decoration: none;
+	/*width: 21%;*/
+}
+
+/* 显示未支付的预约选择 */
+.stylist {
+	padding: 10px 25px;
+	background: #fff;
+	margin-top: 30px;
+}
+
+.iconAndTxt {
+	float: left;
+}
+
+.iconAndTxt .txt {
+	display: inline-block;
+	padding-left: 5px;
+	transform: translateY(-20px);
+}
+
+.iconAndTxt .bage {
+	display: inline-block;
+	transform: translateY(-18px);
+	color: #bbb;
+	font-size: .8em;
+}
+
+.enter {
+	float: right;
+	margin-top: 26px;
+	color: #bbb;
+	font-size: .9em;
+}
+
+.iconAndTxt img {
+	width: 87px;
+	height: 87px;
+	border-radius: 50%;
+}
+
+
+/* 设计服务信息 */
+.container1 {
+	/*margin-top: 30px;*/
+	background: #fff;
+}
+
+.container1 > div {
+	background: inherit;
+	padding: 16px 30px;
+	padding-right: 40px;
+	font-size: .8em;
+	color: #ccc;
+}
+
+.container1 .left {
+	float: left;
+}
+
+.container1 .right {
+	float: right;
+	/*font-size: .9em;
+	color: #ccc;*/
+}
+
+/* 设置未支付页面中的去支付栏 */
+.go-pay {
+	/*position: fixed;
+	bottom: 0;
+	width: 92%;*/
+	background: #fff;
+	padding: 30px 40px;
+	font-size: .8em;
+
+}
+
+.go-pay .left {
+	float: left;
+}
+
+.go-pay .right {
+	float: right;
+}
+
+.go-pay .btn {
+	padding: .2em .5em;
+	border-radius: .2em;
+	background: #fff;
+	font-size: 1em;
+	border: 3px solid #f00;
+	margin-left: 30px;
+	color: #f00;
+}
+
+.go-pay .left .price {
+	color: #f00;
+}
+
+.go-pay .earnest {
+	font-size: .8em;
+	color: #bbb;
+}
+
+/* 已支付项的整体 */
+.item {
+	margin-bottom: 30px;
+}
+
+
+
+
+/* 设置清除浮动 */
+.clearfloat:before,
+.clearfloat:after {
+	display: table;
+	content: "";
+}
+
+.clearfloat:after {
+	clear: both;
+}

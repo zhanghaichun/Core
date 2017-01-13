@@ -1,0 +1,144 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-top: 93px;
+	padding-bottom: 20%;
+	background: #ededed;
+	/*font-family: "微软雅黑";*/
+}
+
+/* 设置标题 */
+.title {
+	position: fixed;
+	top: 0%;
+	height: 44px;
+	line-height: 44px;
+	background: #fff;
+	text-align: center;
+	width: 100%;
+	z-index: 2;
+	border-bottom: 1px solid #eee;
+}
+
+
+.title span {
+	display: block;
+	width: 85px;
+	margin: auto;
+}
+
+.title a {
+	float: left;
+	height: 44px;
+	line-height: 44px;
+}
+
+.title img {
+	width: 25px;
+  vertical-align: middle;
+  margin-top: -5px;
+}
+
+/* 设置选项卡 */
+.tab {
+	position: fixed;
+	top: 44px;
+	width: 100%;
+	height: 35px;
+  line-height: 35px;
+	background: #fff;
+	z-index: 2;
+}
+
+.tab > div {
+	display: inline-block;
+	width: 33.3333%;
+	text-align: center;
+}
+
+.tab span {
+	padding-bottom: 4px;
+}
+
+.active {
+	color: #f00;
+	border-bottom: 1px solid #f00;
+}
+
+/* 选项卡内容 */
+div.use,div.no-use,div.limited {
+	display: none;
+}
+
+/* 优惠券缺省 */
+.no-coupon .content {
+	height: 25vh;
+	background: url("../img/Image/iconImage/记录缺省图/优惠券缺省@3x.png") no-repeat;
+	background-size: 30vw 30vw;
+	background-position: center center;
+	text-align: center;
+}
+
+.no-coupon .content span {
+	display: inline-block;
+	margin-top: 22vh;
+}
+
+.coupon {
+	position: relative;
+	width: 90%;
+	margin: auto;
+	background: url("../img/Image/优惠券bj.png") no-repeat;
+	background-size: 100% 100%;
+	height: 32vw;
+	padding-top: 7vw;
+	padding-left: 5vw;
+	padding-right: 5vw;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+}
+
+.coupon .reward {
+	font-size: 120%;
+}
+
+.coupon .sum {
+	float: right;
+	font-size: 200%;
+  color: #F1C40D;
+  transform: translateY(-9vw);
+  -webkit-transform: translateY(-2rem);
+}
+
+.coupon .time {
+	color: #fff;
+  position: absolute;
+  bottom: 1vw;
+  font-size: 90%;
+}
+
+.coupon .condition {
+	font-size: 90%;
+}
+
+/* 分页内容显示动画 */
+.opacity{
+    -webkit-animation: opacity 0.5s linear;
+    animation: opacity 0.5s linear;
+}
+@-webkit-keyframes opacity {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@keyframes opacity {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}

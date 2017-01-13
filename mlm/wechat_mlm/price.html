@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1, maximum-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/price.css">
+	<script src="js/jquery-1.10.1.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+    <title>设计师服务价格</title>
+	
+<body>
+	<div class="s_content" id="content">							
+	</div>	
+	<script>
+		//调用ios接口函数
+		function loadURL(url) {
+			var iFrame;
+			iFrame = document.createElement("iframe");
+			iFrame.setAttribute("src", url);
+			iFrame.setAttribute("style", "display:none;");
+			iFrame.setAttribute("height", "0px");
+			iFrame.setAttribute("width", "0px");
+			iFrame.setAttribute("frameborder", "0");
+			document.body.appendChild(iFrame);
+			// 发起请求后这个iFrame就没用了，所以把它从dom上移除掉
+			iFrame.parentNode.removeChild(iFrame);
+			iFrame = null;
+		}
+		//分享接口
+		function load(){
+			//loadURL("load:loadData");//ios
+			// window.partner.saveImage();//android
+
+
+		
+
+
+var data = {
+    "id":77,
+    "name":"大斌",
+    "leveName":"创意总监",
+    "iconPhotoUrl":"http://121.40.92.117:991/s77/2016080601415614566477.png",
+    "priceList":[
+        {
+            "productInfo":{
+                "productName":"全能热缩烫",
+                "productType":7,
+                "productClas":51,
+                "status":1,
+                "bought":77,
+                "province":"黑龙江",
+                "city":"哈尔滨",
+                "id":103
+            },
+            "userLevl":4,
+            "price":498,
+            "status":1,
+            "originalPrice":498,
+            "doubleIntegral":1,
+            "id":172
+        },
+        {
+            "productInfo":{
+                "productName":"全能热缩烫",
+                "productType":7,
+                "productClas":51,
+                "status":1,
+                "bought":15,
+                "province":"黑龙江",
+                "city":"哈尔滨",
+                "id":104
+            },
+            "userLevl":4,
+            "price":108,
+            "status":1,
+            "originalPrice":108,
+            "doubleIntegral":1,
+            "id":173
+        },
+        {
+            "productInfo":{
+                "productName":"菲灵",
+                "productType":7,
+                "productClas":51,
+                "status":1,
+                "bought":13,
+                "province":"黑龙江",
+                "city":"哈尔滨",
+                "id":105
+            },
+            "userLevl":4,
+            "price":598,
+            "status":1,
+            "originalPrice":598,
+            "doubleIntegral":1,
+            "id":174
+        },
+        {
+            "productInfo":{
+                "productName":"菲灵",
+                "productType":1,
+                "productClas":12,
+                "status":1,
+                "bought":9,
+                "province":"黑龙江",
+                "city":"哈尔滨",
+                "id":106
+            },
+            "userLevl":4,
+            "price":138,
+            "status":1,
+            "originalPrice":138,
+            "doubleIntegral":1,
+            "id":175
+        },
+        {
+            "productInfo":{
+                "productName":"欧莱雅",
+                "productType":8,
+                "productClas":61,
+                "status":1,
+                "bought":12,
+                "province":"黑龙江",
+                "city":"哈尔滨",
+                "id":107
+            },
+            "userLevl":4,
+            "price":333,
+            "status":1,
+            "originalPrice":698,
+            "doubleIntegral":1,
+            "id":176
+        },
+        {
+            "productInfo":{
+                "productName":"欧莱雅",
+                "productType":1,
+                "productClas":12,
+                "status":1,
+                "bought":2,
+                "province":"黑龙江",
+                "city":"哈尔滨",
+                "id":108
+            },
+            "userLevl":4,
+            "price":168,
+            "status":1,
+            "originalPrice":168,
+            "doubleIntegral":1,
+            "id":177
+        },
+        {
+            "productInfo":{
+                "productName":"施华蔻",
+                "productType":1,
+                "productClas":11,
+                "status":1,
+                "bought":358,
+                "province":"黑龙江",
+                "city":"哈尔滨",
+                "id":109
+            },
+            "userLevl":4,
+            "price":798,
+            "status":1,
+            "originalPrice":798,
+            "doubleIntegral":2,
+            "id":178
+        },
+        {
+            "productInfo":{
+                "productName":"施华蔻",
+                "productType":1,
+                "productClas":12,
+                "status":1,
+                "bought":2,
+                "province":"黑龙江",
+                "city":"哈尔滨",
+                "id":110
+            },
+            "userLevl":4,
+            "price":198,
+            "status":1,
+            "originalPrice":198,
+            "doubleIntegral":2,
+            "id":179
+        },
+        {
+            "productInfo":{
+                "productName":"奇幻名品",
+                "productType":8,
+                "productClas":61,
+                "status":1,
+                "bought":9,
+                "province":"黑龙江",
+                "city":"哈尔滨",
+                "id":111
+            },
+            "userLevl":4,
+            "price":398,
+            "status":1,
+            "originalPrice":398,
+            "doubleIntegral":1,
+            "id":180
+        },
+        {
+            "productInfo":{
+                "productName":"奇幻名品",
+                "productType":2,
+                "productClas":22,
+                "status":1,
+                "bought":31,
+                "province":"黑龙江",
+                "city":"哈尔滨",
+                "id":112
+            },
+            "userLevl":4,
+            "price":448,
+            "status":1,
+            "originalPrice":448,
+            "doubleIntegral":1,
+            "id":181
+        },
+        {
+            "productInfo":{
+                "productName":"奇幻名品",
+                "productType":2,
+                "productClas":21,
+                "status":1,
+                "bought":46,
+                "province":"黑龙江",
+                "city":"哈尔滨",
+                "id":113
+            },
+            "userLevl":4,
+            "price":100,
+            "status":1,
+            "originalPrice":498,
+            "doubleIntegral":1,
+            "id":182
+        },
+        {
+            "productInfo":{
+                "productName":"露新兰",
+                "productType":2,
+                "productClas":12,
+                "status":1,
+                "bought":0,
+                "province":"黑龙江",
+                "city":"哈尔滨",
+                "id":116
+            },
+            "userLevl":4,
+            "price":498,
+            "status":1,
+            "originalPrice":498,
+            "doubleIntegral":1,
+            "id":183
+        },
+        {
+            "productInfo":{
+                "productName":"露新兰",
+                "productType":2,
+                "productClas":22,
+                "status":1,
+                "bought":19,
+                "province":"黑龙江",
+                "city":"哈尔滨",
+                "id":115
+            },
+            "userLevl":4,
+            "price":548,
+            "status":1,
+            "originalPrice":548,
+            "doubleIntegral":1,
+            "id":184
+        },
+        {
+            "productInfo":{
+                "productName":"露新兰",
+                "productType":8,
+                "productClas":61,
+                "status":1,
+                "bought":11,
+                "province":"黑龙江",
+                "city":"哈尔滨",
+                "id":114
+            },
+            "userLevl":4,
+            "price":598,
+            "status":1,
+            "originalPrice":598,
+            "doubleIntegral":1,
+            "id":185
+        },
+        {
+            "productInfo":{
+                "productName":"菲灵4",
+                "productType":2,
+                "productClas":21,
+                "status":1,
+                "bought":0,
+                "province":"黑龙江",
+                "city":"哈尔滨",
+                "id":119
+            },
+            "userLevl":4,
+            "price":598,
+            "status":1,
+            "originalPrice":598,
+            "doubleIntegral":1,
+            "id":186
+        },
+        {
+            "productInfo":{
+                "productName":"菲灵",
+                "productType":2,
+                "productClas":22,
+                "status":1,
+                "bought":10,
+                "province":"黑龙江",
+                "city":"哈尔滨",
+                "id":118
+            },
+            "userLevl":4,
+            "price":648,
+            "status":1,
+            "originalPrice":648,
+            "doubleIntegral":1,
+            "id":187
+        }
+    ]
+}; 
+		setData(data);
+	}
+;
+		function setData(data){
+			var div = '';
+			div = div + '<span class="s_logo"><img src="img/Image/mlm.png" style="width:100%;"></span><div class="s_tx"><img src="'+data.iconPhotoUrl+'" class="s_pic"><p class="s_name">'+data.name+'</p><p class="s_style">'+data.leveName+'</p></div><div class="s_mian">';
+
+			for (var i = 0; i < data.priceList.length; i++) {
+				if(data.priceList[i].productInfo.productType == 5){
+					div = div + '<ul  class="s_list1"><li class="s_cut clearfix"><span class="fl">'+data.priceList[i].productInfo.productName+'</span><i  class="fr"><span class="s_money">￥</span>'+data.priceList[i].price+'</i></li>';
+				}
+			}
+			
+			
+			
+			for (var i = 0; i < data.priceList.length; i++) {
+				if(data.priceList[i].productInfo.productType == 6){
+					div = div + '<li class="s_cut clearfix"><span class="fl">'+data.priceList[i].productInfo.productName+'</span><i  class="fr"><span class="s_money">￥</span>'+data.priceList[i].price+'</i></li></ul>';
+					 break;
+				}
+				
+			}								
+
+	
+			
+			function  hair(num,name)
+			{
+					div = div + '<div class="s_list2"><h4>'+name+'</h4><ul>';
+					for (var i = 0; i < data.priceList.length; i++) {
+						if(data.priceList[i].productInfo.productType == num){
+							div = div + '<li class="clearfix"><span class="fl">'+data.priceList[i].productInfo.productName+'</span><span class="s_gary">('+feild(data.priceList[i].productInfo.productClas)+')</span><i  class="fr"><span class="s_money">￥</span>' + data.priceList[i].price + '</i></li>';
+					}
+			}
+			function feild(clas){
+				switch(clas)
+				{
+				case 11:return '烫发';break;
+				case 12:return '局部烫发';break;
+				case 21:return '长发';break;
+				case 22:return '短发';break;
+				case 41:return '养发';break;
+                case 51:return '长发';break;
+                case 52:return '短发';break;
+				case 31:return '护理';break;
+                case 61:return '接发';break;
+				default:break;
+				}
+			}
+			div = div + '</ul></div>';
+			}
+			
+			hair(1,'烫发');
+
+			hair(2,'染发');
+			
+			hair(3,'护理');
+			
+			hair(4,'养发');
+			
+			hair(7,'洗色');
+			
+			hair(8,'接发');
+			
+			$("#content").html(div);
+		}
+	
+		$(function(){
+			load();
+			//setData(data);
+		})
+	</script>
+</body>
+</html>

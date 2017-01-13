@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>限时抢购页</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<link rel="stylesheet" href="css/flash-sale.css">
+</head>
+<body class="bg">
+<!-- 定义限时抢购标题 -->
+<div class="title">
+	<img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt="">
+	<span>限时抢购</span>
+</div>
+
+<!-- 优惠券项目 -->
+<!-- 标志 -->
+<div class="sign"><img src="img/Image/banner@2x.png" alt=""></div>
+
+<!-- .items -->
+<div class="item">
+	<div class="left">
+		<img src="img/Image/pic@2x.png" alt="">
+	</div>
+	<div class="right">
+		<div class="txt">洗剪吹优惠券</div>
+		<span class="use">仅限小孩设计师洗剪吹使用</span>
+		<span class="time">可用时间 8:00 - 9:00</span>
+		<span class="price">￥<span class="big">10</span>.00 <del>68:00</del> </span>
+		<button class="btn grab">抢</button>
+	</div>
+</div>
+
+<!-- 显示确认取消订单弹窗 -->
+<div class="overlay">
+	<div class="content">
+		<div class="confirm">
+			<img src="img/Image/success-icon@3x.png" alt="">
+			<span class="prompt">抢购成功！</span>
+			<span class="txt">请在我的优惠券中查看</span>
+		</div>
+		<div class="btn-group">
+			<button class="btn">知道了</button>
+		</div>
+	</div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+		// 清除浮动
+		$(".item").addClass("clearfloat");
+
+		// 点击抢购
+		$(".grab").click(function() {
+			$(".overlay").show();
+			$(this).css({"background": "#bbb", "color": "#fff"});
+		})
+
+		$(".overlay .btn").click(function(){
+			$(".overlay").hide();
+		});
+	})
+</script>
+</body>
+</html>

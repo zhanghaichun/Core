@@ -1,0 +1,547 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 50px;
+	padding-top: 78px;
+	/*font-size: 3em;*/
+	background: #ededed;
+	font-family: "微软雅黑";
+}
+
+/* 设置顶部设计师标题 */
+.title {
+	width: 100%;
+	height: 44px;
+	line-height: 44px;
+	position: fixed;
+	top: 0;
+	background: #fff;
+	text-align: center;
+	z-index: 2;
+}
+
+.title .left {
+	float: left;
+	margin-left: 1.3vw;
+}
+
+.title .left a {
+	color: #000;
+	text-decoration: none;
+}
+
+.title .left img {
+	width: 1em;
+	transform: translate(.1em, -.05em);
+}
+
+.title .right {
+	float: right;
+	height: 44px;
+	line-height: 44px;
+	margin-right: 1.3vw;
+	/*transform: translateY(-.2em);
+	-webkit-transform: translateY(-.2em);*/
+}
+
+.title .right img {
+	width: 32px;
+	vertical-align: middle;
+	transform: translateY(-2px);
+}
+
+/* 设置设计师首页的筛选设计师选项，全部区域、智能排序和筛选 */
+.screen {
+	position: fixed;
+	width: 100%;
+	top: 44px;
+	height: 34px;
+	line-height: 34px;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	padding-left: 8.5vw;
+	list-style: none;
+	z-index: 2;
+	border-top: 1px solid #ddd;
+}
+
+.screen .red img {
+	transform: translateY(.15em);
+}
+
+.screen .gray {
+	color: #AFAFAF;
+}
+
+.screen .filcrate a {
+	text-decoration: none;
+	color: #AFAFAF;
+}
+
+.screen li {
+	display: inline-block;
+	/*margin-right: 3em;*/
+	width: 34%;
+	font-size: .9em
+}
+
+.screen li:last-child {
+	width: 19%;
+}
+
+.screen li img {
+	vertical-align: middle;
+	margin-left: 4px;
+	width: 1em;
+}
+
+
+.screen li img.fil {
+	position: relative;
+	top: -3px;
+}
+
+/* 设置搜索区域 */
+.search {
+	position: relative;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	display: none;
+	background: #fff;
+	padding-left: 0;
+	/*margin-top: 1.3em;*/
+	/*z-index: 100;*/
+}
+
+.search input {
+	width: 65%;
+	/*font-size/: 1em;*/
+	/*padding: .2em 0.3em;*/
+	box-sizing: border-box;
+	padding-left: 6vw;
+	margin-left: 6vw;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	border: 1px solid #aaa;
+	border-radius: .2em;
+	background-image: url(../img/Image/search/searchbar.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size: .9em;
+	outline: none;
+}
+
+.search span {
+	font-size: .8em;
+  margin-left: 1vw;
+  border: 1px solid #aaa;
+  padding: 1.2vw 1.3vw;
+  border-radius: .15em;
+  display: inline-block;
+  /*transform: translateY(.1em);*/
+  background: #bbb;
+  line-height: 1;
+  color: #fff;
+}
+
+.search img {
+	display: none;
+	width: 1.1em;
+	position: absolute;
+	top: .9rem;
+	right: 30%;
+}
+
+
+/* 设置遮罩层 */
+.overlay {
+	position: fixed;
+	top: 78px;
+	display: none;
+	width: 100%;
+	height: 88.5%;
+	background: rgba(0,0,0,.3);
+	z-index: 10;
+}
+
+/* 设置发型分类下拉选项 */
+.intel-sort {
+	position: fixed;
+	/*display: none;*/
+	top: 3.6rem;
+	right: 37%;
+	width: 23%;
+	background: #fff;
+	list-style: none;
+	z-index: 4;
+	margin-top: 1.7em;
+	padding: 0;
+	border-radius: 0.3em;
+}
+
+.intel-sort li:last-child {
+	border-radius: 0.3em;
+}
+
+.intel-sort li {
+	text-align: center;
+	padding-top: .1em;
+	padding-bottom: .1em;
+	border-bottom: 1px solid #eee;
+	margin-top: .2em;
+}
+
+/* 设置默认的情况下，“智能排序” 选项是被选中的*/
+.intel-sort li.default {
+	background: #aaa;
+}
+
+.intel-sort li.default > a {
+	color: #fff;
+}
+
+.intel-sort li a {
+	color: #bbb;
+	font-size: .8em;
+}
+
+.intel-sort li a:visited,
+.intel-sort li a:active,
+.intel-sort li a {
+	text-decoration: none;
+}
+
+.arrow {
+	position: absolute;
+	width: 1em;
+	top: -.4em;
+  left: 39%;
+}
+
+/* 页面的主体部分(包括发型师和发型的介绍)  */
+.outer-container {
+	margin-top: 1em;
+}
+
+
+.location {
+	position: absolute;
+	top: .7em;
+	left: .5em;
+	background: rgba(0,0,0,.6);
+	padding: .2em 0.7em;
+	padding-top: 0;
+	padding-left: .6em;
+	border-radius: 1em;
+}
+
+.location > img {
+	width: 1em;
+	height: 1em;
+	vertical-align: middle;
+}
+
+.location-txt {
+	color: #fff;
+	font-size: .7em;
+}
+
+ul.first-minus {
+	position: absolute;
+	bottom: 3.2rem;
+	width: 100%;
+	list-style: none;
+	padding: 0;
+	padding-left: .3em;
+	box-sizing: border-box;
+	overflow: visible;
+	height: 1em;
+	/*background: linear-gradient(transparent 10%,#F33818 40%);*/
+	background-color: rgba(255,0,0,.6);
+	background-size: 100% 9px; 
+}
+
+ul.first-minus li {
+	display: inline-block;
+	/*background: rgba(255,0,0,.6);*/
+}
+
+ul.first-minus li img {
+	/*float: left;*/
+	transform: translateY(-.55em);
+	width: 1em;
+	height: 1em;
+	vertical-align: middle;
+}
+
+ul.first-minus li span {
+	display: inline-block;
+	transform: translateY(-.5em);
+	color: #fff;
+	font-size: .7em;
+}
+
+.stylistIntro {
+	margin-top: -13px;
+	background: transparent;
+	padding-right: 1.3em;
+	padding-top: .2em;
+	padding-bottom: 1em;
+	padding-left: .7em;
+	font-size: .7em;
+}
+
+img.stylist {
+	width: 100%;
+	height: 11em;
+	margin-bottom: 0;
+	border-top-left-radius: .3em; 
+	border-top-right-radius: .3em; 
+}
+
+.appoint-content {
+	padding-top: 1em;
+}
+
+
+.intro {
+	float: left;
+	width: 83%;
+}
+
+.intro > a {
+	display: block;
+}
+
+.intro .name {
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+.intro .motto {
+	min-height: 1em;
+	max-width: 16em;
+	margin-top: .3em;
+	margin-bottom: .3em;
+}
+
+.intro .level {
+	display: inline-block;
+	color: #f00;
+	padding: .1em .4em;
+	margin-left: 16px;
+	box-sizing: border-box;
+	border: 1px solid #f00;
+	/*font-weight: bold;*/
+	font-size: .8em;
+}
+
+.stylistIntro ul {
+	list-style: none;
+	margin: 0;
+	margin-top: .3em;
+	padding: 0;
+}
+
+.stylistIntro ul li {
+	display: inline-block;
+	margin-right: 3px;
+}
+
+.appoint {
+	float: right;
+	transform: translateY(.4em);
+}
+
+.appoint img {
+	width: 2.5em;
+	height: 2.5em;
+	/*transform: translateY(-.5em);*/
+}
+
+.appoint a {
+	display: inline-block;
+	transform: translateY(-.5em);
+}
+
+.appoint .line {
+	display: inline-block;
+	position: relative;
+	/*top: 8px;*/
+	font-size: 0;
+	border-left: 1px solid #ddd;
+	padding: 3px 5px 40px;
+}
+
+.img-circle {
+	border-radius: 50%;
+}
+
+.text-danger {
+	color: #f00;
+}
+
+.text-muted {
+	color: #bbb;
+}
+
+/* 全部区域下拉列表项中的遮罩层显示 */
+.overlay-allArea {
+	position: fixed;
+	top: 78px;
+	display: none;
+	width: 100%;
+	height: 88.5%;
+	background: rgba(0,0,0,.3);
+	z-index: 10;
+}
+
+.overlay-container {
+	position: fixed;
+	/*display: none;*/
+	top: 4rem;
+	right: 4%;
+	width: 92%;
+	height: 46%;
+	background: rgba(255,255,255,.8);
+	list-style: none;
+	z-index: 999;
+	margin-top: 20px;
+	padding: 0;
+	border-radius: 0.3em;
+	/*overflow: auto;*/
+}
+
+
+.overlay-container ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.overlay-container ul li {
+	line-height: 3.5;
+	font-size: .8em;
+}
+
+.overlay-container li > a {
+	color: #bbb;
+	text-decoration: none;
+}
+
+.overlay-container .allArea {
+	/*float: left;*/
+	width: 100%;
+}
+
+.overlay-container .allArea li:first-child {
+	border-top-left-radius: .3em;
+}
+
+.overlay-container .allArea li:last-child {
+	border-bottom-left-radius: .3em;
+}
+
+.overlay-container .allArea li {
+	text-align: center;
+	background: #fff;
+}
+
+.overlay-container .area-addr {
+	display: block;
+	overflow-y: auto;
+	height: 100%;
+	width: 100%;
+	float: right;
+}
+
+.overlay-container > .over {
+	overflow-y: auto;
+	height: 100%;
+}
+
+.overlay-container > .over1 {
+	float: left;
+	width: 30%;
+	overflow-y: auto;
+	height: 100%;
+}
+
+.overlay-container .area-addr li {
+	padding-left: 2em;
+	border-bottom: 1px solid #ddd;
+}
+
+.overlay-container .area-addr li > a {
+	color: #000;
+}
+
+
+
+/* 设置清除浮动 */
+.clearfloat:before,
+.clearfloat:after {
+	display: table;
+	content: "";
+}
+
+.clearfloat:after {
+	clear: both;
+}
+
+/* 定义响应式图片的类 .img-responsive */
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+/* 定义栅格系统 */
+.row {
+	background: transparent;
+	margin-top: 1em;
+}
+
+/* 将主容器中的容器边框设置成圆角边框的 */
+.col-xs-12 {
+	position: relative;
+  min-height: 1px;
+  background: #fff;
+  margin: auto;
+  margin-bottom: 1em;
+  width: 92%;
+  border-radius: .3em;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+/* 分页内容显示动画 */
+.opacity{
+    -webkit-animation: opacity 0.5s linear;
+    animation: opacity 0.5s linear;
+}
+@-webkit-keyframes opacity {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@keyframes opacity {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}

@@ -1,0 +1,77 @@
+.list_pic{width:100%;}
+
+.list_pic li{position:relative;margin-bottom:7px;}
+
+.list_pic li img{width:100%;height:100%;}
+
+.list_bg1{width:100%;height:100%;background:url("../img/Image/bg1.png");
+    -webkit-background-size:100%;
+    position:absolute;top:0;left:0;}
+
+.list_bg2{width:100%;height:100%;background:url("../img/Image/bg2.png");
+    -webkit-background-size:100%;
+    position:absolute;top:0;left:0;}
+
+.jieshao{padding:18px 16px 21px 17px;}
+
+.js_content{width:100%;
+    position:relative;
+}
+.js_content img{width:100%;}
+
+.tips{position:absolute;top:26%;left:8%;width:64%;font-size:0.8rem;color:#717171;}
+
+.tips p{line-height:14px;}
+
+.border_div{padding:21px 14px ; }
+
+.border_list{border:6px solid #191718;padding:4% 8% 5% 7%;}
+
+.border_list li{float:left;}
+
+.tx{width:48px;height:48px;margin-right:10%;}
+
+.tx img{border-radius:50%;width:100%;height:100%;display:block;}
+
+.name{font-size:19px;color:#464646;line-height:42px;}
+
+.border_list .title{font-size:15px;color:#464646;line-height:42px;float:right;}
+
+
+.jieshao2{padding:18px 16px 21px 17px;position:relative;}
+
+.js2_content img{  width:100%;}
+
+.js2_content span{color:#717171;}
+
+.js2_content .span1{position:absolute;top:55px;left:28px;width:58%;height:59px;line-height:15px;font-size:13px;}
+
+.js2_content .span2{position:absolute;bottom:89px;left:28px;width:58%;height:59px;line-height:15px;font-size:13px;}
+
+
+.footer{padding-left:14px;}
+
+.box1{position:relative;margin-bottom:7px;}
+
+.box1 .no1{width:76%;}
+
+.box1 .no1 img{width:100%;}
+
+.note1{position:absolute;bottom:50px;right:7%;color: #726E6E;}
+
+
+.box2{position:relative;margin-bottom:7px;}
+
+.box2 .no2{width:53.3%;}
+
+.box2 .no2 img{width:100%;}
+
+.note2{position:absolute;bottom:68px;left:26.4%;color: #726E6E;}
+
+.ad{position:absolute;bottom:20px;left:9%;color:#191718;}
+
+.jieshao1{margin: 0 16px 0 17px;padding: 10px;border:5px solid #000;}
+.jieshao1 img{width: 50px;height: 50px;border-radius: 50%;margin: 0 15px;}
+.jieshao1 .name{line-height: 50px;}
+.jieshao1 .leveName{line-height: 50px;float: right;padding-right: 20px;font-size: 16px;}
+.js2_content p{height: 5px;}

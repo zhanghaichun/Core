@@ -1,0 +1,60 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 3em;
+	background: #ebebeb;
+	/*font-family: "微软雅黑";*/
+}
+
+/* 设置顶部预约标题 */
+.title {
+	background: #fff;
+	text-align: center;
+	padding: 15px 0 15px 15px;
+	margin-bottom: 30px;
+}
+
+.title img {
+	float: left;
+}
+
+
+/* 设计积分记录主项 */
+.record {
+	background: #fff;
+	padding: .5em;
+	font-size: .9em;
+}
+
+.record span {
+	display: block;
+}
+
+.record .left {
+	float: left;
+}
+
+.record .right {
+	float: right;
+	text-align: right;
+}
+
+.integral-balance {
+	font-size: .9em;
+	color: #bbb;
+}
+
+.amount {
+	color: #f00;
+}
+
+/* 设置清除浮动 */
+.clearfloat:before,
+.clearfloat:after {
+	display: table;
+	content: "";
+}
+
+.clearfloat:after {
+	clear: both;
+}

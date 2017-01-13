@@ -1,0 +1,163 @@
+body {
+	margin: 0;
+	padding: 0;
+	padding-bottom: 20%;
+	font-size: 3em;
+	background: #ededed;
+	/*font-family: "微软雅黑";*/
+}
+
+/* 设置顶部预约标题 */
+.title {
+	background: #fff;
+	text-align: center;
+	padding: 15px 0 15px 15px;
+	margin-bottom: 30px;
+}
+
+.title img {
+	float: left;
+}
+
+/* 定义需要处理的部位 */
+/*.fair-len {
+	text-align: center;
+	padding: 10px 30px 30px 30px;
+	background: #fff;
+}
+
+.fair-len .len {
+	display: inline-block;
+	width: 48%;
+	text-align: center;
+	padding: 10px 0;
+	border: 3px solid #f00;
+	margin: 0;
+}
+
+.fair-len .whole {
+	border-top-left-radius: .2em;
+	border-bottom-left-radius: .2em;
+	margin-right: -.3em;
+	border-right: none;
+	background: #f00;
+	color: #fff;
+}
+
+.fair-len .part {
+	border-top-right-radius: .2em;
+	border-bottom-right-radius: .2em;
+	margin-left: -.3em;
+}*/
+
+/* 定义头发的长度 （整体或局部）*/
+.fair-len {
+	text-align: center;
+	padding: 10px 30px 30px 30px;
+	background: #fff;
+}
+
+.fair-len .len {
+	display: inline-block;
+	width: 32%;
+	text-align: center;
+	padding: 10px 0;
+	border: 3px solid #f00;
+	margin: 0;
+}
+
+.fair-len .middle {
+	margin-left: -.6em;
+	margin-right: -.6em;
+}
+
+.fair-len .middle,
+.fair-len .short {
+	border-right: none;
+}
+
+.fair-len .short {
+	background: #f00;
+	color: #fff;
+	border-top-left-radius: .2em;
+	border-bottom-left-radius: .2em;
+}
+
+.fair-len .long {
+	border-top-right-radius: .2em;
+	border-bottom-right-radius: .2em;
+}
+
+/* 设置造型样式列表 */
+.list-item {
+	background: #fff;
+	padding: 30px 50px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+.list-item .left {
+	float: left;
+}
+
+.list-item .left > span {
+	margin-left: 1em;
+}
+
+.list-item .right {
+	float: right;
+}
+
+.list-item .left > span,
+.list-item .right > span {
+	color: #f00;
+}
+
+.list-item del {
+	font-size: .8em;
+	color: #bbb;
+}
+
+
+
+/* 设计底部的确定和取消按钮 */
+.opera-btn {
+	position: fixed;
+	bottom: 0;
+	width: 92%;
+	background: #fff;
+	padding: 30px 40px;
+
+}
+
+.opera-btn > button {
+	float: right;
+	padding: .2em .5em;
+	border-radius: .2em;
+	background: #fff;
+	font-size: 1em;
+	border: 3px solid #ddd;
+	margin-left: 30px;
+	color: #bbb;
+}
+
+.opera-btn > button:first-child {
+	color: #f00;
+	border-color: #f00;
+}
+
+
+
+
+
+
+/* 设置清除浮动 */
+.clearfloat:before,
+.clearfloat:after {
+	display: table;
+	content: "";
+}
+
+.clearfloat:after {
+	clear: both;
+}

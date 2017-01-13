@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>当前定位城市</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/location.css">
+</head>
+<body>
+<!-- 定义当前城市标题标题 -->
+<div class="title">
+	<a href="javascript: history.go(-1);"><img src="img/Image/CLOSE@3x.png" alt=""></a>
+	<span>当期城市-<span class="city">哈尔滨</span></span>
+</div>
+
+<!-- 定位城市 -->
+<div class="location-city">
+	<div class="content">
+		<div class="label">定位城市</div>
+		<div class="container">
+			<span>哈尔滨</span>
+		</div>
+	</div>
+</div>
+
+
+<!-- 热门城市 -->
+<div class="hot-city">
+	<div class="content">
+		<div class="label">热门城市</div>
+		<div class="container">
+			<a class="harbin" href="javascript: history.go(-1)"><span>哈尔滨</span></a>
+			<a class="mdj" href="javascript: history.go(-1)"><span>牡丹江</span></a>
+			<a class="qqhe" href="javascript: history.go(-1)"><span>齐齐哈尔</span></a>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+		$(".harbin").addClass("stress");
+
+		// 设置职位标签在点击时的切换效果
+		$(".hot-city .container > a").click(function(){
+
+			if ($(this).hasClass("stress")) {
+				$(this).removeClass("stress");
+			} else {
+				$(this).addClass("stress");
+			}
+
+		})
+
+
+	})
+</script>
+</body>
+</html>

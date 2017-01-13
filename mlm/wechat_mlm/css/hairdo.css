@@ -1,0 +1,293 @@
+body {
+	margin: 0;
+	background: #ddd;
+	height: 100%;
+	padding-top: 85px;
+	/*font-family: "微软雅黑";*/
+	padding-bottom: 15%;
+	font-size: 16px;
+}
+
+/* 设置标题 */
+.title {
+	width: 100%;
+	height: 44px;
+	line-height: 44px;
+	position: fixed;
+	top: 0;
+	background: #fff;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+	z-index: 2;
+}
+
+.title .left {
+	float: left;
+	margin-left: 3.3vw;
+	font-size: 14px;
+}
+
+.title .left a {
+	color: #000;
+	text-decoration: none;
+}
+
+.title .left img {
+	width: 1em;
+	transform: translate(.1em, -.05em);
+}
+
+.title span.txt {
+	display: block;
+  width: 40px;
+  margin: auto;
+}
+
+
+/* 筛选 */
+.screen-con {
+	position: fixed;
+	top: 44px;
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+	/*margin-top: 44px;*/
+	background: #fff;
+	z-index: 2;
+}
+
+.screen {
+	margin: 0;
+	padding-left: 0;
+	background: #fff;
+	list-style: none;
+}
+
+.screen li {
+	display: inline-block;
+	width: 32%;
+	text-align: center;
+}
+
+.screen li img {
+	vertical-align: middle;
+	margin-left: 4px;
+}
+
+.screen li img.fil {
+	position: relative;
+	width: 15px;
+}
+
+.screen li img.fl-icon {
+	width: 15px;
+}
+
+.screen li:last-child {
+	margin-right: 0;
+}
+
+/* 设置发型介绍的列表 */
+.row {
+	/*margin-bottom: 1em;*/
+}
+
+
+.wrapper {
+	background: #fff;
+	max-height: 560px;
+	overflow: hidden;
+}
+
+.wrapper a {
+	display: block;
+}
+
+.wrapper .flex {
+	height: 44px;
+	position: relative;
+	display: -webkit-flex;
+	align-items: center;
+}
+
+.wrapper .flex span {
+	margin: auto;
+}
+
+.wrapper  img {
+	height: 140px;
+	padding-bottom: 0em;
+	width: 100%;
+}
+
+.col-xs-6 {
+	height: auto;
+	margin-bottom: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+
+.wrapper span {
+	display: block;
+	/*height: 44px;*/
+	padding: 5px 10px;
+	/*text-align: center;*/
+	overflow: hidden;
+	font-size: 12px;
+}
+
+.vertical-center {
+	height: 3em;
+	line-height: 3em;
+}
+
+
+/* 设置遮罩层 */
+.overlay {
+	position: absolute;
+	top: 74px;
+	display: none;
+	width: 100%;
+	height: 90%;
+	background: rgba(0,0,0,.4);
+	z-index: 2;
+}
+
+/* 设置发型分类下拉选项 */
+.hairdo-sort {
+	position: fixed;
+	right: 5%;
+	width: 23%;
+	background: #fff;
+	list-style: none;
+	z-index: 3;
+	margin-top: 9px;
+	padding: 0;
+	/*border-radius: 0.3em;*/
+}
+
+.hairdo-sort li {
+	text-align: center;
+	border-bottom: 1px solid #eee;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.hairdo-sort li a,
+.hairdo-sort li a:visited {
+	color: #bbb;
+}
+
+.hairdo-sort li a:visited,
+.hairdo-sort li a:active,
+.hairdo-sort li a {
+	text-decoration: none;
+}
+
+.arrow {
+	position: absolute;
+	top: -8px;
+  left: 9vw;
+	width: 20px;
+}
+
+/* 这只回到顶部标签的样式 */	
+.anchor {
+	position: fixed;
+	display: none;
+	bottom: 70px;
+	right: 1%;
+}
+
+.anchor img {
+	width: 40px;
+}
+
+
+
+
+/* 设置底部导航栏的样式 */
+.navlist {
+	position: fixed;
+	/*display: none;*/
+	bottom: 0;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	/*padding-left: 5%;
+	padding-right: 5%;*/
+	background: #fff;
+	list-style: none;
+	/*font-size: 0;*/
+}
+
+.navlist img {
+	width: 25px;
+	transform: translateY(0.5rem);
+}
+
+.navlist .appoint img {
+	width: 45px;
+	transform: translateY(0.1rem);
+}
+
+.navlist li {
+	display: inline-block;
+	width: 18%;
+	text-align: center;
+	padding-left: 4%;
+	/*margin-right: 11%;*/
+	vertical-align: middle;
+}
+
+.navlist li a {
+	color: #aaa;
+	text-decoration: none;
+}
+
+.navlist li span {
+	position: relative;
+	font-size: 60%;
+	/*display: inline-block;*/
+	/*width: 81px;*/
+}
+
+/* 底部导航栏的样式设置结束 */
+
+a {
+	text-decoration: none;
+	color: #000;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+/* 分页内容显示动画 */
+.opacity{
+    -webkit-animation: opacity 0.5s linear;
+    animation: opacity 0.5s linear;
+}
+@-webkit-keyframes opacity {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@keyframes opacity {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}

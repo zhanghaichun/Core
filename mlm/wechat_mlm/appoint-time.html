@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>选择预约时间</title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/Image/iconImage/logo144.png">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/appoint-time.css">
+</head>
+<body>
+<!-- 定义预约标题 -->
+<div class="title">
+	<a href="javascript: history.go(-1)"><img src="img/Image/iconImage/others-icon/nav-返回@2x.png" alt=""></a>
+	<span>选择时间</span>
+</div>
+
+<!-- 设置时间栏 -->
+<!-- <div class="time-column clearfloat"> -->
+	<div class="swiper-container swiper-2">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<ul class="time-list">
+					<li><span class="week">周二</span><span class="date">03月08日</span></li>
+					<li><span class="week">今天</span><span class="date">03月09日</span></li>
+					<li><span class="week">周三</span><span class="date">03月10日</span></li>
+					<li><span class="week">周四</span><span class="date">03月11日</span></li>
+				</ul>
+				<div><img class="time-arrow" src="img/Image/iconImage/others-icon/预约选择时间页面箭头@2x.png" alt=""></div>
+			</div>
+			<div class="swiper-slide">
+				<ul class="time-list2">
+					<li><span class="week">周五</span><span class="date">03月11日</span></li>
+					<li><span class="week">周六</span><span class="date">03月11日</span></li>
+					<li><span class="week">周日</span><span class="date">03月11日</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+<!-- </div> -->
+
+<!-- 使用swiper来设置滚动的可预约的时间 -->
+<div class="swiper-container swiper-container1">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+    	<div class="bookable">
+	    	<span><span>6:00</span><br><span>可预约</span></span>
+    	</div>
+
+    	<div class="bookable">
+	    	<span><span>6:00</span><br><span>可预约</span></span>
+    	</div>
+
+    	<div class="bookable">
+	    	<span><span>6:00</span><br><span>可预约</span></span>
+    	</div>
+
+    	<div class="bookable">
+	    	<span><span>6:00</span><br><span>可预约</span></span>
+    	</div>
+    	<div class="bookable">
+	    	<span><span>6:00</span><br><span>可预约</span></span>
+    	</div>
+
+    	<div class="bookable">
+	    	<span><span>6:00</span><br><span>可预约</span></span>
+    	</div>
+    	<div class="bookable">
+	    	<span><span>6:00</span><br><span>可预约</span></span>
+    	</div>
+
+    	<div class="bookable">
+	    	<span><span>6:00</span><br><span>可预约</span></span>
+    	</div>
+    </div>
+
+
+    <div class="swiper-slide">
+    	<div class="bookable">
+	    	<span><span>6:00</span><br><span>可预约</span></span>
+    	</div>
+
+    	<div class="bookable">
+	    	<span><span>6:00</span><br><span>可预约</span></span>
+    	</div>
+
+    	<div class="bookable">
+	    	<span><span>6:00</span><br><span>可预约</span></span>
+    	</div>
+
+    	<div class="bookable">
+	    	<span><span>6:00</span><br><span>可预约</span></span>
+    	</div>
+    </div>
+
+    <div class="swiper-slide">
+    	<div class="bookable">
+	    	<span><span>6:00</span><br><span>可预约</span></span>
+    	</div>
+    </div>
+
+    <div class="swiper-slide">
+    	<div class="bookable">
+	    	<span><span>6:00</span><br><span>可预约</span></span>
+    	</div>
+    </div>
+
+    <div class="swiper-slide">
+    	<div class="bookable">
+	    	<span><span>6:00</span><br><span>可预约</span></span>
+    	</div>
+    </div>
+
+    <div class="swiper-slide">
+    	<div class="bookable">
+	    	<span><span>6:00</span><br><span>可预约</span></span>
+    	</div>
+    </div>
+
+    <div class="swiper-slide">
+    	<div class="bookable">
+	    	<span><span>6:00</span><br><span>可预约</span></span>
+    	</div>
+    </div>
+
+
+  </div>
+</div>
+
+<!-- 确定预约时间的底部栏 -->
+<div class="mkapp-time clearfloat">
+	<div class="left">
+		<div>预约时间：</div>
+		<span class="date">2016-03-09</span>
+		<span class="time">6:00</span>
+	</div>
+	<div class="right"><a href="appoint.html">确定</a></div>
+</div>
+
+
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script>
+	$(function() {
+		$(".bookable").css("height",$(".bookable").width() + "px");
+		// 创建swiper
+		var mySwiper = new Swiper(".swiper-container1", {
+			autoplay: false,
+		})
+
+		var mySwiper2 = new Swiper(".swiper-2", {
+			autoplay: false,
+		})
+
+
+		// 当时间列表点击的时候会出现相应的选中效果
+		$(".time-list li").click(function() {
+			$(this).css({ "border-bottom": "3px solid #f00" });
+			$(this).find("span").css({ "color": "#000" });
+
+			$(this).siblings().css({ "border-bottom": "none" });
+			$(this).siblings().find("span").css({ "color": "#bbb" });
+
+		});
+
+		// 切换到指定的slide
+		$(".time-list li:eq(0)").bind("click",function() {
+			mySwiper.slideTo(0,700,false);
+		})
+		$(".time-list li:eq(1)").bind("click",function() {
+			mySwiper.slideTo(1,700,false);
+		})
+		$(".time-list li:eq(2)").bind("click",function() {
+			mySwiper.slideTo(2,700,false);
+		})
+		$(".time-list li:eq(3)").bind("click",function() {
+			mySwiper.slideTo(3,700,false);
+		})
+
+		$(".time-list2 li:eq(0)").bind("click",function() {
+			mySwiper.slideTo(4,700,false);
+		})
+		$(".time-list2 li:eq(1)").bind("click",function() {
+			mySwiper.slideTo(5,700,false);
+		})
+		$(".time-list2 li:eq(2)").bind("click",function() {
+			mySwiper.slideTo(6,700,false);
+		})
+
+		setInterval(function() {
+			$(".time-list li").eq(mySwiper.activeIndex).css({"border-bottom": "3px solid #f00"});
+			$(".time-list li").eq(mySwiper.activeIndex).find("span").css({"color": "#000"});
+			
+			$(".time-list li").eq(mySwiper.activeIndex).siblings().css({"border-bottom": "none"});
+			$(".time-list li").eq(mySwiper.activeIndex).siblings().find("span").css({"color": "#bbb"});
+
+			if(mySwiper.activeIndex >= 4) {
+				mySwiper2.slideNext();
+				$(".time-list2 li").eq(mySwiper.activeIndex-4).css({"border-bottom": "3px solid #f00"});
+				$(".time-list2 li").eq(mySwiper.activeIndex-4).find("span").css({"color": "#000"});
+
+				$(".time-list2 li").eq(mySwiper.activeIndex-4).siblings().css({"border-bottom": "none"});
+				$(".time-list2 li").eq(mySwiper.activeIndex-4).siblings().find("span").css({"color": "#bbb"});
+			} else {
+				mySwiper2.slideTo(0,700,false);
+			}
+		},30);
+
+		// 点击预约就会改变预约项的样式
+		$(".swiper-slide .bookable").click(function() {
+
+			if($(this).hasClass("w")) {
+				$(this).removeClass("w");
+				$(this).find("span > span").removeClass("r");
+			} else {
+				$(this).addClass("w");
+				$(this).find("span > span").addClass("r");
+			}
+
+		});
+
+		
+	})
+</script>
+</body>
+</html>

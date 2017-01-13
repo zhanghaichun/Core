@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/sweetalert.css">
+	<style>
+		button {
+			background-color: #AEDEF4;
+			color: white;
+			border: none;
+			box-shadow: none;
+			font-size: 17px;
+			font-weight: 500;
+			font-weight: 600;
+			border-radius: 3px;
+			padding: 15px 35px;
+			margin: 26px 5px 0 5px;
+			cursor: pointer;
+		}
+
+		body {
+			/*background: url("img/Self/1.jpg") no-repeat ,url("img/Self/forest.jpg") no-repeat;*/
+			/*background-size: cover; */
+		}
+
+		.clearfloat:before,
+		.clearfloat:after {
+			display: table;
+			content: "";
+		}
+
+		.clearfloat:after {
+			clear: both;
+		}
+		
+		.img-con img {
+			float: left;
+			width: 50px;
+			height: 50px;
+		}
+
+		.img-con img:first-child {
+			margin-right: 20px;
+		}
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		td , th {
+			border: 1px solid #aaa;
+			text-align: center;
+		}
+
+		.center {
+			width: 47%;
+			margin: auto;
+		}
+
+		.ths {
+			font-style: italic;
+			color: #00f;
+		}
+	</style>
+</head>
+<body>
+<div class="show">
+	<button class="btn">show error message</button>
+</div>
+
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/sweetalert-dev.js"></script>
+<script>
+	$(function() {
+		$(".btn").click(function() {
+			swal({
+				title: 'hello',
+			  text: '<div class="center"><div class="img-con clearfloat"><img src="img/Self/1.jpg"><img src="img/Self/sasuke.jpg"></div><table><tbody><tr><th>姓名</th><th class="ths">年龄</th></tr><tr><td>漩涡鸣人</td><td>20</td></tr><tr><td>宇智波佐助</td><td>22</td></tr></tbody></table></div>',
+			  html: true
+			});
+		});
+
+
+	})
+
+</script>
+</body>
+</html>
