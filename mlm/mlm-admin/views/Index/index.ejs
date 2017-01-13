@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html>
+<!--
+BeyondAdmin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.2.0
+Version: 1.0.0
+Purchase: http://wrapbootstrap.com
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Head -->
+<head>
+		<meta charset="utf-8" />
+		<title>首页</title>
+
+		<meta name="description" content="Dashboard" />
+		<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="shortcut icon" href="../../assets/img/favicon.png" type="image/x-icon">
+
+
+		<!--Basic Styles-->
+		<link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link id="bootstrap-rtl-link" href="" rel="stylesheet" />
+		<link href="../../assets/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="../../assets/css/weather-icons.min.css" rel="stylesheet" />
+
+		<!--Fonts-->
+		<!--<link href="http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300" rel="stylesheet" type="text/css">-->
+
+		<!--Beyond styles-->
+		<link href="../../assets/css/beyond.min.css" rel="stylesheet" type="text/css" />
+		<link href="../../assets/css/demo.min.css" rel="stylesheet" />
+		<link href="../../assets/css/typicons.min.css" rel="stylesheet" />
+		<link href="../../assets/css/animate.min.css" rel="stylesheet" />
+		<link id="skin-link" href="" rel="stylesheet" type="text/css" />
+
+		<!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+		<script src="../../assets/js/skins.min.js"></script>
+		<style>
+				.page-body{padding: 18px 0px 0px;margin-top: 40px;margin-bottom: 25px;}
+				.row ,.col-xs-12, .col-xs-4{padding: 0px;margin: 0px;}
+				.page-content{margin-bottom: 50px;}
+				.databox{min-width: auto;margin-bottom: 0px;height: 60px;}
+				.databox .databox-text{padding-top: 10px;font-size: 13px!important;padding-left: 10px;margin: 4px 0px 0px}
+				.databox .databox-number{line-height: 30px;font-size: 25px!important;padding-right: 10px;margin: 0px;}
+				.navbar.bottomSlider{height: 45px!important;position: fixed;width: 100%;}
+				.container.bottomSlider{width: 100%!important;padding: 0px;background: #2dc3e8;color: #ffffff}
+				.col-xs-6.bottomSlider{height: 45px;text-align: center;line-height: 45px;}
+				.f20{font-size: 20px;}
+				.modal-dialog{position: absolute;top: 20%;width: 95%;}
+				.modal-dialog p{margin-bottom: 0px;}
+				.glyphicon{top:2px;padding-right:3px;}
+				.orders-container{box-shadow: none;margin-bottom: 0px;}
+
+				.widget-buttons>[data-toggle="collapse"]{color: #428bca;}
+				textarea{width: 100%;height: 80px;}
+				.modal-footer{padding-top: 10px;padding-bottom: 10px;}
+				.modal-footer .btn{width: 80px;}
+				#myModal button{width: 100%;background: #57b5e3;color: #ffffff;font-size: 20px;}
+				.col-xs-6.part-left{padding-left:10px;padding-right: 5px;padding-bottom: 5px;padding-top: 5px;border-color: #dedede;}
+				.col-xs-6.part-right{padding-left:5px;padding-right: 10px;padding-bottom: 5px;padding-top: 5px;border-color: #dedede;}
+				.head{padding-bottom: 10px;}
+				.pull-left{line-height: 45px;color: #ffffff;padding:0px 50px;font-size: 16px;}
+				.designer{width: 100px; height: 45px;top: 0px;position: fixed;left: 0px;z-index: 2;text-align: left;padding: 0px 10px;line-height: 45px;color: #ffffff}
+				.logout{width: 100px; height: 45px;top: 0px;position: fixed;right: 0px;z-index: 2;text-align: right;padding: 0px 10px;line-height: 45px;color: #ffffff}
+				.item-left{padding-left: 0px;}
+				.orders-container{border-color: #dedede}
+				.cricle{width: 20px;height: 20px;position: absolute;z-index: 2;left: 50%;top:60px;margin-left: -10px;background: #ffffff}
+				.orders-container .orders-list .order-item .item-more{right:10px;}
+				.row.item{border-top: 1px solid #e5e5e5;}
+				.row.item .col-xs-2{padding: 0px;}
+				.empty{height: 10px;background: #eee}
+				.table th,.table td{
+						white-space: nowrap;
+						text-align: center;
+				}
+		</style>
+
+</head>
+<!-- /Head -->
+<!-- Body -->
+<body>
+<!-- Loading Container -->
+<div class="loading-container">
+		<div class="loading-progress">
+				<div class="rotator">
+						<div class="rotator">
+								<div class="rotator colored">
+										<div class="rotator">
+												<div class="rotator colored">
+														<div class="rotator colored"></div>
+														<div class="rotator"></div>
+												</div>
+												<div class="rotator colored"></div>
+										</div>
+										<div class="rotator"></div>
+								</div>
+								<div class="rotator"></div>
+						</div>
+						<div class="rotator"></div>
+				</div>
+				<div class="rotator"></div>
+		</div>
+</div>
+<!--  /Loading Container -->
+<!-- Navbar -->
+<div class="navbar bottomSlider">
+		<div class="navbar-inner">
+				<div class="navbar-container">
+						<div class="navbar-header designer">
+								设计师
+						</div>
+						<div class="navbar-header pull-left text-center">
+								<%= username%>
+						</div>
+						<div class="navbar-header logout">
+								注销
+						</div>
+				</div>
+		</div>
+</div>
+<!-- /Navbar -->
+<!-- Main Container -->
+<div class="main-container container-fluid">
+		<!-- Page Container -->
+		<div class="page-container">
+				<!-- Page Content -->
+				<div class="page-content">
+						<!-- Page Body -->
+						<div class="page-body bg-white">
+								<div class="row head ">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+												<div class="row">
+														<div class="col-xs-6 part-left bg-white bordered-bottom-1">
+																<div class="databox themeprimary">
+																		<div class="databox-text text-left">今日预约订单(数)</div>
+																		<span class="databox-number text-right"><%= yorder%></span>
+
+																</div>
+														</div>
+														<div class="col-xs-6 part-right bordered-bottom-1 bordered-left-1  ">
+																<div class="databox themeprimary">
+																		<div class="databox-text text-left">今日到店订单(数)</div>
+																		<span class="databox-number text-right"><%= dorder%></span>
+
+																</div>
+														</div>
+														<div class="col-xs-6 part-left">
+																<div class="databox themeprimary">
+																		<div class="databox-text">今日完成订单(数)</div>
+																		<span class="databox-number text-right"><%= worder%></span>
+																</div>
+														</div>
+														<div class="col-xs-6 part-right bordered-left-1">
+																<div class="databox themeprimary">
+																		<div class="databox-text text-left">本月累计订单(数)</div>
+																		<span class="databox-number text-right"><%= border%></span>
+																</div>
+														</div>
+														<div class="cricle"></div>
+												</div>
+										</div>
+								</div>
+								<div class="col-xs-12 empty"></div>
+								<div class="row item">
+										<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+												<div class="orders-container">
+														<ul class="orders-list">
+																<li class="order-item">
+																		<a href="../Order/unconfirmed">
+																				<div class="row">
+																						<div class="col-xs-6 item-left">
+																								<div class="item-booker padding-left-10">设计师未确认订单</div>
+																						</div>
+																						<div class="col-xs-4 item-left">
+																								<div class="item-booker text-right padding-left-10" style="margin-top: 7px;"><%= porder%></div>
+																						</div>
+																						<div class="col-xs-2 item-more" href="javascript:void(0)">
+																								<i></i>
+																						</div>
+																				</div>
+																		</a>
+																</li>
+														</ul>
+												</div>
+										</div>
+								</div>
+								<div class="col-xs-12 empty"></div>
+
+								<div class="row">
+										<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
+												<div class="orders-container bordered-top-1">
+														<ul class="orders-list">
+																<% for(var i=0; i<adminStylistHomes.length; i++){%>
+																<li class="order-item">
+																		<div class="row">
+																				<div class="col-xs-6 item-left">
+																						<div class="item-booker padding-left-10"><%= adminStylistHomes[i].name%></div>
+																				</div>
+																				<div class="col-xs-6 item-left text-right">
+																						<div class="item-booker padding-left-10">今日到店订单:<%= adminStylistHomes[i].dorder%></div>
+																				</div>
+																		</div>
+																</li>
+																<%}%>
+														</ul>
+												</div>
+
+										</div>
+								</div>
+								<% if(mechanics.length){%>
+										<div class="col-xs-12 empty"></div>
+										<div class="row">
+												<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="overflow:scroll">
+														<table class="table table-scrollable">
+																<thead>
+																		<tr>
+																				<th>技师</th>
+																				<th>技师编号</th>
+																				<th>当月业绩</th>
+																				<th>累计业绩</th>
+																				<th>所属门店</th>
+																		</tr>
+																</thead>
+																<tbody>
+																		<% for(var i=0; i<mechanics.length; i++){%>
+																		<tr>
+																				<td><%= mechanics[i].name %></td>
+																				<td><%= mechanics[i].mecNumb %></td>
+																				<td><a href="../Order/month?mtId=<%= mechanics[i].id %>"><%= mechanics[i].mouthAccumulated %></a></td>
+																				<td><%= mechanics[i].allAccumulated %></td>
+																				<td><%= mechanics[i].studio.names %></td>
+																		</tr>
+																		<%}%>
+																</tbody>
+														</table>
+												</div>
+										</div>
+								<%}%>
+						</div>
+						<!-- /Page Body -->
+				</div>
+				<!-- /Page Content -->
+		</div>
+		<!-- /Page Container -->
+		<!-- Main Container -->
+
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom bottomSlider ">
+		<div class="container bottomSlider">
+			 <!-- <div class="col-xs-4 bottomSlider bordered-right-2" id="order"><i class="glyphicon glyphicon-th-list"></i>当日订单</div>
+				<div class="col-xs-4 bottomSlider bordered-right-2" id="confirm"><i class="glyphicon glyphicon-time"></i>到店确认</div>
+				<div class="col-xs-4 bottomSlider" id="add"><i class="glyphicon glyphicon-file"></i>追加订单</div>-->
+				<div class="col-xs-6 bottomSlider bordered-right-2" id="order"><i class="glyphicon glyphicon-th-list"></i>当日订单</div>
+				<div class="col-xs-6 bottomSlider " id="confirm"><i class="glyphicon glyphicon-time"></i>到店确认</div>
+		</div>
+</nav>
+
+		<!--Basic Scripts-->
+		<script src="../../assets/js/jquery-2.0.3.min.js"></script>
+		<script src="../../assets/js/bootstrap.min.js"></script>
+
+		<!--Beyond Scripts-->
+		<script src="../../assets/js/beyond.min.js"></script>
+
+
+		<!--Page Related Scripts-->
+		<!--Sparkline Charts Needed Scripts-->
+		<script src="../../assets/js/charts/sparkline/jquery.sparkline.js"></script>
+		<script src="../../assets/js/charts/sparkline/sparkline-init.js"></script>
+
+		<!--Easy Pie Charts Needed Scripts-->
+		<script src="../../assets/js/charts/easypiechart/jquery.easypiechart.js"></script>
+		<script src="../../assets/js/charts/easypiechart/easypiechart-init.js"></script>
+
+		<!--Flot Charts Needed Scripts-->
+		<script src="../../assets/js/charts/flot/jquery.flot.js"></script>
+		<script src="../../assets/js/charts/flot/jquery.flot.resize.js"></script>
+		<script src="../../assets/js/charts/flot/jquery.flot.pie.js"></script>
+		<script src="../../assets/js/charts/flot/jquery.flot.tooltip.js"></script>
+		<script src="../../assets/js/charts/flot/jquery.flot.orderBars.js"></script>
+		<script src="../../assets/js/bootbox/bootbox.js"></script>
+<script>
+		$(function(){
+				$("#sign").click(function(){
+						$("#myModal").modal();
+						$(this).find("span").css('color','#dedede');
+				})
+				$('.edit').click(function(){
+						var key = $(this)
+						var type = $(this).parent().siblings('.widget-caption').html();
+						var text = $(this).parent().parent().siblings('.widget-body').find('p').html();
+						$("#edit .modal-title").html(type);
+						$("#edit .modal-body textarea").val(text);
+						$("#edit").modal();
+						$("#edit .btn-blue").click(function(){
+								key.parent().parent().siblings('.widget-body').find('p').html($("#edit .modal-body textarea").val())
+								$("#edit").modal('hide');
+						})
+				})
+				$('#name').click(function(){
+						var text = $(this).parent().find('span').html();
+						$("#edit-name .modal-body input[type='text']").val(text);
+						$("#edit-name").modal();
+						$("#edit-name .btn-blue").click(function(){
+								$('#name').parent().find('span').html($("#edit-name .modal-body input[type='text']").val())
+								$("#edit-name").modal('hide');
+						})
+				})
+				$("#order").click(function(){
+						window.location.href = '../Order/index'
+				})
+				$("#confirm").click(function(){
+						window.location.href = '../Appoint/index'
+				})
+				$("#add").click(function(){
+						window.location.href = '../Add/index'
+				})
+				$(".logout").click(function(){
+						window.location.href = '../logout'
+				})
+				$(".designer").click(function(){
+						window.location.href = '../Index/designer'
+				})
+		})
+		// If you want to draw your charts with Theme colors you must run initiating charts after that current skin is loaded
+</script>
+
+
+
+<div id="myModal" class="modal modal-darkorange">
+		<div class="modal-dialog">
+				<div class="modal-content">
+						<div class="modal-body text-center">
+								<p class="f20">签到成功</p>
+						</div>
+						<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">确 定</button>
+						</div>
+				</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="edit" class="modal modal-darkorange">
+		<div class="modal-dialog">
+				<div class="modal-content">
+						<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+								<h4 class="modal-title">Modal Title</h4>
+						</div>
+						<div class="modal-body">
+								<textarea class="form-control" rows="5" style="resize: none"></textarea>
+						</div>
+						<div class="modal-footer">
+								<button type="button" class="btn btn-default " data-dismiss="modal">取消</button>
+								<button type="button" class="btn btn-default btn-blue">修改</button>
+						</div>
+				</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<div id="edit-name" class="modal modal-darkorange">
+		<div class="modal-dialog">
+				<div class="modal-content">
+						<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+								<h4 class="modal-title">用户名</h4>
+						</div>
+						<div class="modal-body">
+								<input type="text" class="form-control" />
+						</div>
+						<div class="modal-footer">
+								<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+								<button type="button" class="btn btn-default btn-blue ">修改</button>
+						</div>
+				</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</body>
+<!--  /Body -->
+</html>

@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<!--
+BeyondAdmin - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.2.0
+Version: 1.0.0
+Purchase: http://wrapbootstrap.com
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Head -->
+<head>
+    <meta charset="utf-8" />
+    <title>到店确认</title>
+
+    <meta name="description" content="Dashboard" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="../../assets/img/favicon.png" type="image/x-icon">
+
+
+    <!--Basic Styles-->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link id="bootstrap-rtl-link" href="" rel="stylesheet" />
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../assets/css/weather-icons.min.css" rel="stylesheet" />
+
+    <!--Fonts-->
+    <!--<link href="http://fonts.useso.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300" rel="stylesheet" type="text/css">-->
+
+    <!--Beyond styles-->
+    <link href="../../assets/css/beyond.min.css" rel="stylesheet" type="text/css" />
+    <link href="../../assets/css/demo.min.css" rel="stylesheet" />
+    <link href="../../assets/css/typicons.min.css" rel="stylesheet" />
+    <link href="../../assets/css/animate.min.css" rel="stylesheet" />
+    <link id="skin-link" href="" rel="stylesheet" type="text/css" />
+
+    <!--Skin Script: Place this script in head to load scripts for skins and rtl support-->
+    <script src="../../assets/js/skins.min.js"></script>
+    <style>
+        .main-container{margin-top: 45px;}
+        .navbar.bottomSlider{height: 45px!important;width: 100%;position: fixed;z-index: 99999;top:0px;}
+        .navbar .sidebar-collapse{left: auto;right: 5px;}
+        .back{font-size: 40px;padding-left: 10px;width: 60px;}
+        .navbar .sidebar-collapse:hover{-webkit-box-shadow:none;box-shadow:none}
+        .navbar .sidebar-collapse{width: 100px;line-height: 45px;font-size: 18px;color: #ffffff;position: absolute;left: 50%;margin-left: -50px;}
+        .row{margin: 0px;}
+        .widget{margin: 3px 0 0px 0;}
+        .search{position: fixed;top: -115px;width: 100%;z-index: 1;}
+        .widget,.widget-body{box-shadow: none}
+        .tickets-container{padding: 10px}
+        .ticket-type{border-bottom: 1px solid #eee;}
+        .tickets-container .tickets-list .ticket-item .ticket-time{padding: 5px 10px;height:30px;line-height: 20px;}
+        .type{position: relative;right: 10px;float: right}
+        .type i{color: #F9EF24!important;}
+        .content{padding: 5px 10px;}
+        .ticket-type{height: auto!important;}
+        .ticket-type p{margin: 0px;}
+        .more{width: 100%;height: 40px;line-height: 40px;color: #606060;text-align: center;background: #f5f5f5}
+        .tickets-container .tickets-list .ticket-item .ticket-user{height: 40px;line-height: 30px;padding: 5px 10px;}
+        .ticket-user .col-xs-8{color: #2dc3e8}
+        .submit{width: 100%;}
+        .commit{height: 30px;width: 100%;}
+        .f20{font-size: 20px;}
+        #myModal .modal-dialog{position: absolute;top: 20%;width: 95%;}
+        #myModal .modal-dialog p{margin-bottom: 0px;}
+        #myModal button{width: 100%;background: #57b5e3;color: #ffffff;font-size: 20px;}
+        #edit .modal-dialog{position: absolute;top: 50%;margin-top: -125px;width:calc(100% - 20px);}
+        #edit .modal-content{height: 300px;}
+        #edit .modal-body{height:250px;overflow: scroll}
+        #commit .modal-dialog{position: absolute;top: 50%;margin-top: -75px;width:calc(100% - 20px);}
+        #commit .modal-content{height: 150px;}
+        #commit .modal-body{height:100px;overflow: hidden}
+        #commit .btn{width: 100%;}
+        .form-group label{color: #428bca}
+        .lock{
+            position: fixed;
+            z-index: 1;
+        }
+        .link-search{width: 50px; height: 45px;top: 0px;position: fixed;right: 0px;z-index: 2;text-align: right;padding: 0px 10px;line-height: 45px;color: #ffffff}
+        .fa-angle-right{font-size: 20px;}
+    </style>
+
+    </head>
+    <!-- /Head -->
+    <!-- Body -->
+    <body>
+    <!-- Loading Container -->
+    <div class="loading-container">
+        <div class="loading-progress">
+            <div class="rotator">
+                <div class="rotator">
+                    <div class="rotator colored">
+                        <div class="rotator">
+                            <div class="rotator colored">
+                                <div class="rotator colored"></div>
+                                <div class="rotator"></div>
+                            </div>
+                            <div class="rotator colored"></div>
+                        </div>
+                        <div class="rotator"></div>
+                    </div>
+                    <div class="rotator"></div>
+                </div>
+                <div class="rotator"></div>
+            </div>
+            <div class="rotator"></div>
+        </div>
+    </div>
+    <!--  /Loading Container -->
+    <!-- Navbar -->
+    <div class="navbar bottomSlider">
+        <div class="navbar-inner">
+            <div class="navbar-container">
+                <div class="navbar-header pull-left">
+                    <a href="../Index/index" class="navbar-brand">
+                        <small>
+                            <i class="fa fa-angle-left back"></i>
+                        </small>
+                    </a>
+                </div>
+                <!-- Sidebar Collapse -->
+                <div class="sidebar-collapse" id="sign">到店确认</div>
+                <!-- /Sidebar Collapse -->
+                <div class="navbar-header link-search">
+                    查询
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Navbar -->
+    <!-- Main Container -->
+    <div class="main-container container-fluid">
+        <div class="widget search">
+            <div class="widget-body">
+                <div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="code" placeholder="请输入订单编号">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control " id="phone" placeholder="请输入用户手机号">
+                    </div>
+                    <button type="submit" class="btn btn-blue submit">查询</button>
+
+                </div>
+            </div>
+        </div>
+        <div class="widget main">
+            <div class="widget-main no-padding">
+                <div class="tickets-container">
+                    <ul class="tickets-list">
+                        <% for(var i=0; i<list.length; i++){%>
+                        <li class="ticket-item">
+                            <div class="row">
+                                <a href="javascript:void(0)">
+                                    <div class="ticket-user col-xs-12 detail" orderId="<%= list[i].orderId%>" styPhone="<%= list[i].stylistMobile%>">
+                                        <div class="col-xs-4">订单编号</div>
+                                        <div class="col-xs-8 text-right"><%= list[i].orderNumb%></div>
+                                        <i class="fa fa-angle-right"></i>
+                                    </div>
+                                    <div class="ticket-user col-xs-12">
+                                        <div class="col-xs-4">订单用户</div>
+                                        <div class="col-xs-8 text-right"><%= list[i].userName%></div>
+                                    </div>
+                                    <div class="ticket-user col-xs-12">
+                                        <div class="col-xs-4">订单金额</div>
+                                        <div class="col-xs-8 text-right"><%= list[i].money%></div>
+                                    </div>
+                                    <div class="ticket-user col-xs-12">
+                                        <div class="col-xs-4">预约时间</div>
+                                        <div class="col-xs-8 text-right"><%= list[i].appointTimes%></div>
+                                    </div>
+                                    <div class="ticket-user col-xs-12">
+                                        <div class="col-xs-4">用户手机号</div>
+                                        <div class="col-xs-8 text-right"><%= list[i].mobile%></div>
+                                    </div>
+                                    <div class="ticket-user col-xs-12">
+                                        <div class="col-xs-4">设计师</div>
+                                        <div class="col-xs-8 text-right"><%= list[i].stylistName%></div>
+                                    </div>
+                                </a>
+                                <div class="ticket-user col-xs-12">
+                                    <button class="btn btn-blue commit" orderId="<%= list[i].orderId%>">确认到店</button>
+                                </div>
+                            </div>
+                        </li>
+                        <%}%>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <% if(list.length == 10){%>
+        <div class="more" page="<%=page%>">
+            点击加载更多
+        </div>
+        <%}%>
+    </div>
+
+
+    <!--Basic Scripts-->
+    <script src="../../assets/js/jquery-2.0.3.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+
+    <!--Beyond Scripts-->
+    <script src="../../assets/js/beyond.min.js"></script>
+    <script>
+        var orderCode = '';
+        var userPhone = '';
+        var offsetTop = 0;
+        function commit() {
+            $(".commit").unbind();
+            $(".commit").click(function () {
+                var item = $(this);
+                var param = {orderId: $(this).attr('orderId')}
+                $.post('../Appoint/shampoo', param, function (data) {
+                    $("#commit #shampoo").empty();
+                    if (data.length > 0) {
+                        var option = '';
+                        for(var i=0; i< data.length; i++){
+                            option = option + '<option value="'+data[i].id+'">'+data[i].mecNumb+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+data[i].name+'</option>'
+                        }
+                        $("#commit #shampoo").append(option)
+                        $("#commit").modal();
+                        $("#commit .btn-blue").click(function(){
+                            if($('#shampoo').val()){
+                                param.mtId = $('#shampoo').val();
+                            }else{
+                                param.mtId = '';
+                            };
+                            $.post('../Appoint/confirm', param, function (data) {
+                                $("#commit").modal('hide');
+                                if (data.isSuccess) {
+                                    $("#myModal .f20").html('确认成功');
+                                    $("#myModal").modal();
+                                    item.parent().parent().parent().remove();
+                                } else {
+                                    $("#myModal .f20").html(data.errors[0]);
+                                    $("#myModal").modal();
+                                }
+                            });
+                        })
+                    } else {
+                        $("#myModal .f20").html("技师数据获取失败");
+                        $("#myModal").modal();
+                    }
+                });
+            })
+            $(".ticket-item .detail").unbind();
+            $(".ticket-item .detail").click(function () {
+                var param = {orderId: $(this).attr('orderId'), styPhone: $(this).attr('styPhone')};
+                $(".loading-container").css('display', 'block');
+                $(".loading-progress").css('display', 'block');
+                $.post('/Appoint/detail', param, function (data) {
+                    $("#edit .user div").html(data.userName)
+                    $("#edit .time div").html(data.appointTimes);
+                    $("#edit .addr div").html(data.studio.names+'('+data.studio.addr+')');
+                    $("#edit .product div").remove();
+                    for (var i = 0; i < data.bookProducts.length; i++) {
+                        $("#edit .product").append('<div class="item-product">' + data.bookProducts[i].productName + '(' + data.bookProducts[i].price + ')</div>');
+                    }
+                    $(".loading-container").css('display', 'none');
+                    $(".loading-progress").css('display', 'none');
+                    $("#edit").modal();
+                    $('.container-fluid').css('top', '-' + window.pageYOffset + 'px');
+                    offsetTop = window.pageYOffset;
+                    $('.container-fluid').addClass('lock');
+                    $("#edit .close").unbind();
+                    $("#edit .close").click(function () {
+                        $('.container-fluid').removeClass('lock');
+                        $('body').scrollTop(offsetTop);
+                        offsetTop = 0;
+                        $("#edit").modal('hide');
+                    })
+                })
+            })
+        }
+        $(function(){
+            commit();
+            $(".submit").click(function(){
+                $(".submit").attr('disabled',true);
+                orderCode = $('#code').val();
+                if($.trim($("#phone").val()) == ''){
+                    userPhone = $('#phone').val();
+                }else if(!/^1\d{10}$/.test($.trim($("#phone").val()))){
+                    $("#myModal .f20").html('请输入正确手机号码');
+                    $("#myModal").modal();
+                    $(".submit").attr('disabled',false);
+                    return false;
+                }else {
+                    userPhone = $('#phone').val();
+                }
+                var param = {orderCode:orderCode,userPhone:userPhone}
+                $(".loading-container").css('display','block');
+                $(".loading-progress").css('display','block');
+                $.post('../Appoint/search',param, function (data) {
+                    $('.tickets-list').empty();
+                    var li = '';
+                    for(var i=0; i<data.list.length; i++){
+                        li = li + '<li class="ticket-item"><div class="row"><a href="javascript:void(0)"><div class="ticket-user col-xs-12 detail" orderId="'+data.list[i].orderId+'" styPhone="'+data.list[i].stylistMobile+'">'+
+                                '<div class="col-xs-4">订单编号</div><div class="col-xs-8 text-right">'+data.list[i].orderNumb+'</div><i class="fa fa-angle-right"></i>'+
+                                '</div><div class="ticket-user col-xs-12"><div class="col-xs-4">订单用户</div><div class="col-xs-8 text-right">'+data.list[i].userName+'</div>'+
+                                '</div><div class="ticket-user col-xs-12"><div class="col-xs-4">订单金额</div><div class="col-xs-8 text-right">'+data.list[i].money+'</div>'+
+                                '</div><div class="ticket-user col-xs-12"><div class="col-xs-4">预约时间</div><div class="col-xs-8 text-right">'+data.list[i].appointTimes+'</div>'+
+                                '</div><div class="ticket-user col-xs-12"><div class="col-xs-4">用户手机号</div><div class="col-xs-8 text-right">'+data.list[i].mobile+'</div>'+
+                                '</div><div class="ticket-user col-xs-12"><div class="col-xs-4">设计师</div><div class="col-xs-8 text-right">'+data.list[i].stylistName+'</div>'+
+                                '</div></a><div class="ticket-user col-xs-12"><button class="btn btn-blue commit" orderId="'+data.list[i].orderId+'">确认到店</button></div></div></li>';
+                    }
+                    $('.tickets-list').append(li);
+                    $(".submit").attr('disabled',false);
+                    $(".loading-container").css('display','none');
+                    $(".loading-progress").css('display','none');
+                });
+
+                commit();
+            })
+            $('.more').click(function(){
+                var  param = {page : parseInt($(this).attr('page'))+1,orderCode:orderCode,userPhone:userPhone};
+                $(".loading-container").css('display','block');
+                $(".loading-progress").css('display','block');
+                $.post('/Appoint/ajaxindex',param, function (data) {
+                    var li = '';
+                    for(var i=0; i< data.list.length; i++){
+                        li = li + '<li class="ticket-item"><div class="row"><a href="javascript:void(0)"><div class="ticket-user col-xs-12 detail">' +
+                                '<div class="col-xs-4">订单编号</div><div class="col-xs-8 text-right">'+data.list[i].orderNumb+'</div><i class="fa fa-angle-right"></i>'+
+                                '</div><div class="ticket-user col-xs-12"><div class="col-xs-4">订单用户</div><div class="col-xs-8 text-right">'+data.list[i].userName+'</div>'+
+                                '</div><div class="ticket-user col-xs-12"><div class="col-xs-4">订单金额</div><div class="col-xs-8 text-right">'+data.list[i].money+'</div>'+
+                                '</div><div class="ticket-user col-xs-12"><div class="col-xs-4">预约时间</div><div class="col-xs-8 text-right">'+data.list[i].appointTimes+'</div>'+
+                                '</div><div class="ticket-user col-xs-12"><div class="col-xs-4">用户手机号</div><div class="col-xs-8 text-right">'+data.list[i].mobile+'</div>'+
+                                '</div><div class="ticket-user col-xs-12"><div class="col-xs-4">设计师</div><div class="col-xs-8 text-right">'+data.list[i].stylistName+'</div>'+
+                                '</div></a><div class="ticket-user col-xs-12"><button class="btn btn-blue commit" orderId="'+data.list[i].orderId+'">确认到店</button></div></div></li>';
+                    }
+                    if(data.list.length > 0){
+                        $('.more').attr('page',parseInt($('.more').attr('page'))+1);
+                    }
+                    $('.tickets-list').append(li);
+                    $(".loading-container").css('display','none');
+                    $(".loading-progress").css('display','none');
+                });
+                commit();
+            })
+
+            $(".link-search").click(function(){
+                if($(".search").css('top') == '40px'){
+                    $(".search").animate({top:'-115'},1000);
+                    $(".main").animate({'margin-top':'0px'},1000);
+                }else{
+                    $(".search").animate({top:'40px'},1000);
+                    $(".main").animate({'margin-top':'160px'},1000);
+                }
+
+            })
+
+        })
+    </script>
+    <div id="myModal" class="modal modal-darkorange">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <p class="f20">确认成功</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">确 定</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div id="edit" class="modal modal-darkorange">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" >×</button>
+                    <h4 class="modal-title">预约详情</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="widget">
+                        <div class="widget-body">
+                            <div>
+                                <div class="form-group user">
+                                    <label>预约用户</label>
+                                    <div class="item-user"></div>
+                                </div>
+                                <div class="form-group time">
+                                    <label>预约时间</label>
+                                    <div class="item-time"></div>
+                                </div>
+                                <div class="form-group addr">
+                                    <label>门店</label>
+                                    <div class="item-time"></div>
+                                </div>
+                                <div class="form-group product">
+                                    <label>产品</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <div id="commit" class="modal modal-darkorange">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title">选择技师</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="widget">
+                        <div class="widget-body">
+                            <div>
+                                <div class="form-group addr">
+                                    <div class="item-time">
+                                        <select id="shampoo" style="width:100%;">
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-blue" >确 定</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+
+</body>
+<!--  /Body -->
+</html>
