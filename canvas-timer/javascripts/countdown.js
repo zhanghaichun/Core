@@ -137,7 +137,7 @@ function updateBalls() {
 	
 }
 
-/* 添加小球的方法 */
+/* 添加小球的方法, 应用到了相应的数字矩阵 */
 function addBalls(x, y, num) {
 	for (var i = 0; i < digit[num].length; i++) {
 		for (var j = 0; j < digit[num][i].length; j++) {
